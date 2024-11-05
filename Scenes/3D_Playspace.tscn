@@ -17,11 +17,59 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
 [node name="Modular Floor9" parent="Enviroment" instance=ExtResource("1_vxxph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -3)
 
+[node name="Modular Floor12" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -3)
+
+[node name="Modular Floor13" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -3)
+
+[node name="Modular Floor14" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, -3)
+
+[node name="Modular Floor15" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, -6)
+
+[node name="Modular Floor16" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 3, -6)
+
+[node name="Modular Floor17" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 4, -6)
+
+[node name="Modular Floor21" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, -6)
+
+[node name="Modular Floor18" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, -9)
+
+[node name="Modular Floor19" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, -9)
+
+[node name="Modular Floor20" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, -9)
+
 [node name="Modular Floor10" parent="Enviroment" instance=ExtResource("1_vxxph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -6)
 
 [node name="Modular Floor11" parent="Enviroment" instance=ExtResource("1_vxxph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -6)
+
+[node name="Modular Floor22" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -9)
+
+[node name="Modular Floor25" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -15)
+
+[node name="Modular Floor26" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, -15)
+
+[node name="Modular Floor27" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 4, -15)
+
+[node name="Modular Floor23" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -9)
+
+[node name="Modular Floor24" parent="Enviroment" instance=ExtResource("1_vxxph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -6)
 
 [node name="Modular Floor4" parent="Enviroment" instance=ExtResource("1_vxxph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
@@ -37,16 +85,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.8, 3)
 [node name="Modular Floor7" parent="Enviroment" instance=ExtResource("1_vxxph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.5, 3)
 
-[node name="Player" parent="." instance=ExtResource("2_yd8mt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+[node name="Lights" type="Node3D" parent="."]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, -4.4)
+light_color = Color(0, 0.52191, 0.79828, 1)
+light_energy = 3.0
+light_specular = 5.0
+light_bake_mode = 1
+shadow_enabled = true
+distance_fade_enabled = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 9, 0)
-light_color = Color(1, 0.883001, 0.747641, 1)
-light_energy = 2.0
+light_color = Color(1, 0.723985, 0.323955, 1)
 shadow_enabled = true
 shadow_blur = 0.2
 directional_shadow_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_yd8mt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_hkgyb")
