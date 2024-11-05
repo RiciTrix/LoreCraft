@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvqwsllfow7af"
-path="res://.godot/imported/Modular Floor.glb-48223db18a076c55a8afd7eca0d10ee6.scn"
+uid="uid://dwj8uso2r3mal"
+path="res://.godot/imported/Modular Pillar.glb-33f1e6016e2047e77934d54f81ead485.scn"
 
 [deps]
 
-source_file="res://Assets/3D Placeholders/Modular Floor.glb"
-dest_files=["res://.godot/imported/Modular Floor.glb-48223db18a076c55a8afd7eca0d10ee6.scn"]
+source_file="res://Assets/3D Placeholders/Modular Pillar.glb"
+dest_files=["res://.godot/imported/Modular Pillar.glb-33f1e6016e2047e77934d54f81ead485.scn"]
 
 [params]
 

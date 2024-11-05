@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvqwsllfow7af"
-path="res://.godot/imported/Modular Floor.glb-48223db18a076c55a8afd7eca0d10ee6.scn"
+uid="uid://cfi6ejdtyyqj7"
+path="res://.godot/imported/Modular Wall Doorway.glb-b8ac42a84452917a61b5095979a49c79.scn"
 
 [deps]
 
-source_file="res://Assets/3D Placeholders/Modular Floor.glb"
-dest_files=["res://.godot/imported/Modular Floor.glb-48223db18a076c55a8afd7eca0d10ee6.scn"]
+source_file="res://Assets/3D Placeholders/Modular Wall Doorway.glb"
+dest_files=["res://.godot/imported/Modular Wall Doorway.glb-b8ac42a84452917a61b5095979a49c79.scn"]
 
 [params]
 
