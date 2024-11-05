@@ -21,20 +21,20 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_e1j7q"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bftft"]
 resource_name = "Modular Floor_Cube_001"
+lightmap_size_hint = Vector2i(130, 114)
 _surfaces = [{
 "aabb": AABB(0, -1, 0, 3, 1, 3),
-"attribute_data": PackedByteArray("/y////8X/6//B//H/y//9/8P/8f/F//f/xf//wAA/6//F////xf/9/8X//f/F//3/xf/x/8H/9//B//f/w//3wAA/98AAP/fAAD/xwAA////B//HAAD/9wAA//cAAP/H"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("wPw/PgAAgD/wA38/kOB+P8D4vz34/3c/buQGPyS4Tz/A/D8++P93P/ADfz8kuE8/wPi/PQAAgD9u5AY/kOB+P8D4vz0AAIA/wQ98O5TXED8AAAAA+P93PyM38j4AAEA/wPi/Pfj/dz/BD3w7AABAPwAAAAAAAIA/IzfyPpTXED8A4f88yP9HP+AH/j4AAEA/AAAAAOD/Xz9yI3c/lNcQPwAAAADI/0c/4Af+PpTXED8A4f884P9fP3Ijdz8AAEA/AOH/POD/Xz/dyA09orxGPwDxfz3I/0c/EPwAPw3ldT8A8X894P9fP93IDT0N5XU/AOH/PMj/Rz8Q/AA/orxGPwAAAACw/y8/IzfyPiS4jzvA+L89yP9HP8EPfDvzGgo/AAAAAMj/Rz/BD3w7JLiPO8D4vz2w/y8/IzfyPvMaCj8AAAAA+P93P+AH/j4kuI87wPi/PeD/Xz9yI3c/8xoKP8D4vz34/3c/4Af+PvMaCj8AAAAA4P9fP3Ijdz8kuI87"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AAAJAAMAAAAGAAkACAAVAAoACAATABUAFAARABcAFAAOABEADQAEAA8ADQACAAQABwAMABIABwABAAwAFgAFAAsAFgAQAAUA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_ptk4e"),
-"name": "Grey",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP///78AAAAA//9U1QAAAAD///+/AAD//////78AAP//////vwAA////////AAAAAAAA/78AAAAAAABU1QAAAAAAAP//AAD//wAA/78AAP//AAD//wAA//8AAP////8AAP//VNX//wAA////v///AAD//1TV/////////7///////////////////1TV//8AAAAAVNX//wAAAAD/////AAAAAFTV/////wAA////////AAD///////8AAFTV/3///6oqVNX//////3//////////f/+//3///6oqVNX/f////3////9/////f/+/qipU1f////+qqlRV//////9//7+qqlRVqipU1f9///+qqlRV/3////9//7+qqlRV")
+"vertex_data": PackedByteArray("AAAAAAAAgL8AAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAgL8AAAAAAABAQAAAgL8AAAAAAABAQAAAAAAAAEBAAABAQAAAAAAAAAAAAABAQAAAgL8AAEBAAABAQAAAgL8AAEBAAAAAAAAAAAAAAEBAAABAQAAAAAAAAEBAAAAAAAAAgL8AAEBAAAAAAAAAgL8AAAAAAABAQAAAgL8AAEBAAABAQAAAgL8AAAAAAAAAAAAAgL8AAEBAAABAQAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAABAQAAAAAAAAEBAAQD/fwCA/78BAP9/AID/vwEA/38AgP+/AQD/fwCA/7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AoAEgACA/v8CgASAAID+/wKABIAAgP7/AoAEgACA/3//fwCA/v//f/9/AID+//9//38AgP7//3//fwCA/v8AgAEAAYD/vwCAAQABgP+/AIABAAGA/78AgAEAAYD/v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6iepq")
@@ -46,7 +46,7 @@ size = Vector3(3, 1, 3)
 
 [node name="Modular Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-mesh = SubResource("ArrayMesh_e1j7q")
+mesh = SubResource("ArrayMesh_bftft")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

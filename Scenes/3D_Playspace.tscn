@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bawqfayd3nqfo"]
+[gd_scene load_steps=5 format=3 uid="uid://bawqfayd3nqfo"]
 
 [ext_resource type="PackedScene" uid="uid://ctkhntqyruibw" path="res://Scenes/placeholderFloor.tscn" id="1_vxxph"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="2_yd8mt"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="3_hkgyb"]
+[ext_resource type="LightmapGIData" uid="uid://codpw1js2bmjh" path="res://lightmaps/3D_Playspace.lmbake" id="4_hcsaa"]
 
 [node name="Main" type="Node3D"]
 
@@ -90,15 +91,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.5, 3)
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, -4.4)
 light_color = Color(0, 0.52191, 0.79828, 1)
-light_energy = 3.0
-light_specular = 5.0
+light_energy = 16.0
+light_specular = 16.0
 light_bake_mode = 1
-shadow_enabled = true
 distance_fade_enabled = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 9, 0)
-light_color = Color(1, 0.723985, 0.323955, 1)
+light_color = Color(1, 0.794975, 0.523573, 1)
+light_energy = 0.5
 shadow_enabled = true
 shadow_blur = 0.2
 directional_shadow_mode = 1
@@ -110,3 +111,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 environment = ExtResource("3_hkgyb")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 2
+bounce_indirect_energy = 2.0
+light_data = ExtResource("4_hcsaa")
