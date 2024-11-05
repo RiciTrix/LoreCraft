@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://chb2lo7ll686m"]
+
+[ext_resource type="PackedScene" uid="uid://bya71wqt8siwo" path="res://Assets/3D Placeholders/Modular Floor.glb" id="1_rmtu7"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Modular Floor2" parent="." instance=ExtResource("1_rmtu7")]
+
+[node name="Modular Floor3" parent="." instance=ExtResource("1_rmtu7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Modular Floor4" parent="." instance=ExtResource("1_rmtu7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Modular Floor5" parent="." instance=ExtResource("1_rmtu7")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0, 0, 0)
