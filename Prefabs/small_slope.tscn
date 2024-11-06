@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4 uid="uid://d26r82qc4ddny"]
+
+[ext_resource type="Texture2D" uid="uid://cvq7d7hs20olw" path="res://Assets/3D Placeholders/Modular Slope Small_UV Grid.png" id="1_uuk5w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10ad4"]
+resource_name = "Grey"
+cull_mode = 2
+albedo_texture = ExtResource("1_uuk5w")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ap2a3"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 2, 1, 2),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAQAFAAIAAQAEAAUABAADAAUAAQADAAQAAQAAAAMABQAAAAIABQADAAAA"),
+"name": "Grey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAAAAAAAAAAAA//8AAAAA//8AAP//AAD//wAAAAAAAP////8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_msj08"]
+resource_name = "Modular Slope Small_Cube_003"
+lightmap_size_hint = Vector2i(90, 86)
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 2, 1, 2),
+"attribute_data": PackedByteArray("6P9nP6j/Jz/pk34/m7JmP+j/Zz+Y/xc/6ZN+P2VN2T7w/28/mP8XPy7YQj9lTdk+6P9nP5j/Fz+f9Ak/+oK+O/D/bz+I/wc/6ZN+PwAAgD7w/28/mP8XP5/0CT8AAIA+6P9nP4j/Bz/pk34/+oK+O+j/Zz+I/wc/0if9Pk1ZEz/o/2c/8P7vPqVPOj/6gn4/8P9vP4j/Bz+lTzo/xB3xPtj/Vz+Y/xc/wRbsPhJ3BD/o/2c/iP8HP2ELtjv6gn4/6P9nP5j/Fz9hC7Y7EncEP9j/Vz+I/wc/wRbsPvqCfj/w/28/mP8XPxdsAT/cEfc+AACAP4j/Bz9hC7Y7+oK+OwAAgD+Y/xc/F2wBP/qCvjvw/28/iP8HP2ELtjvcEfc+"),
+"format": 34359742519,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUAAwAGAAQABwAIAAkACgALAAwACgANAAsADgAPABAADgARAA8A"),
+"material": SubResource("StandardMaterial3D_10ad4"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAQAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAgD8AAAAAAAAAAAAAAAAAAABAAAAAAAAAgD8AAAAAAAAAQAAAAAAAAABAAgAEgAGA/P8CAASAAYD8/wIABIABgPz//v/+//9//v/+//7//3/+//7//v//f/7//v/+//9//v/6/wCA/n/+//r/AID+f/7/+v8AgP5//v8AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5/U9UAAP6//n9T1QAA/r/+f1PVAAD+v/5/U9UAAP6/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ap2a3")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fkxib"]
+data = PackedVector3Array(0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1, 0, 0, 1, 0, 0, 0, 0, 2, 0, 0, 2, 1, 0, 2, 0, 0, 2, 0, 2, 2, 1, 0, 0, 0, 0, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 2, 2, 1, 0, 0, 0, 2, 0, 1, 0, 2, 1, 0, 2, 0, 2, 0, 0, 2)
+
+[node name="Modular Slope Small" type="Node3D"]
+
+[node name="Modular 2x2x1 Slope" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_msj08")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Modular 2x2x1 Slope"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Modular 2x2x1 Slope/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fkxib")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=4 uid="uid://bvb10ardpjctb"]
+
+[ext_resource type="Texture2D" uid="uid://daug7bcsdh3gv" path="res://Assets/3D Placeholders/Modular Wall_UV Grid.png" id="1_vjo0u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pkn2"]
+resource_name = "Grey"
+cull_mode = 2
+albedo_texture = ExtResource("1_vjo0u")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ivl1i"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 4, 4, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAQAAAACAAYAAwAGAAIAAwAHAAYABQAAAAQABQABAAAABwAEAAYABwAFAAQABQADAAEABQAHAAMAAQACAAAAAQADAAIA"),
+"name": "Grey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a1mjh"]
+resource_name = "Modular Wall_Cube_002"
+lightmap_size_hint = Vector2i(170, 130)
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 4, 4, 1),
+"attribute_data": PackedByteArray("2P9XP7ABWD9FRQU/W6lVP/j/dz+XAVA/Pz9/P/ADfz/4/3c/sAFYPz8/fz9bqVU/2P9XP5cBUD9FRQU/8AN/P9jtVz+XCVA/wcBAO8EPfDv4B3g/MQUwP3V19T4IfiA/+P93P5cTUD/BwEA7CH4gP9j1Vz8x/S8/dXX1PsEPfDvY/1c/sAFYP35+/j7BD3w7+P93PxYCeD85OXk/CH4gP9j/Vz8WAng/fn7+Pgh+ID/4/3c/sAFYPzk5eT/BD3w7+O13P7DvVz/BwAA/8AN/PwAAgD8WAng/2djYPFupVT/4/3c/FgJ4P9nY2DzwA38/AACAP7ABWD/BwAA/W6lVP/j/dz8W8Hc/OTl5P2ZmJj/Y/1c/GAGAP35+/j78wE8/2O1XPxb4dz9+fv4+ZmYmP/j/dz8YAYA/OTl5P/zATz/Q/08/sAFYP3V19T5mZiY/2P9XPxYCeD/BwEA7/MBPP9D/Tz8WAng/wcBAO2ZmJj/Y/1c/sAFYP3V19T78wE8/"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_6pkn2"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAQAAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAgEAAAAAAAACAQAAAgEAAAIA/AACAQAAAAAAAAIA/AAAAAAAAgEAAAIA/AACAQAAAgEAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAACAQAAAgEAAAAAAAAAAAAAAgEAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAIA/AACAQAAAAAAAAAAAAAAAAAAAAAAAAIA/AACAQAAAAAAAAAAAAACAQAAAgEAAAIA/AACAQAAAgEAAAAAAAACAQAAAAAAAAIA//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6//n/+/wAA/r//f/9/3X/u//9//3/df+7//3//f91/7v//f/9/3X/u/wAAAAD///6/AAAAAP///r8AAAAA///+vwAAAAD///6/AgD8fxP/AIADAPx/0f8AgAAA+n/+//3/AgD6f+f+AIAAgAAAAAD/v/1/AgAfAADA/38BACMA/7/6fwEAAQAAwP7//n//f/6//v/+f/9//r/+//5//3/+v/7//n//f/6/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ivl1i")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m155h"]
+size = Vector3(4, 4, 1)
+
+[node name="Modular Wall2" type="Node3D"]
+
+[node name="Modular Wall" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_a1mjh")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0.5)
+shape = SubResource("BoxShape3D_m155h")

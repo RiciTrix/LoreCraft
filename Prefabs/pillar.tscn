@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://enl8jp6afhus"]
+
+[ext_resource type="PackedScene" uid="uid://dwbgkenp2n8d7" path="res://Assets/3D Placeholders/Modular Pillar.glb" id="1_o11ex"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_434b1"]
+data = PackedVector3Array(1, 4, 0, 0, 4, 1, 0, 4, 0, 1, 4, 0, 1, 4, 1, 0, 4, 1, 1, 0, 1, 0, 4, 1, 1, 4, 1, 1, 0, 1, 0, 0, 1, 0, 4, 1, 1, 0, 0, 1, 4, 1, 1, 4, 0, 1, 0, 0, 1, 0, 1, 1, 4, 1, 0, 0, 1, 0, 4, 0, 0, 4, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 4, 0, 0, 4, 0, 0, 0, 0, 1, 0, 0, 1, 4, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="Modular Pillar2" instance=ExtResource("1_o11ex")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Modular Pillar" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Modular Pillar/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_434b1")
