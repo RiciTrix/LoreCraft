@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://ctkhntqyruibw"]
 
-[ext_resource type="Texture2D" uid="uid://doxl361e8fqin" path="res://Assets/3D Placeholders/Modular Floor_UV Grid.png" id="1_hhw27"]
+[ext_resource type="Texture2D" uid="uid://c0200wfdra1jv" path="res://Assets/3D Placeholders/Modular Floor_UV Grid.png" id="1_hhw27"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptk4e"]
 resource_name = "Grey"
