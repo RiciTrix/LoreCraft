@@ -198,6 +198,9 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("2_yd8mt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+walkSpeed = 3.0
+sprintSpeed = 6.0
+acceleration = 0.9
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_hkgyb")
