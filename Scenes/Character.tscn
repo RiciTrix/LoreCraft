@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs2f1ul5jrvi0"]
+[gd_scene load_steps=5 format=3 uid="uid://cs2f1ul5jrvi0"]
 
 [ext_resource type="Script" path="res://Scenes/characterController.gd" id="1_fips4"]
 
@@ -6,19 +6,32 @@
 radius = 0.3
 height = 1.8
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_lx6ks"]
+radius = 0.4
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1c1m2"]
 radius = 0.3
 height = 1.8
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("main_collider", "crouch_collider")]
 script = ExtResource("1_fips4")
+main_collider = NodePath("CollisionShape3D")
+crouch_collider = NodePath("CrouchShape")
 
 [node name="CameraFollow" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63582, 0)
 
+[node name="CameraFollowCrouch" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.709361, 0)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_vjeup")
+
+[node name="CrouchShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.488743, 0)
+shape = SubResource("SphereShape3D_lx6ks")
+disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

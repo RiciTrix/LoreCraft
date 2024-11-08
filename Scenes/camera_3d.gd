@@ -1,4 +1,5 @@
 extends Camera3D
+class_name PlayerCamera
 
 @export_group("Setup")
 @export var rootNode: CharacterBody3D
@@ -15,6 +16,8 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	followPos = rootNode.get_child(0)
 
+func updateFollowPos(node : Node3D):
+	followPos = node
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
