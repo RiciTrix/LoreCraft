@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs2f1ul5jrvi0"]
+[gd_scene load_steps=9 format=3 uid="uid://cs2f1ul5jrvi0"]
 
-[ext_resource type="Script" path="res://Scenes/characterController.gd" id="1_fips4"]
+[ext_resource type="Script" path="res://Scenes/state_machine_character_controller.gd" id="1_f0lyk"]
+[ext_resource type="Script" path="res://Scenes/state_machine.gd" id="2_4sxpg"]
+[ext_resource type="Script" path="res://Scenes/player_idle.gd" id="3_37y13"]
+[ext_resource type="Script" path="res://Scenes/player_walking.gd" id="3_67bb3"]
+[ext_resource type="Script" path="res://Scenes/player_jumping.gd" id="4_pbxs3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vjeup"]
 radius = 0.3
@@ -13,10 +17,8 @@ radius = 0.4
 radius = 0.3
 height = 1.8
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("main_collider", "crouch_collider")]
-script = ExtResource("1_fips4")
-main_collider = NodePath("CollisionShape3D")
-crouch_collider = NodePath("CrouchShape")
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_f0lyk")
 
 [node name="CameraFollow" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63582, 0)
@@ -36,3 +38,20 @@ disabled = true
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_1c1m2")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_4sxpg")
+initial_state = NodePath("Idle")
+
+[node name="Walking" type="Node" parent="StateMachine"]
+script = ExtResource("3_67bb3")
+speed = 4.0
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_37y13")
+
+[node name="Jumping" type="Node" parent="StateMachine"]
+script = ExtResource("4_pbxs3")
+jump_velocity = 4.5
+air_speed = 10.0
+air_acceleration = 1.0
