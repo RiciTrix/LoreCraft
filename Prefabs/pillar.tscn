@@ -1,13 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://enl8jp6afhus"]
+[gd_scene load_steps=6 format=4 uid="uid://enl8jp6afhus"]
 
-[ext_resource type="PackedScene" uid="uid://dwbgkenp2n8d7" path="res://Assets/3D Placeholders/Modular Pillar.glb" id="1_o11ex"]
+[ext_resource type="Texture2D" uid="uid://cc2tb4ve3lyyi" path="res://Assets/3D Placeholders/Modular Pillar_UV Grid.png" id="1_g11j2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_er0wu"]
+resource_name = "Grey"
+cull_mode = 2
+albedo_texture = ExtResource("1_g11j2")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ptla"]
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 1, 4, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAQAAAACAAYAAwAGAAIAAwAHAAYAAQACAAAAAQADAAIABwAEAAYABwAFAAQABQAAAAQABQABAAAABQADAAEABQAHAAMA"),
+"name": "Grey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sm5ql"]
+resource_name = "Modular Pillar_Cube_005"
+lightmap_size_hint = Vector2i(106, 94)
+_surfaces = [{
+"aabb": AABB(0, 0, 0, 1, 4, 1),
+"attribute_data": PackedByteArray("APF/PaD8Hz5SE0w/jvoOP8D4vz3A/D8+3sp+P5MrSD8A8X89wPw/Pt7Kfj+O+g4/wPi/PaD8Hz5SE0w/kytIP8D4vz0A4f886JCaO2JyhT4A+f89oPwfPofURD9t1Pc+wPi/PaD8Hz6H1EQ/YnKFPgD5/z0A4f886JCaO23U9z4AAAAAAOH/PIfURD9BTK47AOH/PKD8Hz7okJo7eDZqPgAAAACg/B8+6JCaO0FMrjsA4f88AOH/PIfURD94Nmo+APF/PQDh/zyH1EQ/Z6N+P8D4vz2g/B8+6JCaO2JyRT8A8X89oPwfPuiQmjtno34/wPi/PQDh/zyH1EQ/YnJFPwDh/zwA4f886JCaO8oVBD8A8X89oPwfPofURD/PRj0/AOH/PKD8Hz6H1EQ/yhUEPwDxfz0A4f886JCaO89GPT/A+L89AOH/PN7Kfj9BTK47APF/PQAAAABSE0w/eDZqPsD4vz0AAAAAUhNMP0FMrjsA8X89AOH/PN7Kfj94Nmo+"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_er0wu"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAPwAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAgEAAAAAAAACAPwAAgEAAAIA/AACAPwAAAAAAAIA/AAAAAAAAgEAAAIA/AACAPwAAgEAAAIA/AAAAAAAAAAAAAIA/AACAPwAAAAAAAAAAAACAPwAAgEAAAIA/AACAPwAAgEAAAAAAAACAPwAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgEAAAAAAAAAAAAAAgEAAAAAAAACAPwAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA//n/9/wCA/r/+f/3/AID+v/5//f8AgP6//n/9/wCA/r/+f/5/AAD/v/5//n8AAP+//n/+fwAA/7/+f/5/AAD/v/7//n//f/6//v/+f/9//r/+//5//3/+v/7//n//f/6/AAD6f/7//f8AAPp//v/9/wAA+n/+//3/AAD6f/7//f8AAAAA///+vwAAAAD///6/AAAAAP///r8AAAAA///+vwiAAwD5//3/CIADAPn//f8IgAMA+f/9/wiAAwD5//3/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7ptla")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_434b1"]
 data = PackedVector3Array(1, 4, 0, 0, 4, 1, 0, 4, 0, 1, 4, 0, 1, 4, 1, 0, 4, 1, 1, 0, 1, 0, 4, 1, 1, 4, 1, 1, 0, 1, 0, 0, 1, 0, 4, 1, 1, 0, 0, 1, 4, 1, 1, 4, 0, 1, 0, 0, 1, 0, 1, 1, 4, 1, 0, 0, 1, 0, 4, 0, 0, 4, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 4, 0, 0, 4, 0, 0, 0, 0, 1, 0, 0, 1, 4, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1)
 
-[node name="Modular Pillar2" instance=ExtResource("1_o11ex")]
+[node name="Modular Pillar2" type="Node3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Modular Pillar" index="0"]
+[node name="Modular Pillar" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_sm5ql")
+skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Modular Pillar/StaticBody3D" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Modular Pillar"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Modular Pillar/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_434b1")
