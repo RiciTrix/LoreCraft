@@ -19,9 +19,12 @@ func Physics_Update(delta):
 	if Input.is_action_pressed("ui_accept"):
 		Transitioned.emit(self, "Jumping")
 	
+	if Input.is_action_just_pressed("crouch"):
+		Transitioned.emit(self, "Crouching")
+	
 	if body.is_on_floor():
 		body.velocity.x = move_toward(body.velocity.x, 0, slow_speed * delta)
 		body.velocity.z = move_toward(body.velocity.z, 0, slow_speed * delta)
 		
-	if body.input_dir:
+	if body.direction:
 		Transitioned.emit(self, "Walking")

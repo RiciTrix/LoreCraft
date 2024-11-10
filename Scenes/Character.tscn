@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cs2f1ul5jrvi0"]
+[gd_scene load_steps=12 format=3 uid="uid://cs2f1ul5jrvi0"]
 
 [ext_resource type="Script" path="res://Scenes/state_machine_character_controller.gd" id="1_f0lyk"]
 [ext_resource type="Script" path="res://Scenes/state_machine.gd" id="2_4sxpg"]
 [ext_resource type="Script" path="res://Scenes/player_idle.gd" id="3_37y13"]
 [ext_resource type="Script" path="res://Scenes/player_walking.gd" id="3_67bb3"]
 [ext_resource type="Script" path="res://Scenes/player_jumping.gd" id="4_pbxs3"]
+[ext_resource type="Script" path="res://Scenes/sprinting.gd" id="6_83voy"]
+[ext_resource type="Script" path="res://Scenes/sliding.gd" id="7_dvfj7"]
+[ext_resource type="Script" path="res://Scenes/player_crouching.gd" id="8_00jb8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vjeup"]
 radius = 0.3
@@ -17,14 +20,18 @@ radius = 0.4
 radius = 0.3
 height = 1.8
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("crouchFollowCamPos", "standingFollowCamPos", "mainCollider", "crouchCollider")]
 script = ExtResource("1_f0lyk")
+crouchFollowCamPos = NodePath("CameraFollowCrouch")
+standingFollowCamPos = NodePath("CameraFollow")
+mainCollider = NodePath("CollisionShape3D")
+crouchCollider = NodePath("CrouchShape")
 
 [node name="CameraFollow" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63582, 0)
 
 [node name="CameraFollowCrouch" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.709361, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.889702, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -37,7 +44,12 @@ disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_1c1m2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -30.0
+pitch_scale = 0.5
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_4sxpg")
@@ -46,12 +58,30 @@ initial_state = NodePath("Idle")
 [node name="Walking" type="Node" parent="StateMachine"]
 script = ExtResource("3_67bb3")
 speed = 4.0
+acceleration = 4.0
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("3_37y13")
+slow_speed = 12.0
 
 [node name="Jumping" type="Node" parent="StateMachine"]
 script = ExtResource("4_pbxs3")
-jump_velocity = 4.5
-air_speed = 10.0
-air_acceleration = 1.0
+jump_velocity = 6.5
+air_speed = 8.0
+air_acceleration = 4.0
+
+[node name="Sprinting" type="Node" parent="StateMachine"]
+script = ExtResource("6_83voy")
+speed = 8.0
+acceleration = 6.0
+
+[node name="Sliding" type="Node" parent="StateMachine"]
+script = ExtResource("7_dvfj7")
+
+[node name="Timer" type="Timer" parent="StateMachine/Sliding"]
+process_callback = 0
+one_shot = true
+
+[node name="Crouching" type="Node" parent="StateMachine"]
+script = ExtResource("8_00jb8")
+speed = 2.0

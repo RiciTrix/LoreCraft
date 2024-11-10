@@ -35,6 +35,6 @@ func on_child_transitioned(state, new_state_name):
 	if currentState:
 		currentState.exit()
 	
-	print("Changed to: " + new_state.name)
+	print(new_state.name)
 	new_state.enter()
 	currentState = new_state

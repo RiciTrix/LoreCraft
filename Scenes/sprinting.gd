@@ -6,7 +6,7 @@ extends State
 func enter():
 	$"../../AudioStreamPlayer3D".stream = load("res://SFX/concrete-footsteps-6752.mp3")
 	$"../../AudioStreamPlayer3D".playing = true
-	$"../../AudioStreamPlayer3D".pitch_scale = 1
+	$"../../AudioStreamPlayer3D".pitch_scale = 2
 	pass
 	
 func exit():
@@ -21,14 +21,12 @@ func Physics_Update(delta):
 	
 	body.velocity.x += body.direction.x * speed * acceleration * delta
 	body.velocity.z += body.direction.z * speed * acceleration * delta
-	if Input.is_action_just_pressed("crouch"):
-		Transitioned.emit(self, "Crouching")
 	
 	if Input.is_action_pressed("ui_accept"):
 		Transitioned.emit(self, "Jumping")
-		
-	if Input.is_action_pressed("sprint"):
-		Transitioned.emit(self, "Sprinting")
+	
+	if Input.is_action_just_pressed("crouch"):
+		Transitioned.emit(self, "Sliding")
 	
 	if body.direction:
 		body.velocity.x = clampf(body.velocity.x, -speed * abs(body.direction.x), speed * abs(body.direction.x))

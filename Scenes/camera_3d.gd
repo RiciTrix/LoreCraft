@@ -9,19 +9,25 @@ var followPos
 
 @export_group("Settings")
 @export var sensitivity: float
-
+var _enableLerp: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	followPos = rootNode.get_child(0)
 
-func updateFollowPos(node : Node3D):
+func updateFollowPos(node : Node3D, enableLerp: bool):
 	followPos = node
+	_enableLerp = enableLerp
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-		mainNode.position = followPos.global_position
+		mainNode.position.x = followPos.global_position.x
+		mainNode.position.z = followPos.global_position.z
+		if _enableLerp:
+			mainNode.position.y = lerp(mainNode.position.y, followPos.global_position.y, 15 * delta)
+		else: 
+			mainNode.position.y = followPos.global_position.y 
 		if Input.is_action_just_pressed("esc"):
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
