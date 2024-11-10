@@ -29,7 +29,11 @@ func _process(delta):
 		else: 
 			mainNode.position.y = followPos.global_position.y 
 		if Input.is_action_just_pressed("esc"):
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			else:
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 
 func _input(event):
 	if event is InputEventMouseMotion:

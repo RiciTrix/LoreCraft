@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://cc76ty1lfy7vg"]
+[gd_scene load_steps=7 format=4 uid="uid://cc76ty1lfy7vg"]
 
 [ext_resource type="Texture2D" uid="uid://bn2501kkpx4m4" path="res://Assets/3D Placeholders/Modular Floor_UV Grid.png" id="1_j71fx"]
+[ext_resource type="Material" uid="uid://s34sbjwt6g4u" path="res://TextureTest/floor.tres" id="1_pa6x6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ih3c"]
 resource_name = "Grey"
@@ -46,6 +47,7 @@ size = Vector3(4, 1, 4)
 [node name="Modular Floor2" type="Node3D"]
 
 [node name="Modular Floor" type="MeshInstance3D" parent="."]
+material_overlay = ExtResource("1_pa6x6")
 mesh = SubResource("ArrayMesh_aptkd")
 skeleton = NodePath("")
 

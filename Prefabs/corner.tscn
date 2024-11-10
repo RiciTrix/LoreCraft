@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://bpnu5hu6ah5gs"]
+[gd_scene load_steps=7 format=4 uid="uid://bpnu5hu6ah5gs"]
 
+[ext_resource type="Material" uid="uid://cufpgq5vvlqld" path="res://TextureTest/Wall.tres" id="1_28twp"]
 [ext_resource type="Texture2D" uid="uid://dq8xi08cyb2ty" path="res://Assets/3D Placeholders/Modular Wall Corner_UV Grid.png" id="1_kmdhh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24fy5"]
@@ -45,6 +46,7 @@ data = PackedVector3Array(4, 0, 1, 4, 4, 4, 4, 4, 1, 4, 0, 1, 4, 0, 4, 4, 4, 4, 
 [node name="Modular Wall Corner2" type="Node3D"]
 
 [node name="Modular Wall Corner" type="MeshInstance3D" parent="."]
+material_overlay = ExtResource("1_28twp")
 mesh = SubResource("ArrayMesh_o0v3m")
 skeleton = NodePath("")
 

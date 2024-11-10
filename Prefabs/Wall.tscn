@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://bvb10ardpjctb"]
+[gd_scene load_steps=7 format=4 uid="uid://bvb10ardpjctb"]
 
+[ext_resource type="Material" uid="uid://cufpgq5vvlqld" path="res://TextureTest/Wall.tres" id="1_v8221"]
 [ext_resource type="Texture2D" uid="uid://daug7bcsdh3gv" path="res://Assets/3D Placeholders/Modular Wall_UV Grid.png" id="1_vjo0u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pkn2"]
@@ -45,6 +46,7 @@ size = Vector3(4, 4, 1)
 [node name="Modular Wall2" type="Node3D"]
 
 [node name="Modular Wall" type="MeshInstance3D" parent="."]
+material_overlay = ExtResource("1_v8221")
 mesh = SubResource("ArrayMesh_a1mjh")
 skeleton = NodePath("")
 
