@@ -1,0 +1,314 @@
+[gd_scene load_steps=3 format=3 uid="uid://ly212pb4dodt"]
+
+[ext_resource type="PackedScene" uid="uid://cc76ty1lfy7vg" path="res://Prefabs/floor.tscn" id="1_ircbb"]
+[ext_resource type="PackedScene" uid="uid://bvb10ardpjctb" path="res://Prefabs/Wall.tscn" id="2_3jpym"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Modular Floor2" parent="." instance=ExtResource("1_ircbb")]
+
+[node name="Modular Floor3" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Modular Floor4" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="Modular Floor5" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+
+[node name="Modular Floor6" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
+
+[node name="Modular Floor7" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -12)
+
+[node name="Modular Floor8" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+
+[node name="Modular Floor9" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
+
+[node name="Modular Floor10" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -12)
+
+[node name="Modular Floor87" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -12)
+
+[node name="Modular Floor88" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -16)
+
+[node name="Modular Floor89" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -20)
+
+[node name="Modular Floor91" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -23)
+
+[node name="Modular Floor92" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -23)
+
+[node name="Modular Floor93" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -21)
+
+[node name="Modular Floor11" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -12)
+
+[node name="Modular Floor12" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -16)
+
+[node name="Modular Floor13" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -20)
+
+[node name="Modular Floor14" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -20)
+
+[node name="Modular Floor15" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -24)
+
+[node name="Modular Floor16" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -28)
+
+[node name="Modular Floor17" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -28)
+
+[node name="Modular Floor18" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -32)
+
+[node name="Modular Floor19" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -36)
+
+[node name="Modular Floor20" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -36)
+
+[node name="Modular Floor21" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -36)
+
+[node name="Modular Floor22" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -40)
+
+[node name="Modular Floor23" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -44)
+
+[node name="Modular Floor24" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -44)
+
+[node name="Modular Floor25" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -44)
+
+[node name="Modular Floor26" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -48)
+
+[node name="Modular Floor27" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -48)
+
+[node name="Modular Floor28" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -48)
+
+[node name="Modular Floor29" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, -52)
+
+[node name="Modular Floor30" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -52)
+
+[node name="Modular Floor31" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -52)
+
+[node name="Modular Floor32" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -48)
+
+[node name="Modular Floor49" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -48)
+
+[node name="Modular Floor50" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -52)
+
+[node name="Modular Floor51" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -56)
+
+[node name="Modular Floor52" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -60)
+
+[node name="Modular Floor53" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -60)
+
+[node name="Modular Floor54" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -60)
+
+[node name="Modular Floor55" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -64)
+
+[node name="Modular Floor56" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -64)
+
+[node name="Modular Floor57" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -64)
+
+[node name="Modular Floor58" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -48)
+
+[node name="Modular Floor59" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -48)
+
+[node name="Modular Floor60" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -57)
+
+[node name="Modular Floor82" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -39)
+
+[node name="Modular Floor83" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
+
+[node name="Modular Floor84" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -35)
+
+[node name="Modular Floor85" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -31)
+
+[node name="Modular Floor86" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -27)
+
+[node name="Modular Floor61" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -61)
+
+[node name="Modular Floor62" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -61)
+
+[node name="Modular Floor63" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -61)
+
+[node name="Modular Floor64" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -65)
+
+[node name="Modular Floor65" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -65)
+
+[node name="Modular Floor66" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -65)
+
+[node name="Modular Floor67" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -65)
+
+[node name="Modular Floor68" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -69)
+
+[node name="Modular Floor69" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -73)
+
+[node name="Modular Floor70" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -73)
+
+[node name="Modular Floor71" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -73)
+
+[node name="Modular Floor72" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -73)
+
+[node name="Modular Floor73" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -77)
+
+[node name="Modular Floor74" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -77)
+
+[node name="Modular Floor75" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -77)
+
+[node name="Modular Floor76" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -73)
+
+[node name="Modular Floor77" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -69)
+
+[node name="Modular Floor78" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -65)
+
+[node name="Modular Floor79" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -69)
+
+[node name="Modular Floor80" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -69)
+
+[node name="Modular Floor81" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -69)
+
+[node name="Modular Floor33" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -48)
+
+[node name="Modular Floor34" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -48)
+
+[node name="Modular Floor35" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -52)
+
+[node name="Modular Floor36" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -56)
+
+[node name="Modular Floor37" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -60)
+
+[node name="Modular Floor38" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -60)
+
+[node name="Modular Floor39" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -64)
+
+[node name="Modular Floor40" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -64)
+
+[node name="Modular Floor41" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -64)
+
+[node name="Modular Floor42" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -60)
+
+[node name="Modular Floor43" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -68)
+
+[node name="Modular Floor44" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -68)
+
+[node name="Modular Floor45" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -68)
+
+[node name="Modular Floor46" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -72)
+
+[node name="Modular Floor47" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -72)
+
+[node name="Modular Floor48" parent="." instance=ExtResource("1_ircbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, -72)
+
+[node name="Modular Wall2" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, -4, -44)
+
+[node name="Modular Wall3" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, -4, -48)
+
+[node name="Modular Wall4" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, -4, -52)
+
+[node name="Modular Wall5" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -4, -53)
+
+[node name="Modular Wall6" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -4, -40)
+
+[node name="Modular Wall7" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -4, -40)
+
+[node name="Modular Wall8" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -4, -53)
+
+[node name="Modular Wall9" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4, -53)
+
+[node name="Modular Wall10" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -4, -40)
+
+[node name="Modular Wall11" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19, -4, -40)
+
+[node name="Modular Wall12" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19, -4, -44)
+
+[node name="Modular Wall13" parent="." instance=ExtResource("2_3jpym")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19, -4, -48)
