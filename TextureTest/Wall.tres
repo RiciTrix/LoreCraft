@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bd841rqsadsci" path="res://TextureTest/textures/red_brick_diff_1k.jpg" id="1_a8i57"]
 
 [resource]
+depth_draw_mode = 2
 albedo_color = Color(1, 1, 1, 0)
 albedo_texture = ExtResource("1_a8i57")
 uv1_scale = Vector3(0.3, 0.3, 0.3)

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://5p7j4rd0pa0t" path="res://TextureTest/textures/red_brick_disp_1k.png" id="1_wh6a5"]
 
 [resource]
+cull_mode = 2
 depth_draw_mode = 2
 albedo_color = Color(1, 1, 1, 0)
 albedo_texture = ExtResource("1_wh6a5")

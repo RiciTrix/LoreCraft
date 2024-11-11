@@ -22,7 +22,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_a1mjh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ymg2y"]
 resource_name = "Modular Wall_Cube_002"
 lightmap_size_hint = Vector2i(170, 130)
 _surfaces = [{
@@ -35,7 +35,7 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AACAQAAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAgEAAAAAAAACAQAAAgEAAAIA/AACAQAAAAAAAAIA/AAAAAAAAgEAAAIA/AACAQAAAgEAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAACAQAAAgEAAAAAAAAAAAAAAgEAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAIA/AACAQAAAAAAAAAAAAAAAAAAAAAAAAIA/AACAQAAAAAAAAAAAAACAQAAAgEAAAIA/AACAQAAAgEAAAAAAAACAQAAAAAAAAIA//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6//n/+/wAA/r//f/9/3X/u//9//3/df+7//3//f91/7v//f/9/3X/u/wAAAAD///6/AAAAAP///r8AAAAA///+vwAAAAD///6/AgD8fxP/AIADAPx/0f8AgAAA+n/+//3/AgD6f+f+AIAAgAAAAAD/v/1/AgAfAADA/38BACMA/7/6fwEAAQAAwP7//n//f/6//v/+f/9//r/+//5//3/+v/7//n//f/6/")
+"vertex_data": PackedByteArray("AACAQAAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAgEAAAAAAAACAQAAAgEAAAIA/AACAQAAAAAAAAIA/AAAAAAAAgEAAAIA/AACAQAAAgEAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAACAQAAAgEAAAAAAAAAAAAAAgEAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAgEAAAAAAAAAAAAAAgEAAAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAIA/AACAQAAAAAAAAAAAAAAAAAAAAAAAAIA/AACAQAAAAAAAAAAAAACAQAAAgEAAAIA/AACAQAAAgEAAAAAAAACAQAAAAAAAAIA//n/+/wAAAMD+f/7/AAAAwP5//v8AAADA/n/+/wAAAMD/f/9/3X/u//9//3/df+7//3//f91/7v//f/9/3X/u/////////wDA////////AMD///////8AwP///////wDAAQD8fxP/AIACAPx/0f8AgAAABYD+//3/AQD6f+f+AIAAgAAAAAD/v/1/AQAeAADA/38AACIA/7/6fwAAAAAAwP7//n//f/6//v/+f/9//r/+//5//3/+v/7//n//f/6/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ivl1i")
@@ -47,7 +47,7 @@ size = Vector3(4, 4, 1)
 
 [node name="Modular Wall" type="MeshInstance3D" parent="."]
 material_overlay = ExtResource("1_v8221")
-mesh = SubResource("ArrayMesh_a1mjh")
+mesh = SubResource("ArrayMesh_ymg2y")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
