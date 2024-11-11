@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://cisc7erbjpryt"]
+
+[ext_resource type="PackedScene" uid="uid://bpnu5hu6ah5gs" path="res://Prefabs/corner.tscn" id="1_hgtia"]
+[ext_resource type="PackedScene" uid="uid://b8750kr670cue" path="res://Prefabs/doorway.tscn" id="2_majyi"]
+[ext_resource type="PackedScene" uid="uid://bvb10ardpjctb" path="res://Prefabs/Wall.tscn" id="3_hxc5v"]
+[ext_resource type="PackedScene" uid="uid://cc76ty1lfy7vg" path="res://Prefabs/floor.tscn" id="4_3y3l1"]
+[ext_resource type="PackedScene" uid="uid://coov7kvbfc1ub" path="res://Prefabs/medium_stairs.tscn" id="5_psmg7"]
+[ext_resource type="PackedScene" uid="uid://b1ngos6ogwc0w" path="res://Prefabs/2x2Cube.tscn" id="6_s6hbe"]
+[ext_resource type="PackedScene" uid="uid://duxb53ueve2uu" path="res://Prefabs/1x1Cube.tscn" id="7_y36hq"]
+[ext_resource type="PackedScene" uid="uid://enl8jp6afhus" path="res://Prefabs/pillar.tscn" id="8_36xgg"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Modular Wall Corner2" parent="." instance=ExtResource("1_hgtia")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 0, -1)
+
+[node name="Modular Wall Corner3" parent="." instance=ExtResource("1_hgtia")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, -5, -2)
+
+[node name="Modular Wall Doorway2" parent="." instance=ExtResource("2_majyi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="Modular Wall2" parent="." instance=ExtResource("3_hxc5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="Modular Wall3" parent="." instance=ExtResource("3_hxc5v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00512886, -0.00833893, -4.99913)
+
+[node name="Modular Floor2" parent="." instance=ExtResource("4_3y3l1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -5)
+
+[node name="Modular Floor6" parent="." instance=ExtResource("4_3y3l1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9)
+
+[node name="Modular Floor8" parent="." instance=ExtResource("4_3y3l1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9)
+
+[node name="Modular Floor7" parent="." instance=ExtResource("4_3y3l1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -9)
+
+[node name="Modular Stairs Medium" parent="." instance=ExtResource("5_psmg7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, -2, -5)
+
+[node name="Modular Stairs Medium3" parent="." instance=ExtResource("5_psmg7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, -4, -5)
+
+[node name="Modular Stairs Medium2" parent="." instance=ExtResource("5_psmg7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 2, -6, -5)
+
+[node name="Modular Wall6" parent="." instance=ExtResource("3_hxc5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -5, -6)
+
+[node name="Modular Wall7" parent="." instance=ExtResource("3_hxc5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -5, -6)
+
+[node name="Modular Wall9" parent="." instance=ExtResource("3_hxc5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -4, -3)
+
+[node name="Test Cube 2x2" parent="." instance=ExtResource("6_s6hbe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, -5)
+
+[node name="Test Cube 1x1" parent="." instance=ExtResource("7_y36hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.99821, -1.0037, -3.00353)
+
+[node name="Modular Pillar2" parent="." instance=ExtResource("8_36xgg")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 3, -1, -3)
+
+[node name="Modular Pillar3" parent="." instance=ExtResource("8_36xgg")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 0, -1, -3)
+
+[node name="Test Cube 1x2" parent="." instance=ExtResource("7_y36hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, -4)
+
+[node name="Test Cube 1x3" parent="." instance=ExtResource("7_y36hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -1, -5)
+
+[node name="Test Cube 1x4" parent="." instance=ExtResource("7_y36hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -5)
+
+[node name="Test Cube 1x5" parent="." instance=ExtResource("7_y36hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, -4)
