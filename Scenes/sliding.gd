@@ -1,14 +1,17 @@
 extends State
 @export var slideTime: float = 2
 @onready var body = $"../.."
-@export var slideSpeed = 2
+@export var slideSpeed: float = 2
 @onready var timer = $Timer
+@export var toggle: bool = false
+@export var upwardRay: RayCast3D
 var slideDir
 
 func enter():
+	timer.wait_time = slideTime
 	timer.paused = false
 	timer.start()
-	slideDir = body.direction.z
+	slideDir = body.direction
 	body.swapCamState(20, true)
 	$"../../AudioStreamPlayer3D".stream = load("res://SFX/sliding-sound-103631.mp3")
 	$"../../AudioStreamPlayer3D".playing = true
@@ -37,8 +40,14 @@ func Physics_Update(delta):
 		Transitioned.emit(self, "Jumping")
 		timer.paused = true
 	
+	if !Input.is_action_pressed("crouch") && !toggle:
+		if upwardRay.is_colliding():
+			Transitioned.emit(self, "Crouching")
+		else:
+			Transitioned.emit(self, "Walking")
+	
 	print(timer.time_left)
-	body.velocity.z += slideDir * slideSpeed * delta
-	body.velocity.y = body.get_gravity().y
+	body.velocity += slideDir * slideSpeed * delta
+	body.velocity.y += body.get_gravity().y * delta
 	if timer.is_stopped():
 		Transitioned.emit(self, "crouching")

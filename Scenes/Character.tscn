@@ -44,7 +44,6 @@ disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
 mesh = SubResource("CapsuleMesh_1c1m2")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
@@ -57,31 +56,40 @@ initial_state = NodePath("Idle")
 
 [node name="Walking" type="Node" parent="StateMachine"]
 script = ExtResource("3_67bb3")
-speed = 4.0
-acceleration = 4.0
+speed = 3.0
+acceleration = 5.0
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("3_37y13")
-slow_speed = 12.0
+slow_speed = 20.0
 
 [node name="Jumping" type="Node" parent="StateMachine"]
 script = ExtResource("4_pbxs3")
-jump_velocity = 6.5
-air_speed = 8.0
-air_acceleration = 2.0
+jump_velocity = 4.7
+air_speed = 7.0
+air_acceleration = 1.0
 
 [node name="Sprinting" type="Node" parent="StateMachine"]
 script = ExtResource("6_83voy")
-speed = 8.0
+speed = 6.0
 acceleration = 6.0
 
-[node name="Sliding" type="Node" parent="StateMachine"]
+[node name="Sliding" type="Node" parent="StateMachine" node_paths=PackedStringArray("upwardRay")]
 script = ExtResource("7_dvfj7")
+slideTime = 1.3
+slideSpeed = 2.8
+upwardRay = NodePath("../../RayCast3D")
 
 [node name="Timer" type="Timer" parent="StateMachine/Sliding"]
 process_callback = 0
 one_shot = true
 
-[node name="Crouching" type="Node" parent="StateMachine"]
+[node name="Crouching" type="Node" parent="StateMachine" node_paths=PackedStringArray("upwardRay")]
 script = ExtResource("8_00jb8")
 speed = 2.0
+upwardRay = NodePath("../../RayCast3D")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01138, 0)
+target_position = Vector3(0, 1, 0)
+hit_from_inside = true

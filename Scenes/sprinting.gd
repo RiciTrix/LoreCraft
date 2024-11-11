@@ -2,6 +2,7 @@ extends State
 @export var speed: float = 10
 @export var acceleration: float = 2
 @onready var body = $"../.."
+@export var toggle: bool = true
 
 func enter():
 	$"../../AudioStreamPlayer3D".stream = load("res://SFX/concrete-footsteps-6752.mp3")
@@ -27,6 +28,9 @@ func Physics_Update(delta):
 	
 	if Input.is_action_just_pressed("crouch"):
 		Transitioned.emit(self, "Sliding")
+		
+	if !Input.is_action_pressed("sprint"):
+		Transitioned.emit(self, "Walking")
 	
 	if body.direction:
 		body.velocity.x = clampf(body.velocity.x, -speed * abs(body.direction.x), speed * abs(body.direction.x))

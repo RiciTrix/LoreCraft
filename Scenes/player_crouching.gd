@@ -4,6 +4,7 @@ extends State
 @export var acceleration: float = 2
 @onready var body = $"../.."
 @onready var r: bool = false
+@export var upwardRay: RayCast3D
 
 func enter():
 	body.swapCamState(0, true)
@@ -27,12 +28,13 @@ func Physics_Update(delta):
 		
 	if Input.is_action_just_pressed("crouch"):
 		if r:
-			Transitioned.emit(self, "Idle")
+			if !upwardRay.is_colliding():
+				Transitioned.emit(self, "Idle")
 
 	
 	if body.direction:
 		body.velocity.x = clampf(body.velocity.x, -speed * abs(body.direction.x), speed * abs(body.direction.x))
 		body.velocity.z = clampf(body.velocity.z, -speed * abs(body.direction.z), speed * abs(body.direction.z))
 	else:
-		body.velocity.x = move_toward(body.velocity.x, 0, 6 * delta)
-		body.velocity.z = move_toward(body.velocity.z, 0, 6 * delta)
+		body.velocity.x = move_toward(body.velocity.x, 0, 10 * delta)
+		body.velocity.z = move_toward(body.velocity.z, 0, 10 * delta)

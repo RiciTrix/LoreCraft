@@ -61,4 +61,4 @@ crouch={
 [physics]
 
 common/physics_ticks_per_second=128
-3d/default_gravity=12.0
+3d/default_gravity=10.0

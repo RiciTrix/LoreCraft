@@ -33,7 +33,13 @@ func Physics_Update(delta):
 		
 	else: 
 		if body.is_on_floor():
-			Transitioned.emit(self, "idle")
+			if Input.is_action_pressed("sprint"):
+				if Input.is_action_pressed("crouch"):
+					Transitioned.emit(self, "Sliding")
+				else:
+					Transitioned.emit(self, "Sprinting")
+			else:
+				Transitioned.emit(self, "idle")
 		else:
 			body.velocity += body.direction * air_acceleration * delta
 			#body.velocity.x = clampf(body.velocity.x, -air_speed * abs(body.direction.x), air_speed * abs(body.direction.x))
