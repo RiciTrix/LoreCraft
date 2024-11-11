@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=4 uid="uid://jg261ccfcnpa"]
+
+[ext_resource type="Material" uid="uid://s34sbjwt6g4u" path="res://TextureTest/floor.tres" id="1_vv52p"]
+[ext_resource type="Texture2D" uid="uid://b24uha1hifywe" path="res://Assets/3D Placeholders/Modular Floor 2x2_UV Grid.png" id="2_et341"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjdo4"]
+resource_name = "Grey"
+cull_mode = 2
+albedo_texture = ExtResource("2_et341")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ypud"]
+_surfaces = [{
+"aabb": AABB(0, -1, 0, 2, 1, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Grey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gv1ow"]
+resource_name = "Modular Floor 2x2_Cube_011"
+lightmap_size_hint = Vector2i(86, 90)
+_surfaces = [{
+"aabb": AABB(0, -1, 0, 2, 1, 2),
+"attribute_data": PackedByteArray("APF/PaD/Hz/6gn4/6ZN+PwD5/z2o/yc/EncEPy7YQj8A8X89qP8nP/qCfj8u2EI/APn/PaD/Hz8SdwQ/6ZN+PwDxfz2Y/xc/+oK+O9In/T4A+f89oP8fP9wR9z6lTzo/APF/PaD/Hz/6gr47pU86PwD5/z2Y/xc/3BH3PtIn/T4A8X89mP8XPxJ3BD+lTzo/wPi/PYj/Bz/6gn4/0if9PsD4vz2Y/xc/EncEP9In/T4A8X89iP8HP/qCfj+lTzo/APn/PYj/Bz/6gr47LthCPwDxfz0A//8+3BH3PumTfj8A+f89AP//PvqCvjvpk34/APF/PYj/Bz/cEfc+LthCPwAAAACY/xc/3BH3PmELtjsA8X89iP8HP/qCvjvBFuw+APF/PZj/Fz/6gr47YQu2OwAAAACI/wc/3BH3PsEW7D7A+L89mP8XPxJ3BD9hC7Y7oPwfPoj/Bz/6gn4/wRbsPqD8Hz6Y/xc/EncEP8EW7D7A+L89iP8HP/qCfj9hC7Y7"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_kjdo4"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAAgL8AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgL8AAAAAAAAAQAAAgL8AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAQAAAgL8AAABAAAAAQAAAgL8AAABAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAgL8AAABAAAAAAAAAgL8AAAAAAAAAQAAAgL8AAABAAAAAQAAAgL8AAAAAAAAAAAAAgL8AAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAD6f/7//f8AAPp//v/9/wAA+n/+//3/AAD6f/7//f8AAAAA///+vwAAAAD///6/AAAAAP///r8AAAAA///+v/r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7ypud")
+
+[node name="2x2 Floor" type="Node3D"]
+
+[node name="Modular Floor 2x22" type="Node3D" parent="."]
+
+[node name="Modular Floor 2x2" type="MeshInstance3D" parent="Modular Floor 2x22"]
+material_overlay = ExtResource("1_vv52p")
+mesh = SubResource("ArrayMesh_gv1ow")
+skeleton = NodePath("")
