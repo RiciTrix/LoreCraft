@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://cisc7erbjpryt"]
+[gd_scene load_steps=50 format=4 uid="uid://cisc7erbjpryt"]
 
 [ext_resource type="PackedScene" uid="uid://bpnu5hu6ah5gs" path="res://Prefabs/Enviroment/corner.tscn" id="1_hgtia"]
 [ext_resource type="Material" uid="uid://s34sbjwt6g4u" path="res://TextureTest/floor.tres" id="2_kq2vj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ckjevfn1xkvhy" path="res://Assets/3D Placeholders/Modular Wall Doorway_UV Grid.png" id="5_hjgvp"]
 [ext_resource type="PackedScene" uid="uid://coov7kvbfc1ub" path="res://Prefabs/Enviroment/medium_stairs.tscn" id="5_psmg7"]
 [ext_resource type="Texture2D" uid="uid://daug7bcsdh3gv" path="res://Assets/3D Placeholders/Modular Wall_UV Grid.png" id="8_tw2sp"]
+[ext_resource type="PackedScene" uid="uid://b3aiyuskwlnhl" path="res://Prefabs/Traps/saw_blade_trap.tscn" id="10_iaa1a"]
 [ext_resource type="Texture2D" uid="uid://degte4lmh2pf0" path="res://Assets/3D Placeholders/Test Cube 2x2_UV Grid.png" id="10_kdq5x"]
 [ext_resource type="Texture2D" uid="uid://ln4x4y3c4ikd" path="res://Assets/3D Placeholders/Test Cube 1x1_UV Grid.png" id="11_cicn8"]
 [ext_resource type="PackedScene" uid="uid://jg261ccfcnpa" path="res://Prefabs/Enviroment/2x2_floor.tscn" id="12_r2f3x"]
@@ -469,6 +470,21 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0.5)
 shape = SubResource("BoxShape3D_m155h")
 
+[node name="SawBladeTrap" parent="Environment/Modular Wall9" instance=ExtResource("10_iaa1a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 4, -6)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+
+[node name="SawBladeTrap3" parent="Environment/Modular Wall9" instance=ExtResource("10_iaa1a")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -2, 6, -7)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+
+[node name="SawBladeTrap2" parent="Environment/Modular Wall9" instance=ExtResource("10_iaa1a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, 4, -16)
+bladeSpeed = 3
+distance = Vector2(3, 0)
+
 [node name="Modular Wall18" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -6, -8)
 
@@ -883,6 +899,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -25)
 
 [node name="Test Cube 1x33" parent="Environment" instance=ExtResource("20_lount")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1, -19)
+
+[node name="Test Cube 1x41" parent="Environment" instance=ExtResource("20_lount")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -1, -20)
+
+[node name="Test Cube 1x42" parent="Environment" instance=ExtResource("20_lount")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -1, -19)
 
 [node name="Test Cube 1x34" parent="Environment" instance=ExtResource("20_lount")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -1, -19)
