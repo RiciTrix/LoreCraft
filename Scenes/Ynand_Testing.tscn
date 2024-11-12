@@ -1,9 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://04r3db87w3h5"]
+[gd_scene load_steps=5 format=3 uid="uid://04r3db87w3h5"]
 
-[ext_resource type="PackedScene" uid="uid://duxb53ueve2uu" path="res://Prefabs/Enviroment/1x1Cube.tscn" id="1_kwina"]
-
+[ext_resource type="PackedScene" uid="uid://enl8jp6afhus" path="res://Prefabs/Enviroment/pillar.tscn" id="1_u28n8"]
+[ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="2_lwexs"]
+[ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="3_txjps"]
+[ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="4_l54cn"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Test Cube 1x1" parent="." instance=ExtResource("1_kwina")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Modular Pillar2" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 0, 0)
+
+[node name="Modular Pillar3" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 0, -4)
+
+[node name="Modular Pillar4" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 3, 0, -8)
+
+[node name="Modular Pillar6" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 0, -8)
+
+[node name="Modular Pillar7" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 3, 0, -12)
+
+[node name="Modular Pillar8" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 0, -12)
+
+[node name="Modular Pillar9" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 3, 0, -16)
+
+[node name="Modular Pillar10" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 0, -19)
+
+[node name="Modular Pillar11" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 3, 0, -23)
+
+[node name="Modular Pillar12" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 0, -29)
+
+[node name="Modular Pillar13" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 3, 0, -33)
+
+[node name="Modular Pillar5" parent="Environment" instance=ExtResource("1_u28n8")]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 3, 0, -4)
+
+[node name="CameraMain" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29142, 0)
+
+[node name="CameraPivot" type="Node3D" parent="CameraMain"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraMain/CameraPivot" node_paths=PackedStringArray("rootNode", "mainNode", "pivotPoint")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.185575)
+environment = ExtResource("2_lwexs")
+current = true
+fov = 90.0
+script = ExtResource("3_txjps")
+rootNode = NodePath("../../../Player")
+mainNode = NodePath("../..")
+pivotPoint = NodePath("..")
+sensitivity = 0.1
+
+[node name="AudioListener3D" type="AudioListener3D" parent="CameraMain/CameraPivot/Camera3D"]
+current = true
+
+[node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("4_l54cn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -1)
+cam = NodePath("../CameraMain/CameraPivot/Camera3D")
