@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://04r3db87w3h5"]
 
-[ext_resource type="PackedScene" uid="uid://duxb53ueve2uu" path="res://Prefabs/1x1Cube.tscn" id="1_kwina"]
+[ext_resource type="PackedScene" uid="uid://duxb53ueve2uu" path="res://Prefabs/Enviroment/1x1Cube.tscn" id="1_kwina"]
+
 
 [node name="Node3D" type="Node3D"]
 

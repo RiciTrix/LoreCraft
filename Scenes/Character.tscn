@@ -20,7 +20,7 @@ radius = 0.4
 radius = 0.3
 height = 1.8
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("crouchFollowCamPos", "standingFollowCamPos", "mainCollider", "crouchCollider")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("crouchFollowCamPos", "standingFollowCamPos", "mainCollider", "crouchCollider") groups=["Player"]]
 script = ExtResource("1_f0lyk")
 crouchFollowCamPos = NodePath("CameraFollowCrouch")
 standingFollowCamPos = NodePath("CameraFollow")

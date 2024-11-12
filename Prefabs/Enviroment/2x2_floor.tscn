@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://jg261ccfcnpa"]
+[gd_scene load_steps=7 format=4 uid="uid://jg261ccfcnpa"]
 
 [ext_resource type="Material" uid="uid://s34sbjwt6g4u" path="res://TextureTest/floor.tres" id="1_vv52p"]
 [ext_resource type="Texture2D" uid="uid://b24uha1hifywe" path="res://Assets/3D Placeholders/Modular Floor 2x2_UV Grid.png" id="2_et341"]
@@ -40,6 +40,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7ypud")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_t33si"]
+data = PackedVector3Array(0, -1, 2, 0, 0, 0, 0, 0, 2, 0, -1, 2, 0, -1, 0, 0, 0, 0, 0, -1, 0, 2, 0, 0, 0, 0, 0, 0, -1, 0, 2, -1, 0, 2, 0, 0, 2, -1, 0, 2, 0, 2, 2, 0, 0, 2, -1, 0, 2, -1, 2, 2, 0, 2, 2, -1, 2, 0, 0, 2, 2, 0, 2, 2, -1, 2, 0, -1, 2, 0, 0, 2, 0, -1, 0, 2, -1, 2, 2, -1, 0, 0, -1, 0, 0, -1, 2, 2, -1, 2, 2, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 2)
+
 [node name="2x2 Floor" type="Node3D"]
 
 [node name="Modular Floor 2x22" type="Node3D" parent="."]
@@ -48,3 +51,8 @@ shadow_mesh = SubResource("ArrayMesh_7ypud")
 material_overlay = ExtResource("1_vv52p")
 mesh = SubResource("ArrayMesh_gv1ow")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Modular Floor 2x22/Modular Floor 2x2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Modular Floor 2x22/Modular Floor 2x2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_t33si")

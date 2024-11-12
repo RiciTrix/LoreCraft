@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://duxb53ueve2uu"]
+[gd_scene load_steps=7 format=4 uid="uid://duxb53ueve2uu"]
 
 [ext_resource type="Texture2D" uid="uid://ln4x4y3c4ikd" path="res://Assets/3D Placeholders/Test Cube 1x1_UV Grid.png" id="1_0l3cw"]
+[ext_resource type="Material" uid="uid://s34sbjwt6g4u" path="res://TextureTest/floor.tres" id="1_2nyqx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efcbw"]
 resource_name = "Grey"
@@ -44,6 +45,7 @@ shadow_mesh = SubResource("ArrayMesh_aj2fo")
 [node name="Test Cube 1x1" type="Node3D"]
 
 [node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="."]
+material_overlay = ExtResource("1_2nyqx")
 mesh = SubResource("ArrayMesh_ufwff")
 skeleton = NodePath("")
 

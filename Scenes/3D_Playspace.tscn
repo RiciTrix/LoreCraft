@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://bawqfayd3nqfo"]
+[gd_scene load_steps=13 format=3 uid="uid://bawqfayd3nqfo"]
 
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="2_51ewd"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="2_yd8mt"]
-[ext_resource type="PackedScene" uid="uid://cc76ty1lfy7vg" path="res://Prefabs/floor.tscn" id="3_4dq5a"]
+[ext_resource type="PackedScene" uid="uid://cc76ty1lfy7vg" path="res://Prefabs/Enviroment/floor.tscn" id="3_4dq5a"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="3_hkgyb"]
 [ext_resource type="LightmapGIData" uid="uid://codpw1js2bmjh" path="res://lightmaps/3D_Playspace.lmbake" id="4_hcsaa"]
-[ext_resource type="PackedScene" uid="uid://ohh16bp03r3o" path="res://Prefabs/medium_slope.tscn" id="4_pk1te"]
-[ext_resource type="PackedScene" uid="uid://b1ngos6ogwc0w" path="res://Prefabs/2x2Cube.tscn" id="7_u3k0q"]
-[ext_resource type="PackedScene" uid="uid://duxb53ueve2uu" path="res://Prefabs/1x1Cube.tscn" id="8_2arvc"]
-[ext_resource type="PackedScene" uid="uid://bvb10ardpjctb" path="res://Prefabs/Wall.tscn" id="10_slp5j"]
-[ext_resource type="PackedScene" uid="uid://bpnu5hu6ah5gs" path="res://Prefabs/corner.tscn" id="11_2me14"]
-[ext_resource type="PackedScene" uid="uid://enl8jp6afhus" path="res://Prefabs/pillar.tscn" id="11_6u04h"]
+[ext_resource type="PackedScene" uid="uid://ohh16bp03r3o" path="res://Prefabs/Enviroment/medium_slope.tscn" id="4_pk1te"]
+[ext_resource type="PackedScene" uid="uid://b1ngos6ogwc0w" path="res://Prefabs/Enviroment/2x2Cube.tscn" id="7_u3k0q"]
+[ext_resource type="PackedScene" uid="uid://duxb53ueve2uu" path="res://Prefabs/Enviroment/1x1Cube.tscn" id="8_2arvc"]
+[ext_resource type="PackedScene" uid="uid://bvb10ardpjctb" path="res://Prefabs/Enviroment/Wall.tscn" id="10_slp5j"]
+[ext_resource type="PackedScene" uid="uid://b3aiyuskwlnhl" path="res://Prefabs/Traps/saw_blade_trap.tscn" id="10_syqxu"]
+[ext_resource type="PackedScene" uid="uid://bpnu5hu6ah5gs" path="res://Prefabs/Enviroment/corner.tscn" id="11_2me14"]
+[ext_resource type="PackedScene" uid="uid://enl8jp6afhus" path="res://Prefabs/Enviroment/pillar.tscn" id="11_6u04h"]
 
 [node name="Main" type="Node3D"]
 
@@ -102,6 +103,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 20)
 
 [node name="Modular Floor27" parent="Enviroment" instance=ExtResource("3_4dq5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 20)
+
+[node name="Modular Floor75" parent="Enviroment" instance=ExtResource("3_4dq5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 24)
+
+[node name="Modular Floor76" parent="Enviroment" instance=ExtResource("3_4dq5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 24)
+
+[node name="Modular Floor77" parent="Enviroment" instance=ExtResource("3_4dq5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 24)
+
+[node name="Modular Floor78" parent="Enviroment" instance=ExtResource("3_4dq5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 24)
 
 [node name="Modular Floor11" parent="Enviroment" instance=ExtResource("3_4dq5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
@@ -463,6 +476,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 4)
 [node name="Test Cube 1x11" parent="Enviroment" instance=ExtResource("8_2arvc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 4)
 
+[node name="SawBladeTrap" parent="Enviroment" instance=ExtResource("10_syqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -3)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+delay = 0.3
+
+[node name="SawBladeTrap2" parent="Enviroment" instance=ExtResource("10_syqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -2)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+delay = 1.0
+
+[node name="SawBladeTrap3" parent="Enviroment" instance=ExtResource("10_syqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -4)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+delay = 0.5
+
+[node name="SawBladeTrap4" parent="Enviroment" instance=ExtResource("10_syqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -5)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+delay = 0.1
+
+[node name="SawBladeTrap5" parent="Enviroment" instance=ExtResource("10_syqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+delay = 0.2
+
+[node name="SawBladeTrap6" parent="Enviroment" instance=ExtResource("10_syqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -7)
+bladeSpeed = 2
+distance = Vector2(3, 0)
+
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
@@ -471,6 +519,7 @@ light_color = Color(1, 0.794975, 0.523573, 1)
 light_bake_mode = 1
 shadow_enabled = true
 shadow_blur = 0.2
+directional_shadow_max_distance = 50.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, 0)
@@ -480,7 +529,6 @@ light_bake_mode = 1
 shadow_enabled = true
 omni_range = 9.0
 omni_attenuation = 0.3
-omni_shadow_mode = 0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -8)
@@ -490,7 +538,6 @@ light_bake_mode = 1
 shadow_enabled = true
 omni_range = 9.0
 omni_attenuation = 0.3
-omni_shadow_mode = 0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 6, -10)
@@ -500,7 +547,6 @@ light_bake_mode = 1
 shadow_enabled = true
 omni_range = 9.0
 omni_attenuation = 0.3
-omni_shadow_mode = 0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights"]
 transform = Transform3D(0.224144, 0.5, -0.836516, 0.965926, -1.82562e-08, 0.258819, 0.12941, -0.866025, -0.482963, 5, 2, -11)
