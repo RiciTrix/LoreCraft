@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://cisc7erbjpryt"]
+[gd_scene load_steps=52 format=4 uid="uid://cisc7erbjpryt"]
 
 [ext_resource type="PackedScene" uid="uid://bpnu5hu6ah5gs" path="res://Prefabs/corner.tscn" id="1_hgtia"]
 [ext_resource type="Material" uid="uid://s34sbjwt6g4u" path="res://TextureTest/floor.tres" id="2_kq2vj"]
@@ -219,45 +219,6 @@ shadow_mesh = SubResource("ArrayMesh_aj2fo")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iedmg"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjdo4"]
-resource_name = "Grey"
-cull_mode = 2
-albedo_texture = ExtResource("12_03ad4")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_7ypud"]
-_surfaces = [{
-"aabb": AABB(0, -1, 0, 2, 1, 2),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
-"name": "Grey",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_gv1ow"]
-resource_name = "Modular Floor 2x2_Cube_011"
-lightmap_size_hint = Vector2i(86, 90)
-_surfaces = [{
-"aabb": AABB(0, -1, 0, 2, 1, 2),
-"attribute_data": PackedByteArray("APF/PaD/Hz/6gn4/6ZN+PwD5/z2o/yc/EncEPy7YQj8A8X89qP8nP/qCfj8u2EI/APn/PaD/Hz8SdwQ/6ZN+PwDxfz2Y/xc/+oK+O9In/T4A+f89oP8fP9wR9z6lTzo/APF/PaD/Hz/6gr47pU86PwD5/z2Y/xc/3BH3PtIn/T4A8X89mP8XPxJ3BD+lTzo/wPi/PYj/Bz/6gn4/0if9PsD4vz2Y/xc/EncEP9In/T4A8X89iP8HP/qCfj+lTzo/APn/PYj/Bz/6gr47LthCPwDxfz0A//8+3BH3PumTfj8A+f89AP//PvqCvjvpk34/APF/PYj/Bz/cEfc+LthCPwAAAACY/xc/3BH3PmELtjsA8X89iP8HP/qCvjvBFuw+APF/PZj/Fz/6gr47YQu2OwAAAACI/wc/3BH3PsEW7D7A+L89mP8XPxJ3BD9hC7Y7oPwfPoj/Bz/6gn4/wRbsPqD8Hz6Y/xc/EncEP8EW7D7A+L89iP8HP/qCfj9hC7Y7"),
-"format": 34359742519,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_kjdo4"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAAAAgL8AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgL8AAAAAAAAAQAAAgL8AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAQAAAgL8AAABAAAAAQAAAgL8AAABAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAgL8AAABAAAAAAAAAgL8AAAAAAAAAQAAAgL8AAABAAAAAQAAAgL8AAAAAAAAAAAAAgL8AAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAD6f/7//f8AAPp//v/9/wAA+n/+//3/AAD6f/7//f8AAAAA///+vwAAAAD///6/AAAAAP///r8AAAAA///+v/r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_7ypud")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_adcil"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_er0wu"]
 resource_name = "Grey"
 cull_mode = 2
@@ -297,43 +258,6 @@ shadow_mesh = SubResource("ArrayMesh_7ptla")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_434b1"]
 data = PackedVector3Array(1, 4, 0, 0, 4, 1, 0, 4, 0, 1, 4, 0, 1, 4, 1, 0, 4, 1, 1, 0, 1, 0, 4, 1, 1, 4, 1, 1, 0, 1, 0, 0, 1, 0, 4, 1, 1, 0, 0, 1, 4, 1, 1, 4, 0, 1, 0, 0, 1, 0, 1, 1, 4, 1, 0, 0, 1, 0, 4, 0, 0, 4, 1, 0, 0, 1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 1, 4, 0, 0, 4, 0, 0, 0, 0, 1, 0, 0, 1, 4, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lm05p"]
-resource_name = "Grey"
-cull_mode = 2
-albedo_texture = ExtResource("11_cicn8")
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_gccj4"]
-_surfaces = [{
-"aabb": AABB(0, 0, 0, 1, 1, 1),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
-"name": "Grey",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_3nmau"]
-resource_name = "Test Cube 1x1_Cube_009"
-lightmap_size_hint = Vector2i(70, 46)
-_surfaces = [{
-"aabb": AABB(0, 0, 0, 1, 1, 1),
-"attribute_data": PackedByteArray("AOH/PLD+rz7jK34/pzd9PwDxfz2g/p8+Fl8xPwtZCD8A8X89sP6vPuMrfj8LWQg/AOH/PKD+nz4WXzE/pzd9PwDh/zyg/p8+oQ7qO0MWMjwA8X89kP6PPtRBnT7qTe8+APF/PaD+nz6hDuo76k3vPgDh/zyQ/o8+1EGdPkMWMjwA4f88kP6PPmZmJj9DFjI8APF/PQD9fz4zM7M+6k3vPgDxfz2Q/o8+MzOzPkMWMjwA4f88AP1/PmZmJj/qTe8+AOH/PAD9fz4zM7M+C1kIPwDxfz3g/F8+ZmYmP6c3fT8A8X89AP1/PjMzsz6nN30/AOH/POD8Xz5mZiY/C1kIPwAAAACQ/o8+1EGdPgtZCD8A4f88AP1/PqEO6junN30/AOH/PJD+jz6hDuo7C1kIPwAAAAAA/X8+1EGdPqc3fT8A8X89kP6PPhZfMT9DFjI8wPi/PQD9fz7jK34/6k3vPsD4vz2Q/o8+Fl8xP+pN7z4A8X89AP1/PuMrfj9DFjI8"),
-"format": 34359742519,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_lm05p"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAIA/AAAAAAAAgD8AAAAAAACAPwAAgD8AAIA/AgAEgAGA/P8CAASAAYD8/wIABIABgPz/AgAEgAGA/P/+//7//3/+//7//v//f/7//v/+//9//v/+//7//3/+//r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//3//fwCA/v//f/9/AID+//9//38AgP7//3//fwCA/v8AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_gccj4")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1tywc"]
 
@@ -377,6 +301,43 @@ shadow_mesh = SubResource("ArrayMesh_opp6o")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ittdr"]
 margin = 0.09
 size = Vector3(4, 1, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjdo4"]
+resource_name = "Grey"
+cull_mode = 2
+albedo_texture = ExtResource("12_03ad4")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ypud"]
+_surfaces = [{
+"aabb": AABB(0, -1, 0, 2, 1, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Grey",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gv1ow"]
+resource_name = "Modular Floor 2x2_Cube_011"
+lightmap_size_hint = Vector2i(86, 90)
+_surfaces = [{
+"aabb": AABB(0, -1, 0, 2, 1, 2),
+"attribute_data": PackedByteArray("APF/PaD/Hz/6gn4/6ZN+PwD5/z2o/yc/EncEPy7YQj8A8X89qP8nP/qCfj8u2EI/APn/PaD/Hz8SdwQ/6ZN+PwDxfz2Y/xc/+oK+O9In/T4A+f89oP8fP9wR9z6lTzo/APF/PaD/Hz/6gr47pU86PwD5/z2Y/xc/3BH3PtIn/T4A8X89mP8XPxJ3BD+lTzo/wPi/PYj/Bz/6gn4/0if9PsD4vz2Y/xc/EncEP9In/T4A8X89iP8HP/qCfj+lTzo/APn/PYj/Bz/6gr47LthCPwDxfz0A//8+3BH3PumTfj8A+f89AP//PvqCvjvpk34/APF/PYj/Bz/cEfc+LthCPwAAAACY/xc/3BH3PmELtjsA8X89iP8HP/qCvjvBFuw+APF/PZj/Fz/6gr47YQu2OwAAAACI/wc/3BH3PsEW7D7A+L89mP8XPxJ3BD9hC7Y7oPwfPoj/Bz/6gn4/wRbsPqD8Hz6Y/xc/EncEP8EW7D7A+L89iP8HP/qCfj9hC7Y7"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_kjdo4"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAAgL8AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgL8AAAAAAAAAQAAAgL8AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAQAAAgL8AAABAAAAAQAAAgL8AAABAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAgL8AAABAAAAAAAAAgL8AAAAAAAAAQAAAgL8AAABAAAAAQAAAgL8AAAAAAAAAAAAAgL8AAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAD6f/7//f8AAPp//v/9/wAA+n/+//3/AAD6f/7//f8AAAAA///+vwAAAAD///6/AAAAAP///r8AAAAA///+v/r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7ypud")
 
 [node name="Node3D" type="Node3D"]
 
@@ -602,18 +563,6 @@ shape = SubResource("BoxShape3D_iedmg")
 [node name="2x2 Floor" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11)
 
-[node name="Modular Floor 2x22" type="Node3D" parent="Environment/2x2 Floor"]
-
-[node name="Modular Floor 2x2" type="MeshInstance3D" parent="Environment/2x2 Floor/Modular Floor 2x22"]
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_gv1ow")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Environment/2x2 Floor/Modular Floor 2x22"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/2x2 Floor/Modular Floor 2x22/StaticBody3D"]
-shape = SubResource("BoxShape3D_adcil")
-
 [node name="2x2 Floor2" parent="Environment" instance=ExtResource("12_r2f3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
 
@@ -694,12 +643,6 @@ shape = SubResource("ConcavePolygonShape3D_434b1")
 [node name="Test Cube 1x3" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x3"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x3/StaticBody3D"]
@@ -708,12 +651,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x8" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x8"]
 
@@ -724,12 +661,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x9" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x9"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x9"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x9/StaticBody3D"]
@@ -738,12 +669,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x10" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x10"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x10"]
 
@@ -754,12 +679,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x11" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x11"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x11/StaticBody3D"]
@@ -768,12 +687,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x4" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x4"]
 
@@ -784,12 +697,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x5" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x5"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x5/StaticBody3D"]
@@ -798,12 +705,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x6" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x6"]
 
@@ -814,12 +715,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x7" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x7"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x7/StaticBody3D"]
@@ -828,12 +723,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x12" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -5, -3)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x12"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x12"]
 
@@ -844,12 +733,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x13" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -5, -4)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x13"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x13"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x13/StaticBody3D"]
@@ -858,12 +741,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x14" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, -4)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x14"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x14"]
 
@@ -874,12 +751,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x15" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, -3)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x15"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x15"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x15/StaticBody3D"]
@@ -888,12 +759,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x16" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, -5)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x16"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x16"]
 
@@ -904,12 +769,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x17" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, -6)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x17"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x17"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x17/StaticBody3D"]
@@ -918,12 +777,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x18" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -5, -7)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x18"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x18"]
 
@@ -934,12 +787,6 @@ shape = SubResource("BoxShape3D_1tywc")
 [node name="Test Cube 1x19" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -5, -7)
 
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x19"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x19"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Test Cube 1x19/StaticBody3D"]
@@ -948,12 +795,6 @@ shape = SubResource("BoxShape3D_1tywc")
 
 [node name="Test Cube 1x20" type="Node3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -5, -7)
-
-[node name="Modualr Test Cube 1x1" type="MeshInstance3D" parent="Environment/Test Cube 1x20"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -4)
-material_overlay = ExtResource("2_kq2vj")
-mesh = SubResource("ArrayMesh_3nmau")
-skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Test Cube 1x20"]
 
@@ -977,6 +818,14 @@ shape = SubResource("BoxShape3D_ittdr")
 
 [node name="2x2 Floor5" parent="Environment" instance=ExtResource("12_r2f3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -15)
+
+[node name="Modular Floor 2x22" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11)
+
+[node name="Modular Floor 2x2" type="MeshInstance3D" parent="Environment/Modular Floor 2x22"]
+material_overlay = ExtResource("2_kq2vj")
+mesh = SubResource("ArrayMesh_gv1ow")
+skeleton = NodePath("")
 
 [node name="Lighting" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.120591, -0.0325003, 0.0582037)
