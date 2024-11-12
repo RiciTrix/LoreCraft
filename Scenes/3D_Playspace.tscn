@@ -509,6 +509,7 @@ delay = 0.2
 [node name="SawBladeTrap6" parent="Enviroment" instance=ExtResource("10_syqxu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -7)
 bladeSpeed = 2
+spinSpeed = 15
 distance = Vector2(3, 0)
 
 [node name="Lights" type="Node3D" parent="."]
