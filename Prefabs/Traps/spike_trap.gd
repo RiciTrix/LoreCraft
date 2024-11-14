@@ -18,16 +18,13 @@ func activate():
 
 var tween2
 func deactivate():
-	print("done")
 	activeTimer.start()
 	tween.kill()
 	await activeTimer.timeout
 	tween = get_tree().create_tween()
 	super.deactivate()
-	print("done 2")
 	tween.tween_property(spikes, "position", Vector3(0, originalPos.y, 0), speed)
 	if trapType == Types.AlwaysOn:
-		print(0)
 		tween.connect("finished", reset)
 
 func reset():

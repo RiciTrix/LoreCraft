@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bawqfayd3nqfo"]
+[gd_scene load_steps=15 format=3 uid="uid://bawqfayd3nqfo"]
 
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="2_51ewd"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="2_yd8mt"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b3aiyuskwlnhl" path="res://Prefabs/Traps/saw_blade_trap.tscn" id="10_syqxu"]
 [ext_resource type="PackedScene" uid="uid://bpnu5hu6ah5gs" path="res://Prefabs/Enviroment/corner.tscn" id="11_2me14"]
 [ext_resource type="PackedScene" uid="uid://enl8jp6afhus" path="res://Prefabs/Enviroment/pillar.tscn" id="11_6u04h"]
+[ext_resource type="PackedScene" uid="uid://rs2qmui5lb7n" path="res://Prefabs/Traps/flame_thrower.tscn" id="12_y4qcm"]
 [ext_resource type="PackedScene" uid="uid://dyl3weht6gb5p" path="res://Prefabs/Traps/spike_trap.tscn" id="13_qt3d0"]
 
 [node name="Main" type="Node3D"]
@@ -513,10 +514,30 @@ bladeSpeed = 2
 spinSpeed = 15
 distance = Vector2(3, 0)
 
+[node name="SpikeTrap" parent="Enviroment" instance=ExtResource("13_qt3d0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
+
+[node name="SpikeTrap2" parent="Enviroment" instance=ExtResource("13_qt3d0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
+length = 1.0
+activeTime = 5.0
+speed = 0.1
+
+[node name="flame_thrower" parent="Enviroment" instance=ExtResource("12_y4qcm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+mode = 0
+swapPolarity = 0
+
+[node name="flame_thrower2" parent="Enviroment" instance=ExtResource("12_y4qcm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+mode = 0
+swapPolarity = 0
+
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 9, 0)
+visible = false
 light_color = Color(1, 0.794975, 0.523573, 1)
 light_bake_mode = 1
 shadow_enabled = true
@@ -536,6 +557,15 @@ omni_attenuation = 0.3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -8)
 light_energy = 1.2
 light_specular = 1.5
+light_bake_mode = 1
+shadow_enabled = true
+omni_range = 9.0
+omni_attenuation = 0.3
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 5, -4)
+light_energy = 2.0
+light_specular = 4.0
 light_bake_mode = 1
 shadow_enabled = true
 omni_range = 9.0
@@ -573,12 +603,3 @@ light_data = ExtResource("4_hcsaa")
 [node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("2_yd8mt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, -10)
 cam = NodePath("../CameraMain/CameraPivot/Camera3D")
-
-[node name="SpikeTrap" parent="." instance=ExtResource("13_qt3d0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
-
-[node name="SpikeTrap2" parent="." instance=ExtResource("13_qt3d0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
-length = 1.0
-activeTime = 5.0
-speed = 0.1
