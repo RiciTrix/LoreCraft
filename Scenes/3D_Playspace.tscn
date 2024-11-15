@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bawqfayd3nqfo"]
+[gd_scene load_steps=16 format=3 uid="uid://bawqfayd3nqfo"]
 
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="2_51ewd"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="2_yd8mt"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://enl8jp6afhus" path="res://Prefabs/Enviroment/pillar.tscn" id="11_6u04h"]
 [ext_resource type="PackedScene" uid="uid://rs2qmui5lb7n" path="res://Prefabs/Traps/flame_thrower.tscn" id="12_y4qcm"]
 [ext_resource type="PackedScene" uid="uid://dyl3weht6gb5p" path="res://Prefabs/Traps/spike_trap.tscn" id="13_qt3d0"]
+[ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="15_uohyw"]
 
 [node name="Main" type="Node3D"]
 
@@ -507,31 +508,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
 bladeSpeed = 2
 distance = Vector2(3, 0)
 delay = 0.2
+trapType = 0
 
 [node name="SawBladeTrap6" parent="Enviroment" instance=ExtResource("10_syqxu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -7)
 bladeSpeed = 2
 spinSpeed = 15
 distance = Vector2(3, 0)
+trapType = 0
 
 [node name="SpikeTrap" parent="Enviroment" instance=ExtResource("13_qt3d0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
-
-[node name="SpikeTrap2" parent="Enviroment" instance=ExtResource("13_qt3d0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
-length = 1.0
-activeTime = 5.0
-speed = 0.1
-
-[node name="flame_thrower" parent="Enviroment" instance=ExtResource("12_y4qcm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
-mode = 0
-swapPolarity = 0
+trapType = 0
 
 [node name="flame_thrower2" parent="Enviroment" instance=ExtResource("12_y4qcm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+spinSpeed = 2.0
+spinInterval = 90.0
+timeBetweenIntervals = 3.0
 mode = 0
 swapPolarity = 0
+positiveX = false
+negativeZ = true
+trapType = 0
+
+[node name="flame_thrower3" parent="Enviroment" instance=ExtResource("12_y4qcm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
+spinMode = 1
+spinSpeed = -2.0
+spinInterval = 60.0
+timeBetweenIntervals = 1.0
+mode = 0
+swapPolarity = 0
+trapType = 0
 
 [node name="Lights" type="Node3D" parent="."]
 
@@ -603,3 +612,7 @@ light_data = ExtResource("4_hcsaa")
 [node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("2_yd8mt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5, -10)
 cam = NodePath("../CameraMain/CameraPivot/Camera3D")
+
+[node name="Pressure Plate" parent="." node_paths=PackedStringArray("whatToActivate") instance=ExtResource("15_uohyw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+whatToActivate = [NodePath("../Enviroment/flame_thrower2"), NodePath("../Enviroment/SpikeTrap"), NodePath("../Enviroment/SawBladeTrap6"), NodePath("../Enviroment/flame_thrower3"), NodePath("../Enviroment/SawBladeTrap5")]

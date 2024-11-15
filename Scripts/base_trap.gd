@@ -16,13 +16,14 @@ enum process_modes{
 @export var processType: process_modes
 var activated: bool
 
+func is_active() -> bool:
+	return activated
+
 func activate():
 	activated = true
-	pass
 	
 func deactivate():
 	activated = false
-	pass
 
 func _ready():
 	if trapType == Types.AlwaysOn:

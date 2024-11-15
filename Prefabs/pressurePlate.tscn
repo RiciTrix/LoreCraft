@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=4 uid="uid://xu5rp8pa0hox"]
+
+[ext_resource type="Script" path="res://Scripts/pressure_plate.gd" id="1_qf6mk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsjdk"]
+resource_name = "Presure Plate"
+cull_mode = 2
+albedo_color = Color(0.68749, 0.541503, 0.145985, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_i63kw"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Presure Plate",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AACZGf//ZeYAAAAAAAAAAAAAmRn//5kZAAD//wAA//8AAGXm//9l5gAA//8AAAAAAABl5v//mRkAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0cioq"]
+resource_name = "Presure Plate_Cube_001"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.1, 1),
+"attribute_data": PackedByteArray("/1////8f/z//XwAA/5////+fAAD/3/8//1//v/8f/3//X/+//5//v/+f/7//3/9//1//P/9f/z//X/8//5//P/+f/z//n/8//1//f/9f/3//X/9//5//f/+f/3//n/9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAAJAAMAAAAGAAkACAAVAAoACAATABUAFAARABcAFAAOABEADQAEAA8ADQACAAQABwAMABIABwABAAwAFgAFAAsAFgAQAAUA"),
+"material": SubResource("StandardMaterial3D_vsjdk"),
+"name": "Presure Plate",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//0s0AAAAA////vwAAAAD//5axmRn//2Xmc9GZGf//ZebAs5kZ//9l5v//AAAAAAAASsAAAAAAAAD/vwAAAAAAACTlmRn//5kZlcCZGf//mRm945kZ//+ZGf////8AAP///7///wAA///41f//AAD//2/ZZeb//2XmQNxl5v//Zeb//2Xm//9l5jHb//8AAAAA/7///wAAAACW8f//AAAAADP2Zeb//5kZmvBl5v//mRn//2Xm//+ZGRr7dvMqtwAA/38N6EAus/kYtlXnyyv/f/+/xch9vgAA/3+fw7CqJ8zpveXJQKb/f/+/AAD/f1vg+RMYReIFcd/ZEP9//7/mQhQIAAD/f0uiQcLwKwkfc6S6wP9//7+uKEwi")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_i63kw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxvj2"]
+size = Vector3(0.775, 0.035, 0.775)
+
+[node name="Pressure Plate" type="Node3D"]
+script = ExtResource("1_qf6mk")
+
+[node name="Presure Plate" type="Node3D" parent="."]
+
+[node name="Presure plate" type="MeshInstance3D" parent="Presure Plate"]
+mesh = SubResource("ArrayMesh_0cioq")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_sxvj2")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
