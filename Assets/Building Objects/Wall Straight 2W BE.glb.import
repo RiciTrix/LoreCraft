@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bm6wukruqwr5x"
-path="res://.godot/imported/Pillar Puzzle Pillars.glb-37625aabea046f746f1f1fc27602c371.scn"
+uid="uid://cxjbduwhxmux2"
+path="res://.godot/imported/Wall Straight 2W BE.glb-330adba9708669c1990e5ed65ca7b6f6.scn"
 
 [deps]
 
-source_file="res://Assets/Traps/Pillar Puzzle/Pillar Puzzle Pillars.glb"
-dest_files=["res://.godot/imported/Pillar Puzzle Pillars.glb-37625aabea046f746f1f1fc27602c371.scn"]
+source_file="res://Assets/Building Objects/Wall Straight 2W BE.glb"
+dest_files=["res://.godot/imported/Wall Straight 2W BE.glb-330adba9708669c1990e5ed65ca7b6f6.scn"]
 
 [params]
 
