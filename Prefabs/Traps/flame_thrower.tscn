@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=4 uid="uid://rs2qmui5lb7n"]
 
-[ext_resource type="Script" path="res://Prefabs/Traps/flame_thrower.gd" id="1_p5pyp"]
+[ext_resource type="Script" path="res://Scripts/flame_thrower.gd" id="1_p5pyp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2yu6"]
 resource_name = "Stone"
@@ -189,12 +189,11 @@ material = SubResource("StandardMaterial3D_nl7sq")
 script = ExtResource("1_p5pyp")
 spinMode = 2
 spinSpeed = 1.0
-spinInterval = 45.0
-timeBetweenIntervals = 0.5
+spinInterval = 180.0
+timeBetweenIntervals = 1.0
 mode = 1
-swapPolarity = 3
-positiveX = true
-negativeX = true
+swapPolarity = 2
+positiveZ = true
 trapType = 1
 
 [node name="Flame Thrower Pillar2" type="Node3D" parent="."]
@@ -260,11 +259,6 @@ visibility_aabb = AABB(-8, -8, -8, 16, 16, 16)
 process_material = SubResource("ParticleProcessMaterial_gxhmo")
 draw_pass_1 = SubResource("BoxMesh_b50dp")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.5, 0.433013, -0.75, 0, 0.866025, 0.5, 0.866025, -0.25, 0.433013, -3, 2.5, 2)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

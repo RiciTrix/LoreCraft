@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=4 uid="uid://dyl3weht6gb5p"]
 
-[ext_resource type="Script" path="res://Prefabs/Traps/spike_trap.gd" id="1_ntrpm"]
+[ext_resource type="Script" path="res://Scripts/spike_trap.gd" id="1_ntrpm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hreq"]
 resource_name = "Stone"
