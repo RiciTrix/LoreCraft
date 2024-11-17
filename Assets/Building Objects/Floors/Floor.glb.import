@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4vbmlri4hw8w"
-path="res://.godot/imported/Wall Doorway.glb-ac347f902226ef37d9528e383ae9ddb1.scn"
+uid="uid://c7j346n0147ku"
+path="res://.godot/imported/Floor.glb-fb9e8799c815f593b75a5a1d15d5dcba.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Wall Doorway.glb"
-dest_files=["res://.godot/imported/Wall Doorway.glb-ac347f902226ef37d9528e383ae9ddb1.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor.glb"
+dest_files=["res://.godot/imported/Floor.glb-fb9e8799c815f593b75a5a1d15d5dcba.scn"]
 
 [params]
 
@@ -32,8 +32,19 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
+"meshes": {
+"Floor_Cube_005": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
 "nodes": {
-"PATH:Wall Doorway": {
+"PATH:Floor Empty": {
 "generate/physics": true
 }
 }

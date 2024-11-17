@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://bbp1nbvvus6iq"]
+
+[ext_resource type="PackedScene" uid="uid://ds2tjlhmgqjjd" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_vqswp"]
+[ext_resource type="PackedScene" uid="uid://c4vbmlri4hw8w" path="res://Assets/Building Objects/Walls/Wall Doorway.glb" id="2_rlhsg"]
+[ext_resource type="PackedScene" uid="uid://cff5o5sc51dg6" path="res://Assets/Building Objects/Floors/Floor Inner Corner 2x2.glb" id="3_xtmdv"]
+[ext_resource type="PackedScene" uid="uid://cxfurf6tp4yxo" path="res://Assets/Building Objects/Floors/Floor 2x2.glb" id="4_egorw"]
+[ext_resource type="PackedScene" uid="uid://dv5mm2t16h2yd" path="res://Assets/Building Objects/Floors/Floor Straight 1 Side.glb" id="5_mjgs0"]
+[ext_resource type="PackedScene" uid="uid://bhbq0m5mai3nf" path="res://Assets/Building Objects/Floors/Floor Corner.glb" id="6_1k8ny"]
+[ext_resource type="PackedScene" uid="uid://c7j346n0147ku" path="res://Assets/Building Objects/Floors/Floor.glb" id="7_ooxaw"]
+[ext_resource type="PackedScene" uid="uid://d4moa7bvn5b4l" path="res://Assets/Building Objects/Walls/Wall Straight.glb" id="8_uilu5"]
+[ext_resource type="PackedScene" uid="uid://bi0rekuaiwah4" path="res://Assets/Building Objects/Walls/Wall Corner.glb" id="9_5qho5"]
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00286555, -0.00587535)
+
+[node name="Enviroment" type="Node3D" parent="."]
+
+[node name="Floor Hallway Straigt" parent="Enviroment" instance=ExtResource("1_vqswp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Wall Doorway2" parent="Enviroment" instance=ExtResource("2_rlhsg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.00286555, 0.00587535)
+
+[node name="Floor Inner Corner 2x22" parent="Enviroment" instance=ExtResource("3_xtmdv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.00286555, -1.99412)
+
+[node name="Floor Inner Corner 2x23" parent="Enviroment" instance=ExtResource("3_xtmdv")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.00286555, 0.00587535)
+
+[node name="Floor 2x2" parent="Enviroment" instance=ExtResource("4_egorw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.00286555, -3.99412)
+
+[node name="Floor 2x3" parent="Enviroment" instance=ExtResource("4_egorw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00286555, -3.99412)
+
+[node name="Floor Straight 1 Side" parent="Enviroment" instance=ExtResource("5_mjgs0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, -0.00286555, 0.00587535)
+
+[node name="Floor Straight 1 Side2" parent="Enviroment" instance=ExtResource("5_mjgs0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, -0.00286555, 0.00587535)
+
+[node name="Floor Corner2" parent="Enviroment" instance=ExtResource("6_1k8ny")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, -0.00286555, -3.99412)
+
+[node name="Floor Corner3" parent="Enviroment" instance=ExtResource("6_1k8ny")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6, -0.00286555, 0.00587535)
+
+[node name="Floor Straight 1 Side3" parent="Enviroment" instance=ExtResource("5_mjgs0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.00286555, -7.99412)
+
+[node name="Floor Straight 1 Side4" parent="Enviroment" instance=ExtResource("5_mjgs0")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 10, -0.00286555, -3.99412)
+
+[node name="Floor" parent="Enviroment" instance=ExtResource("7_ooxaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.00286555, -7.99412)
+
+[node name="Floor2" parent="Enviroment" instance=ExtResource("7_ooxaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.00286555, -7.99412)
+
+[node name="Floor3" parent="Enviroment" instance=ExtResource("7_ooxaw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.00286555, -7.99412)
+
+[node name="Wall Straight2" parent="." instance=ExtResource("8_uilu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.00286555, 0.00587535)
+
+[node name="Wall Straight3" parent="." instance=ExtResource("8_uilu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -0.00286555, 0.00587535)
+
+[node name="Wall Corner2" parent="." instance=ExtResource("9_5qho5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, -0.00286555, 1.00588)
+
+[node name="Wall Corner3" parent="." instance=ExtResource("9_5qho5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11, -0.00286555, 1.00587)

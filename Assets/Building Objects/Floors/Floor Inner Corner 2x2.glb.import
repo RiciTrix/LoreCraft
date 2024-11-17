@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bhbq0m5mai3nf"
-path="res://.godot/imported/Floor Corner.glb-abdf45b2a97541a9f0e2b5fbcbccd16a.scn"
+uid="uid://cff5o5sc51dg6"
+path="res://.godot/imported/Floor Inner Corner 2x2.glb-962ead4a5f61871a11bd65391be5c3c1.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor Corner.glb"
-dest_files=["res://.godot/imported/Floor Corner.glb-abdf45b2a97541a9f0e2b5fbcbccd16a.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor Inner Corner 2x2.glb"
+dest_files=["res://.godot/imported/Floor Inner Corner 2x2.glb-962ead4a5f61871a11bd65391be5c3c1.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Floor Corner_Cube_007": {
+"Floor Inner Corner 2x2_Cube_010": {
 "generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -44,9 +44,8 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Floor Corner": {
-"generate/physics": true,
-"physics/shape_type": 2
+"PATH:Floor Inner Corner 2x2": {
+"generate/physics": true
 }
 }
 }

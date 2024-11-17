@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bytcsbmx7ckyi"
-path="res://.godot/imported/Floor 1 Side 2x2.glb-6e76f46c29496b57b83dadac072143b6.scn"
+uid="uid://82cbky46hdie"
+path="res://.godot/imported/Wall Corner BE 1.glb-0da3e60d7a5497b56e81e262db0080af.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor 1 Side 2x2.glb"
-dest_files=["res://.godot/imported/Floor 1 Side 2x2.glb-6e76f46c29496b57b83dadac072143b6.scn"]
+source_file="res://Assets/Building Objects/Walls/Wall Corner BE 1.glb"
+dest_files=["res://.godot/imported/Wall Corner BE 1.glb-0da3e60d7a5497b56e81e262db0080af.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Floor 1 Side 2x2_Cube_008": {
+"Wall Corner BE 1_Cube_013": {
 "generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -44,7 +44,7 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Floor Straight 2x2": {
+"PATH:Wall Corner BE 1": {
 "generate/physics": true
 }
 }

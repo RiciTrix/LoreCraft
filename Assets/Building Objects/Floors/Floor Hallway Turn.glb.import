@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfd0brsybqi75"
-path="res://.godot/imported/Floor Hallway T.glb-ccc98cb9d445a06e8bfc8a95e708e827.scn"
+uid="uid://c1pqpjjy6dljp"
+path="res://.godot/imported/Floor Hallway Turn.glb-2dfbc104f32cb2624f1e19923e067c26.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor Hallway T.glb"
-dest_files=["res://.godot/imported/Floor Hallway T.glb-ccc98cb9d445a06e8bfc8a95e708e827.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor Hallway Turn.glb"
+dest_files=["res://.godot/imported/Floor Hallway Turn.glb-2dfbc104f32cb2624f1e19923e067c26.scn"]
 
 [params]
 
@@ -31,6 +31,23 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Floor Hallway Turn_Cube_002": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Floor Hallway Corner": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

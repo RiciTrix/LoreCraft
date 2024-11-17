@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://wj22ibseau0x"
-path="res://.godot/imported/Floor Corner 2x2.glb-5cb6ca61536fbc29cce763025ff7f539.scn"
+uid="uid://cxfurf6tp4yxo"
+path="res://.godot/imported/Floor 2x2.glb-0e10419823de957641e43259c669b664.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor Corner 2x2.glb"
-dest_files=["res://.godot/imported/Floor Corner 2x2.glb-5cb6ca61536fbc29cce763025ff7f539.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor 2x2.glb"
+dest_files=["res://.godot/imported/Floor 2x2.glb-0e10419823de957641e43259c669b664.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Floor Corner 2x2_Cube_009": {
+"Floor 2x2_Cube_011": {
 "generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -44,8 +44,9 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Floor Corner 2x2": {
-"generate/physics": true
+"PATH:Floor Empty 2x2": {
+"generate/physics": true,
+"physics/shape_type": 1
 }
 }
 }

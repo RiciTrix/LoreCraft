@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bi0rekuaiwah4"
-path="res://.godot/imported/Wall Corner.glb-2586ab51ac7f78210f3dac5b3f0742ad.scn"
+uid="uid://bhbq0m5mai3nf"
+path="res://.godot/imported/Floor Corner.glb-730ae79d9b6659bed0581b5a42fc9852.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Wall Corner.glb"
-dest_files=["res://.godot/imported/Wall Corner.glb-2586ab51ac7f78210f3dac5b3f0742ad.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor Corner.glb"
+dest_files=["res://.godot/imported/Floor Corner.glb-730ae79d9b6659bed0581b5a42fc9852.scn"]
 
 [params]
 
@@ -32,9 +32,21 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
+"meshes": {
+"Floor Corner_Cube_007": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
 "nodes": {
-"PATH:Wall Corner": {
-"generate/physics": true
+"PATH:Floor Corner": {
+"generate/physics": true,
+"physics/shape_type": 2
 }
 }
 }

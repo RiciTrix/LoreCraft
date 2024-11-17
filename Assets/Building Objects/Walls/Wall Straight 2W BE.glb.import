@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1pqpjjy6dljp"
-path="res://.godot/imported/Floor Hallway Turn.glb-508418fe151857e9d0e5ef98b4beaa80.scn"
+uid="uid://cxjbduwhxmux2"
+path="res://.godot/imported/Wall Straight 2W BE.glb-cc81ebb3566cea94b0de98b722c14af6.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor Hallway Turn.glb"
-dest_files=["res://.godot/imported/Floor Hallway Turn.glb-508418fe151857e9d0e5ef98b4beaa80.scn"]
+source_file="res://Assets/Building Objects/Walls/Wall Straight 2W BE.glb"
+dest_files=["res://.godot/imported/Wall Straight 2W BE.glb-cc81ebb3566cea94b0de98b722c14af6.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cxfurf6tp4yxo"
-path="res://.godot/imported/Floor 2x2.glb-54b3092a19ef7f3f8d0f6eff9f28fe1b.scn"
+uid="uid://dv5mm2t16h2yd"
+path="res://.godot/imported/Floor Straight 1 Side.glb-2a38f64de0932bd535b6ed7b24cee493.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor 2x2.glb"
-dest_files=["res://.godot/imported/Floor 2x2.glb-54b3092a19ef7f3f8d0f6eff9f28fe1b.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor Straight 1 Side.glb"
+dest_files=["res://.godot/imported/Floor Straight 1 Side.glb-2a38f64de0932bd535b6ed7b24cee493.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Floor 2x2_Cube_011": {
+"Floor Straight 1 Side_Cube_006": {
 "generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -44,9 +44,8 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Floor Empty 2x2": {
-"generate/physics": true,
-"physics/shape_type": 1
+"PATH:Floor Staight 1 side": {
+"generate/physics": true
 }
 }
 }

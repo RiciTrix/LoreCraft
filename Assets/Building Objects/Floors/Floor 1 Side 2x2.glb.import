@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cff5o5sc51dg6"
-path="res://.godot/imported/Floor Inner Corner 2x2.glb-2f4f76d1d5d9920e55b15d820c63b80a.scn"
+uid="uid://bytcsbmx7ckyi"
+path="res://.godot/imported/Floor 1 Side 2x2.glb-b67a72fa3557daa6306074fa73edffc5.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor Inner Corner 2x2.glb"
-dest_files=["res://.godot/imported/Floor Inner Corner 2x2.glb-2f4f76d1d5d9920e55b15d820c63b80a.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor 1 Side 2x2.glb"
+dest_files=["res://.godot/imported/Floor 1 Side 2x2.glb-b67a72fa3557daa6306074fa73edffc5.scn"]
 
 [params]
 
@@ -31,6 +31,23 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Floor 1 Side 2x2_Cube_008": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Floor Straight 2x2": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

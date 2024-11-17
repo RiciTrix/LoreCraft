@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dv5mm2t16h2yd"
-path="res://.godot/imported/Floor Straight 1 Side.glb-e18545567a591bc9421cadf4b242d511.scn"
+uid="uid://d4moa7bvn5b4l"
+path="res://.godot/imported/Wall Straight.glb-736a470650ffa39830dc97b237504631.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor Straight 1 Side.glb"
-dest_files=["res://.godot/imported/Floor Straight 1 Side.glb-e18545567a591bc9421cadf4b242d511.scn"]
+source_file="res://Assets/Building Objects/Walls/Wall Straight.glb"
+dest_files=["res://.godot/imported/Wall Straight.glb-736a470650ffa39830dc97b237504631.scn"]
 
 [params]
 

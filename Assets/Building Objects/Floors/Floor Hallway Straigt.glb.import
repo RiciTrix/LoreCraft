@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c7j346n0147ku"
-path="res://.godot/imported/Floor.glb-873766ae31186f9a9dbddfd3e3632d2a.scn"
+uid="uid://ds2tjlhmgqjjd"
+path="res://.godot/imported/Floor Hallway Straigt.glb-0994ab75b314f1f0843cd7c12952b9bb.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor.glb"
-dest_files=["res://.godot/imported/Floor.glb-873766ae31186f9a9dbddfd3e3632d2a.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb"
+dest_files=["res://.godot/imported/Floor Hallway Straigt.glb-0994ab75b314f1f0843cd7c12952b9bb.scn"]
 
 [params]
 
@@ -31,6 +31,23 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Floor Hallway Straigt_Cube_003": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Floor Straight": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

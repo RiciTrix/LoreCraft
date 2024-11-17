@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cxjbduwhxmux2"
-path="res://.godot/imported/Wall Straight 2W BE.glb-330adba9708669c1990e5ed65ca7b6f6.scn"
+uid="uid://bi0rekuaiwah4"
+path="res://.godot/imported/Wall Corner.glb-fad59e770b162dfeb7eba3cfebb8b43c.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Wall Straight 2W BE.glb"
-dest_files=["res://.godot/imported/Wall Straight 2W BE.glb-330adba9708669c1990e5ed65ca7b6f6.scn"]
+source_file="res://Assets/Building Objects/Walls/Wall Corner.glb"
+dest_files=["res://.godot/imported/Wall Corner.glb-fad59e770b162dfeb7eba3cfebb8b43c.scn"]
 
 [params]
 
@@ -31,6 +31,12 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Wall Corner": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

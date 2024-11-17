@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d4moa7bvn5b4l"
-path="res://.godot/imported/Wall Straight.glb-7881c1a558594e66d9b7a3f2f15e029c.scn"
+uid="uid://ckt6d43jx86ut"
+path="res://.godot/imported/Floor No Exits.glb-1b6ed1e6860b4d6c3d9840962f5f4c2f.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Wall Straight.glb"
-dest_files=["res://.godot/imported/Wall Straight.glb-7881c1a558594e66d9b7a3f2f15e029c.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor No Exits.glb"
+dest_files=["res://.godot/imported/Floor No Exits.glb-1b6ed1e6860b4d6c3d9840962f5f4c2f.scn"]
 
 [params]
 
@@ -31,6 +31,23 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Floor No Exits_Cube": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Floor No Exits": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

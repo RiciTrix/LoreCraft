@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://nfdopaarsjlp"
-path="res://.godot/imported/Wall Straight 2W.glb-c431d88938d65ae2a3df8e4a47135a65.scn"
+uid="uid://c4vbmlri4hw8w"
+path="res://.godot/imported/Wall Doorway.glb-2eb6eb150949a1784729f8ace3a83275.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Wall Straight 2W.glb"
-dest_files=["res://.godot/imported/Wall Straight 2W.glb-c431d88938d65ae2a3df8e4a47135a65.scn"]
+source_file="res://Assets/Building Objects/Walls/Wall Doorway.glb"
+dest_files=["res://.godot/imported/Wall Doorway.glb-2eb6eb150949a1784729f8ace3a83275.scn"]
 
 [params]
 
@@ -31,6 +31,12 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Wall Doorway": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

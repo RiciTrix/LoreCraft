@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ckt6d43jx86ut"
-path="res://.godot/imported/Floor No Exits.glb-cd07cfdf67be6dea9eef12512331f82b.scn"
+uid="uid://bfd0brsybqi75"
+path="res://.godot/imported/Floor Hallway T.glb-d33e08b1204e46fc0c299c97b165fdd6.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floor No Exits.glb"
-dest_files=["res://.godot/imported/Floor No Exits.glb-cd07cfdf67be6dea9eef12512331f82b.scn"]
+source_file="res://Assets/Building Objects/Floors/Floor Hallway T.glb"
+dest_files=["res://.godot/imported/Floor Hallway T.glb-d33e08b1204e46fc0c299c97b165fdd6.scn"]
 
 [params]
 
@@ -31,6 +31,23 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Floor Hallway T_Cube_004": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Floor T": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

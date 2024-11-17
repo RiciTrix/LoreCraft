@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://82cbky46hdie"
-path="res://.godot/imported/Wall Corner BE 1.glb-bc40be88db1b41fbc54761a8fec1c3d9.scn"
+uid="uid://b68il2gutudqo"
+path="res://.godot/imported/Wall Corner BE 2.glb-2fce6630d546623ce75308e8a274b1d5.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Wall Corner BE 1.glb"
-dest_files=["res://.godot/imported/Wall Corner BE 1.glb-bc40be88db1b41fbc54761a8fec1c3d9.scn"]
+source_file="res://Assets/Building Objects/Walls/Wall Corner BE 2.glb"
+dest_files=["res://.godot/imported/Wall Corner BE 2.glb-2fce6630d546623ce75308e8a274b1d5.scn"]
 
 [params]
 
@@ -31,6 +31,23 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Wall Corner BE 2_Cube_018": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Wall Corner BE 2": {
+"generate/physics": true
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
