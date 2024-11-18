@@ -630,6 +630,6 @@ whatToActivate = [NodePath("../Enviroment/flame_thrower2"), NodePath("../Envirom
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 14)
 
 [node name="Node3D2" parent="." instance=ExtResource("17_aqgqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00202, 0.00230801, 1.00177)
 spin_speed = 1.0
 spin_direction = Vector3i(0, 1, 0)
