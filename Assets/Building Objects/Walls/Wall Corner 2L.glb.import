@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c11kafuqu6vvo"
-path="res://.godot/imported/Floor.glb-fb9e8799c815f593b75a5a1d15d5dcba.scn"
+uid="uid://cwbfn0ox875d8"
+path="res://.godot/imported/Wall Corner 2L.glb-23075cfc1a0c77fbf27b998dca040df2.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floors/Floor.glb"
-dest_files=["res://.godot/imported/Floor.glb-fb9e8799c815f593b75a5a1d15d5dcba.scn"]
+source_file="res://Assets/Building Objects/Walls/Wall Corner 2L.glb"
+dest_files=["res://.godot/imported/Wall Corner 2L.glb-23075cfc1a0c77fbf27b998dca040df2.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Floor_Cube_005": {
+"Wall Corner 2L_Cube_024": {
 "generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -44,11 +44,8 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Floor Empty": {
-"generate/physics": true,
-"physics/shape_type": 3,
-"primitive/position": Vector3(2, -0.5, 2),
-"primitive/size": Vector3(4, 1, 4)
+"PATH:Wall Corner 2L": {
+"generate/physics": true
 }
 }
 }

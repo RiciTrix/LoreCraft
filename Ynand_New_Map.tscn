@@ -10,7 +10,8 @@
 [ext_resource type="LightmapGIData" uid="uid://iveoa7c1uis7" path="res://lightmaps/Ynand_Level.lmbake" id="4_kswd1"]
 [ext_resource type="PackedScene" uid="uid://wj22ibseau0x" path="res://Assets/Building Objects/Floors/Floor Corner 2x2.glb" id="5_m0o1p"]
 [ext_resource type="PackedScene" uid="uid://cff5o5sc51dg6" path="res://Assets/Building Objects/Floors/Floor Inner Corner 2x2.glb" id="6_2kry3"]
-[ext_resource type="PackedScene" uid="uid://ccj7ykfbk3vrh" path="res://Assets/Building Objects/Pillar.glb" id="7_ascw7"]
+[ext_resource type="PackedScene" uid="uid://ccj7ykfbk3vrh" path="res://Assets/Building Objects/Pillars/Pillar.glb" id="7_ascw7"]
+
 
 [node name="Node3D" type="Node3D"]
 

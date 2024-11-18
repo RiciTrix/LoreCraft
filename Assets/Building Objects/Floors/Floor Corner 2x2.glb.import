@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://wj22ibseau0x"
+uid="uid://c4vii36lgl7fa"
 path="res://.godot/imported/Floor Corner 2x2.glb-4df92537aee4409b6a10ea3df141368f.scn"
 
 [deps]
@@ -32,23 +32,12 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
-"meshes": {
-"Floor Corner 2x2_Cube_009": {
-"generate/lightmap_uv": 1,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 60.0,
-"lods/normal_split_angle": 25.0,
-"save_to_file/enabled": false,
-"save_to_file/path": ""
-}
-},
 "nodes": {
 "PATH:Floor Corner 2x2": {
 "generate/physics": true,
 "physics/shape_type": 3,
-"primitive/position": Vector3(0.25, -0.5, -0.25),
-"primitive/size": Vector3(0.5, 1, 0.5)
+"primitive/position": Vector3(1, -0.5, 1),
+"primitive/size": Vector3(2, 1, 2)
 }
 }
 }

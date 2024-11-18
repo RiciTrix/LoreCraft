@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfd0brsybqi75"
+uid="uid://buu2mv05jqk50"
 path="res://.godot/imported/Floor Hallway T.glb-d33e08b1204e46fc0c299c97b165fdd6.scn"
 
 [deps]
@@ -45,7 +45,10 @@ _subresources={
 },
 "nodes": {
 "PATH:Floor T": {
-"generate/physics": true
+"generate/physics": true,
+"physics/shape_type": 3,
+"primitive/position": Vector3(2, -0.5, 2),
+"primitive/size": Vector3(4, 1, 4)
 }
 }
 }

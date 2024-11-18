@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1pqpjjy6dljp"
+uid="uid://c8v35qgpcbvid"
 path="res://.godot/imported/Floor Hallway Turn.glb-2dfbc104f32cb2624f1e19923e067c26.scn"
 
 [deps]
@@ -45,7 +45,10 @@ _subresources={
 },
 "nodes": {
 "PATH:Floor Hallway Corner": {
-"generate/physics": true
+"generate/physics": true,
+"physics/shape_type": 3,
+"primitive/position": Vector3(2, -0.5, 2),
+"primitive/size": Vector3(4, 1, 4)
 }
 }
 }

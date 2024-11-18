@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c11kafuqu6vvo"
-path="res://.godot/imported/Floor.glb-fb9e8799c815f593b75a5a1d15d5dcba.scn"
+uid="uid://d0jjxvipbu1o4"
+path="res://.godot/imported/Pillar.glb-fbadd58a6a2def11145c721af38536e9.scn"
 
 [deps]
 
-source_file="res://Assets/Building Objects/Floors/Floor.glb"
-dest_files=["res://.godot/imported/Floor.glb-fb9e8799c815f593b75a5a1d15d5dcba.scn"]
+source_file="res://Assets/Building Objects/Pillars/Pillar.glb"
+dest_files=["res://.godot/imported/Pillar.glb-fbadd58a6a2def11145c721af38536e9.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Floor_Cube_005": {
+"Pillar_Cube_021": {
 "generate/lightmap_uv": 1,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -44,11 +44,10 @@ _subresources={
 }
 },
 "nodes": {
-"PATH:Floor Empty": {
+"PATH:Pillar": {
 "generate/physics": true,
-"physics/shape_type": 3,
-"primitive/position": Vector3(2, -0.5, 2),
-"primitive/size": Vector3(4, 1, 4)
+"physics/shape_type": 1,
+"primitive/size": Vector3(2, 4, 2)
 }
 }
 }

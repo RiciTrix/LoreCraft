@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cff5o5sc51dg6"
+uid="uid://cn0ijfa8t33m4"
 path="res://.godot/imported/Floor Inner Corner 2x2.glb-962ead4a5f61871a11bd65391be5c3c1.scn"
 
 [deps]
@@ -47,8 +47,8 @@ _subresources={
 "PATH:Floor Inner Corner 2x2": {
 "generate/physics": true,
 "physics/shape_type": 3,
-"primitive/position": Vector3(0.25, -0.5, 0.25),
-"primitive/size": Vector3(0.5, 1, 0.5)
+"primitive/position": Vector3(1, -0.5, 1),
+"primitive/size": Vector3(2, 1, 2)
 }
 }
 }

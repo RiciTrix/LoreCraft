@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bytcsbmx7ckyi"
+uid="uid://ba3rheaxmp0up"
 path="res://.godot/imported/Floor 1 Side 2x2.glb-b67a72fa3557daa6306074fa73edffc5.scn"
 
 [deps]
@@ -47,8 +47,8 @@ _subresources={
 "PATH:Floor Straight 2x2": {
 "generate/physics": true,
 "physics/shape_type": 3,
-"primitive/position": Vector3(0.25, -0.5, 0.25),
-"primitive/size": Vector3(0.5, 1, 0.5)
+"primitive/position": Vector3(1, -0.5, 1),
+"primitive/size": Vector3(2, 1, 2)
 }
 }
 }
