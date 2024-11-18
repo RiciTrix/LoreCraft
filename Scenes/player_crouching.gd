@@ -24,7 +24,8 @@ func Physics_Update(delta):
 	body.velocity.z += body.direction.z * speed * acceleration * delta
 	
 	if Input.is_action_pressed("ui_accept"):
-		Transitioned.emit(self, "Jumping")
+		if !upwardRay.is_colliding():
+			Transitioned.emit(self, "Jumping")
 		
 	if Input.is_action_just_pressed("crouch"):
 		if r:

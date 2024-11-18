@@ -39,6 +39,14 @@ sensitivity = 0.1
 [node name="AudioListener3D" type="AudioListener3D" parent="CameraMain/CameraPivot/Camera3D"]
 current = true
 
+[node name="RayCast3D" type="RayCast3D" parent="CameraMain/CameraPivot/Camera3D"]
+exclude_parent = false
+target_position = Vector3(0, 0, -1)
+collision_mask = 16384
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false
+
 [node name="Enviroment" type="Node3D" parent="."]
 
 [node name="Modular Floor2" parent="Enviroment" instance=ExtResource("3_4dq5a")]

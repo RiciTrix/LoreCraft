@@ -7,6 +7,8 @@ class_name PlayerCamera
 @export var pivotPoint: Node3D
 var followPos
 
+@onready var ray = $RayCast3D
+
 @export_group("Settings")
 @export var sensitivity: float
 var _enableLerp: bool = false
@@ -24,6 +26,12 @@ func updateFollowPos(node : Node3D, enableLerp: bool):
 func _process(delta):
 		mainNode.position.x = followPos.global_position.x
 		mainNode.position.z = followPos.global_position.z
+		
+		if ray.is_colliding() and ray.get_collider().is_in_group('interactable'):
+			
+			if Input.is_action_just_pressed("interact"):
+				ray.get_collider().get_parent().interact()
+		
 		if _enableLerp:
 			mainNode.position.y = lerp(mainNode.position.y, followPos.global_position.y, 15 * delta)
 		else: 
