@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bbp1nbvvus6iq"]
 
 [node name="Main" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00286555, -0.00587535)
 
 [node name="Enviroment" type="Node3D" parent="."]
