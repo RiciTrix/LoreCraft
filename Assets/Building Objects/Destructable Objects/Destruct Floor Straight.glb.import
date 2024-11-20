@@ -1,0 +1,222 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bn14xxsuifqm4"
+path="res://.godot/imported/Destruct Floor Straight.glb-be8b09f2768d6ffb52591286dc819e37.scn"
+
+[deps]
+
+source_file="res://Assets/Building Objects/Destructable Objects/Destruct Floor Straight.glb"
+dest_files=["res://.godot/imported/Destruct Floor Straight.glb-be8b09f2768d6ffb52591286dc819e37.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Destructable Floor Straight_cell_001": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_002": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_003": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_004": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_005": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_006": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_007": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_009": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_010": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_011": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_012": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_013": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_015": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_016": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_017": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_018": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_019": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_020": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_021": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_022": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_023": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_024": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_025": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_026": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_027": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_029": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_030": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_031": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_032": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_033": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_034": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_035": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_036": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_037": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_038": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_039": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_040": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_041": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_042": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_043": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_044": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_045": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_046": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_047": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_048": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_049": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_050": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_051": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_052": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_053": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_054": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_055": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_056": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_057": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_058": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_059": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_060": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_061": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_062": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_063": {
+"generate/physics": true
+},
+"PATH:Destructable Floor Straight_cell_064": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
