@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://2ibg0ajorly5"]
+[gd_scene load_steps=28 format=3 uid="uid://2ibg0ajorly5"]
 
 [ext_resource type="PackedScene" uid="uid://bkfg22p0mytef" path="res://Assets/Building Objects/Floors/Floor 2x2.glb" id="1_0hk34"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_ww3ms"]
@@ -9,6 +9,8 @@
 [ext_resource type="LightmapGIData" uid="uid://iveoa7c1uis7" path="res://lightmaps/Ynand_Level.lmbake" id="4_kswd1"]
 [ext_resource type="PackedScene" uid="uid://c4vii36lgl7fa" path="res://Assets/Building Objects/Floors/Floor Corner 2x2.glb" id="5_m0o1p"]
 [ext_resource type="PackedScene" uid="uid://cn0ijfa8t33m4" path="res://Assets/Building Objects/Floors/Floor Inner Corner 2x2.glb" id="6_2kry3"]
+[ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="9_ojcci"]
+[ext_resource type="PackedScene" uid="uid://dyl3weht6gb5p" path="res://Prefabs/Traps/spike_trap.tscn" id="10_fjumf"]
 [ext_resource type="PackedScene" uid="uid://coov7kvbfc1ub" path="res://Prefabs/Enviroment/medium_stairs.tscn" id="12_6aap1"]
 [ext_resource type="PackedScene" uid="uid://buu2mv05jqk50" path="res://Assets/Building Objects/Floors/Floor Hallway T.glb" id="13_ru26k"]
 [ext_resource type="PackedScene" uid="uid://c8v35qgpcbvid" path="res://Assets/Building Objects/Floors/Floor Hallway Turn.glb" id="14_3ejd3"]
@@ -24,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://34e5ylcd1736" path="res://Assets/Building Objects/Walls/Wall Straight 2W.glb" id="21_o4u8f"]
 [ext_resource type="PackedScene" uid="uid://bibll4pikqx77" path="res://Assets/Building Objects/Walls/Wall Corner.glb" id="22_k0ry2"]
 [ext_resource type="PackedScene" uid="uid://va2u7m5g2hw5" path="res://Assets/Building Objects/Walls/Wall Doorway With Floor.glb" id="24_o7p4d"]
+[ext_resource type="PackedScene" uid="uid://b3aiyuskwlnhl" path="res://Prefabs/Traps/saw_blade_trap.tscn" id="27_b1mfw"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -392,6 +395,14 @@ transform = Transform3D(-1, 0, 1.88745e-07, 0, 1, 0, -1.50996e-07, 0, -1.25, 81,
 [node name="Floor Hallway Straigt18" parent="Environment" instance=ExtResource("3_i8c3t")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 65, -6, -31)
 
+[node name="Pressure Plate" parent="Environment/Floor Hallway Straigt18" node_paths=PackedStringArray("whatToActivate") instance=ExtResource("9_ojcci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25583, 0, 0.233749)
+whatToActivate = [NodePath("../../Floor Hallway Straigt20/SpikeTrap2")]
+
+[node name="Pressure Plate2" parent="Environment/Floor Hallway Straigt18" node_paths=PackedStringArray("whatToActivate") instance=ExtResource("9_ojcci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72333, 0, 2.7066)
+whatToActivate = [NodePath("../../Floor Hallway Straigt20/SpikeTrap")]
+
 [node name="Floor Hallway Straigt19" parent="Environment" instance=ExtResource("3_i8c3t")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 69, -6, -31)
 
@@ -409,6 +420,14 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 89, -6
 
 [node name="Floor Hallway Straigt20" parent="Environment" instance=ExtResource("3_i8c3t")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73, -6, -31)
+
+[node name="SpikeTrap" parent="Environment/Floor Hallway Straigt20" instance=ExtResource("10_fjumf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+trapType = 0
+
+[node name="SpikeTrap2" parent="Environment/Floor Hallway Straigt20" instance=ExtResource("10_fjumf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+trapType = 0
 
 [node name="Floor Hallway Straigt21" parent="Environment" instance=ExtResource("3_i8c3t")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73, -6, -47)
@@ -2633,3 +2652,21 @@ light_data = ExtResource("4_kswd1")
 [node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("3_lw1hh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17)
 cam = NodePath("../CameraMain/CameraPivot/Camera3D")
+
+[node name="SawBladeTrap6" parent="." instance=ExtResource("27_b1mfw")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 62, -5, -31)
+bladeSpeed = 2
+spinSpeed = 15
+distance = Vector2(3, 0)
+
+[node name="SawBladeTrap8" parent="." instance=ExtResource("27_b1mfw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, -6, -29)
+bladeSpeed = 1
+spinSpeed = 15
+distance = Vector2(3, 0)
+
+[node name="SawBladeTrap7" parent="." instance=ExtResource("27_b1mfw")]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 62, -5, -27)
+bladeSpeed = 2
+spinSpeed = 15
+distance = Vector2(3, 0)
