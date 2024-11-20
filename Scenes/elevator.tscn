@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6mr1pakik7qi"]
+
+[ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="1_rljn5"]
+
+[node name="Emelator" type="Node3D"]
+
+[node name="Floor25" parent="." instance=ExtResource("1_rljn5")]
