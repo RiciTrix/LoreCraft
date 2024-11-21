@@ -22,20 +22,20 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_0cioq"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_enjse"]
 resource_name = "Presure Plate_Cube_001"
+lightmap_size_hint = Vector2i(42, 42)
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -0.5, 1, 0.1, 1),
-"attribute_data": PackedByteArray("/1////8f/z//XwAA/5////+fAAD/3/8//1//v/8f/3//X/+//5//v/+f/7//3/9//1//P/9f/z//X/8//5//P/+f/z//n/8//1//f/9f/3//X/9//5//f/+f/3//n/9/"),
-"format": 34896613399,
+"attribute_data": PackedByteArray("wP6/PgAAgD8xDAM/SZJkP6D/Hz/A/z8/2It9PWIYRj+g/x8/AACAP0h+7D5iGEY/wP6/PsD/Pz8xDEM8SZJkP8D+vz7A/z8/MQwDPz3PMz+g/x8/AP//PtuTfT1VVRU/oP8fP8D/Pz9If+w+VVUVP8D+vz4A//8+MQxDPD3PMz/A/r8+AP//Pj3PMz/P83w/oP8fPwD9fz5VVRU/3MAJP6D/Hz8A//8+VVUVP0MncD/A/r8+AP1/Pj3PMz+e5/k+wP6/PgD9fz5JkmQ/z/N8P6D/Hz8AAAAAYhhGP1zACT+g/x8/AP1/PmIYRj/DJnA/wP6/PgAAAABJkmQ/nuf5PgD5/z0A//8+MQwDPzEMQzzA/r8+AP1/PjEMQzwxDAM/wP6/PgD//z4xDEM8MQxDPAD5/z0A/X8+MQwDPzEMAz+g/x8/AP//Ps/zfD9VVdU+4P9fPwD9fz5VVRU/MQxDPOD/Xz8A//8+z/N8PzEMQzyg/x8/AP1/PlVVFT9VVdU+"),
+"format": 34359742519,
 "index_count": 36,
-"index_data": PackedByteArray("AAAJAAMAAAAGAAkACAAVAAoACAATABUAFAARABcAFAAOABEADQAEAA8ADQACAAQABwAMABIABwABAAwAFgAFAAsAFgAQAAUA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
 "material": SubResource("StandardMaterial3D_vsjdk"),
-"name": "Presure Plate",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//0s0AAAAA////vwAAAAD//5axmRn//2Xmc9GZGf//ZebAs5kZ//9l5v//AAAAAAAASsAAAAAAAAD/vwAAAAAAACTlmRn//5kZlcCZGf//mRm945kZ//+ZGf////8AAP///7///wAA///41f//AAD//2/ZZeb//2XmQNxl5v//Zeb//2Xm//9l5jHb//8AAAAA/7///wAAAACW8f//AAAAADP2Zeb//5kZmvBl5v//mRn//2Xm//+ZGRr7dvMqtwAA/38N6EAus/kYtlXnyyv/f/+/xch9vgAA/3+fw7CqJ8zpveXJQKb/f/+/AAD/f1vg+RMYReIFcd/ZEP9//7/mQhQIAAD/f0uiQcLwKwkfc6S6wP9//7+uKEwi")
+"vertex_data": PackedByteArray("AAAAvwAAAAAAAAA/zc3Mvs3MzD3Nzcy+zc3Mvs3MzD3My8w+AAAAvwAAAAAAAAC/AAAAvwAAAAAAAAC/zMvMPs3MzD3Nzcy+zc3Mvs3MzD3Nzcy+AAAAPwAAAAAAAAC/AAAAPwAAAAAAAAC/zMvMPs3MzD3My8w+zMvMPs3MzD3Nzcy+AAAAPwAAAAAAAAA/AAAAPwAAAAAAAAA/zc3Mvs3MzD3My8w+zMvMPs3MzD3My8w+AAAAvwAAAAAAAAA/AAAAvwAAAAAAAAC/AAAAPwAAAAAAAAA/AAAAPwAAAAAAAAC/AAAAvwAAAAAAAAA/zMvMPs3MzD3Nzcy+zc3Mvs3MzD3My8w+zc3Mvs3MzD3Nzcy+zMvMPs3MzD3My8w+AEAAwB/QDugAQP+/y6xk1gBAAMBU1ajqAUAAwKqqU9X9v/7/QKDu1/y//v+WWWTW/r/9/6mqU9X+v/7/VFVT1fy//L8eUO7X/r/+v8ssmen/v/y/VFVU1f2//7+qKqnqAID+v98v3u8AgP6/M9PK7AGA/b+sKqnqAID+v1TVqeoAgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_i63kw")
@@ -49,7 +49,7 @@ script = ExtResource("1_qf6mk")
 [node name="Presure Plate" type="Node3D" parent="."]
 
 [node name="Presure plate" type="MeshInstance3D" parent="Presure Plate"]
-mesh = SubResource("ArrayMesh_0cioq")
+mesh = SubResource("ArrayMesh_enjse")
 skeleton = NodePath("")
 
 [node name="Area3D" type="Area3D" parent="."]

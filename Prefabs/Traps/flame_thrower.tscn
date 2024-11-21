@@ -179,7 +179,6 @@ cull_mode = 2
 depth_draw_mode = 1
 specular_mode = 1
 vertex_color_use_as_albedo = true
-emission = Color(0.753984, 0.753984, 0.753984, 1)
 disable_receive_shadows = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_b50dp"]

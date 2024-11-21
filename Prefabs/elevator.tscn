@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=4 uid="uid://c6mr1pakik7qi"]
+
+[ext_resource type="Script" path="res://Scenes/elevator.gd" id="1_mnpm3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n0uyj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_klr3c"]
+size = Vector3(4, 1, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6d4c"]
+resource_name = "Stone"
+cull_mode = 2
+albedo_color = Color(0.505672, 0.505672, 0.505672, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pqc3e"]
+_surfaces = [{
+"aabb": AABB(0, -1, 0, 4, 1, 4),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABQAGAAQABQAHAAYABwACAAYABwAAAAIAAwAHAAUAAwAAAAcABAACAAEABAAGAAIA"),
+"name": "Stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAgL8AAIBAAAAAAAAAAAAAAACAAAAAAAAAAAAAAIBAAAAAAAAAgL8AAACAAACAQAAAAAAAAACAAACAQAAAgL8AAACAAACAQAAAAAAAAIBAAACAQAAAgL8AAIBA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5t7u4"]
+resource_name = "Floor_Cube_005"
+lightmap_size_hint = Vector2i(46, 38)
+_surfaces = [{
+"aabb": AABB(0, -1, 0, 4, 1, 4),
+"attribute_data": PackedByteArray("AADAPgAAgD+nN30/r6F8PwAAID8AAEA/C1kIP4fyWj8AACA/AACAP6c3fT+H8lo/AADAPgAAQD8LWQg/r6F8PwAAwD4AAEA/QxYyPHkNJT8AACA/AAAAP+pN7z6ivEY/AAAgPwAAQD9DFjI8orxGPwAAwD4AAAA/6k3vPnkNJT8AAMA+AAAAPwtZCD+ivEY/AAAgPwAAgD6nN30/eQ0lPwAAID8AAAA/C1kIP3kNJT8AAMA+AACAPqc3fT+ivEY/AADAPgAAgD5DFjI8h/JaPwAAID8AAAAA6k3vPq+hfD8AACA/AACAPkMWMjyvoXw/AADAPgAAAADqTe8+h/JaPwAAAD4AAAA/6k3vPjaUVzwAAMA+AACAPkMWMjyU1xA/AADAPgAAAD9DFjI8NpRXPAAAAD4AAIA+6k3vPpTXED8AACA/AAAAPwtZCD82lFc8AABgPwAAgD6nN30/lNcQPwAAYD8AAAA/C1kIP5TXED8AACA/AACAPqc3fT82lFc8"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_x6d4c"),
+"name": "Stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAAgL8AAIBAAAAAAAAAAAAAAACAAAAAAAAAAAAAAIBAAAAAAAAAgL8AAACAAAAAAAAAgL8AAACAAACAQAAAAAAAAACAAAAAAAAAAAAAAACAAACAQAAAgL8AAACAAACAQAAAgL8AAACAAACAQAAAAAAAAIBAAACAQAAAAAAAAACAAACAQAAAgL8AAIBAAACAQAAAgL8AAIBAAAAAAAAAAAAAAIBAAACAQAAAAAAAAIBAAAAAAAAAgL8AAIBAAAAAAAAAgL8AAACAAACAQAAAgL8AAIBAAACAQAAAgL8AAACAAAAAAAAAgL8AAIBAAACAQAAAAAAAAACAAAAAAAAAAAAAAIBAAAAAAAAAAAAAAACAAACAQAAAAAAAAIBAAAD/f/9///8AAP9//3///wAA/3//f///AAD/f/9//////////3//////////f/////////9//////////3///////3//f///////f/9///////9//3///////3//f////3//f/9/////f/9//3////9//3//f////3//f/9/////fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pqc3e")
+
+[node name="Emelator" type="Node3D"]
+script = ExtResource("1_mnpm3")
+
+[node name="RigidBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_n0uyj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, 2)
+shape = SubResource("BoxShape3D_klr3c")
+
+[node name="Floor25" type="Node3D" parent="RigidBody3D"]
+
+[node name="Floor Empty" type="MeshInstance3D" parent="RigidBody3D/Floor25"]
+mesh = SubResource("ArrayMesh_5t7u4")
+skeleton = NodePath("")
