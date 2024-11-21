@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cxq001f6ggypc"]
+[gd_scene load_steps=23 format=3 uid="uid://cxq001f6ggypc"]
 
 [ext_resource type="PackedScene" uid="uid://bkfg22p0mytef" path="res://Assets/Building Objects/Floors/Floor 2x2.glb" id="1_8iblc"]
 [ext_resource type="PackedScene" uid="uid://ba3rheaxmp0up" path="res://Assets/Building Objects/Floors/Floor 1 Side 2x2.glb" id="2_jfvve"]
@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://c6mr1pakik7qi" path="res://Prefabs/elevator.tscn" id="19_gdoni"]
 [ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="20_wui56"]
 [ext_resource type="PackedScene" uid="uid://rs2qmui5lb7n" path="res://Prefabs/Traps/flame_thrower.tscn" id="21_6b4i6"]
-[ext_resource type="Environment" uid="uid://4afnk4cfu424" path="res://Prefabs/Enviroment/test.tres" id="22_tqipu"]
 
 [node name="richard_scene" type="Node3D"]
 
@@ -562,7 +561,7 @@ wall_min_slide_angle = 0.610865
 cam = NodePath("../CameraMain/CameraPivot/Camera3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("22_tqipu")
+environment = ExtResource("14_xq6lg")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 2
@@ -570,7 +569,3 @@ bounces = 5
 texel_scale = 5.0
 generate_probes_subdiv = 3
 light_data = ExtResource("17_38e80")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-light_bake_mode = 1
-shadow_enabled = true
