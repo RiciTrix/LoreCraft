@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://2ibg0ajorly5"]
+[gd_scene load_steps=29 format=3 uid="uid://2ibg0ajorly5"]
 
 [ext_resource type="PackedScene" uid="uid://bkfg22p0mytef" path="res://Assets/Building Objects/Floors/Floor 2x2.glb" id="1_0hk34"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_ww3ms"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="3_i8c3t"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="3_lw1hh"]
 [ext_resource type="PackedScene" uid="uid://dpha2xl16wy5j" path="res://Assets/Building Objects/Walls/Wall Doorway.glb" id="4_6yjc7"]
-[ext_resource type="LightmapGIData" uid="uid://iveoa7c1uis7" path="res://lightmaps/Ynand_Level.lmbake" id="4_kswd1"]
 [ext_resource type="PackedScene" uid="uid://c4vii36lgl7fa" path="res://Assets/Building Objects/Floors/Floor Corner 2x2.glb" id="5_m0o1p"]
 [ext_resource type="PackedScene" uid="uid://cn0ijfa8t33m4" path="res://Assets/Building Objects/Floors/Floor Inner Corner 2x2.glb" id="6_2kry3"]
 [ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="9_ojcci"]
@@ -26,7 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://34e5ylcd1736" path="res://Assets/Building Objects/Walls/Wall Straight 2W.glb" id="21_o4u8f"]
 [ext_resource type="PackedScene" uid="uid://bibll4pikqx77" path="res://Assets/Building Objects/Walls/Wall Corner.glb" id="22_k0ry2"]
 [ext_resource type="PackedScene" uid="uid://va2u7m5g2hw5" path="res://Assets/Building Objects/Walls/Wall Doorway With Floor.glb" id="24_o7p4d"]
+[ext_resource type="LightmapGIData" uid="uid://bmvphcsygvmnc" path="res://lightmaps/richard_scene.lmbake" id="26_ljwav"]
 [ext_resource type="PackedScene" uid="uid://b3aiyuskwlnhl" path="res://Prefabs/Traps/saw_blade_trap.tscn" id="27_b1mfw"]
+[ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="28_0ms27"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -1548,41 +1549,17 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 6,
 [node name="Wall Straight96" parent="Environment" instance=ExtResource("20_x6e6w")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -29)
 
-[node name="Wall Corner 2L48" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -25)
-
 [node name="Wall Corner 2L49" parent="Environment" instance=ExtResource("19_jx0m3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -23)
-
-[node name="Wall Corner 2L50" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -21)
-
-[node name="Wall Corner 2L51" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -13)
 
 [node name="Wall Corner 2L52" parent="Environment" instance=ExtResource("19_jx0m3")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, -11)
 
-[node name="Wall Corner 2L53" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -9)
-
-[node name="Wall Corner 2L54" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 0, -9)
-
 [node name="Wall Corner 2L55" parent="Environment" instance=ExtResource("19_jx0m3")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6, 0, -11)
 
-[node name="Wall Corner 2L56" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8, 0, -13)
-
-[node name="Wall Corner 2L57" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, -25)
-
 [node name="Wall Corner 2L58" parent="Environment" instance=ExtResource("19_jx0m3")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 0, -23)
-
-[node name="Wall Corner 2L59" parent="Environment" instance=ExtResource("19_jx0m3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, -21)
 
 [node name="Wall Doorway With Floor2" parent="Environment" instance=ExtResource("24_o7p4d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -6, 28)
@@ -2592,32 +2569,59 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -21, 23)
 [node name="Wall Corner82" parent="Environment" instance=ExtResource("22_k0ry2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9, -21, 23)
 
-[node name="Lighting" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.120591, -0.0325003, 0.0582037)
+[node name="Wall Straight 2W34" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -14)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
-transform = Transform3D(1, 0, 0, 0, -0.857167, 0.515038, 0, -0.515038, -0.857167, 0, 0, 8)
-light_color = Color(0.978785, 0.70744, 0.50883, 1)
-light_energy = 0.999
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 0.403
-shadow_opacity = 0.75
-shadow_blur = 1.303
+[node name="Wall Straight 2W35" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -10)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
-environment = ExtResource("1_ww3ms")
+[node name="Wall Straight 2W36" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
-quality = 3
-bounces = 10
-bias = 0.00959
-light_data = ExtResource("4_kswd1")
+[node name="Wall Straight 2W37" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -14)
 
-[node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("3_lw1hh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17)
-cam = NodePath("../CameraMain/CameraPivot/Camera3D")
+[node name="Wall Straight 2W38" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -21)
+
+[node name="Wall Straight 2W39" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -25)
+
+[node name="Wall Straight 2W40" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -25)
+
+[node name="Wall Straight 2W41" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -21)
+
+[node name="Wall Straight 2W42" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 0, -13)
+
+[node name="Wall Straight 2W43" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, -10)
+
+[node name="Wall Straight 2W44" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -10)
+
+[node name="Wall Straight 2W45" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -13)
+
+[node name="Wall Straight 2W46" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -19)
+
+[node name="Wall Straight 2W47" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -22)
+
+[node name="Wall Straight 2W48" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3, 0, -22)
+
+[node name="Wall Straight 2W49" parent="Environment" instance=ExtResource("21_o4u8f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 0, -19)
+
+[node name="torch" parent="Environment" instance=ExtResource("28_0ms27")]
+transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, -2, 2, -10)
+
+[node name="torch2" parent="Environment" instance=ExtResource("28_0ms27")]
+transform = Transform3D(-1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, -1, 2, 2, -10)
 
 [node name="Traps" type="Node3D" parent="."]
 
@@ -2672,3 +2676,21 @@ trapType = 0
 [node name="SpikeTrap2" parent="Traps" instance=ExtResource("10_fjumf")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 71, -6, -29)
 trapType = 0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 2
+bounces = 5
+texel_scale = 5.0
+generate_probes_subdiv = 3
+light_data = ExtResource("26_ljwav")
+
+[node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("3_lw1hh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17)
+cam = NodePath("../CameraMain/CameraPivot/Camera3D")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_ww3ms")
