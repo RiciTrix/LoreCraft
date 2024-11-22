@@ -2289,6 +2289,12 @@ transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107
 [node name="Floor 2x121" parent="Environment" instance=ExtResource("4_68g5u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -5, 40)
 
+[node name="Floor 2x224" parent="Environment" instance=ExtResource("4_68g5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -5, 38)
+
+[node name="Floor 2x225" parent="Environment" instance=ExtResource("4_68g5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -5, 36)
+
 [node name="Floor 2x122" parent="Environment" instance=ExtResource("4_68g5u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -5, 42)
 
@@ -2297,6 +2303,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -5, 42)
 
 [node name="Floor 2x124" parent="Environment" instance=ExtResource("4_68g5u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -5, 40)
+
+[node name="Floor 2x226" parent="Environment" instance=ExtResource("4_68g5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -5, 38)
+
+[node name="Floor 2x227" parent="Environment" instance=ExtResource("4_68g5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -5, 36)
 
 [node name="Floor 2x125" parent="Environment" instance=ExtResource("4_68g5u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, -5, 44)
