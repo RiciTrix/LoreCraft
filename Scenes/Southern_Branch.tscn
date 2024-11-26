@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dncm5j4f4jk1"]
+[gd_scene load_steps=29 format=3 uid="uid://dncm5j4f4jk1"]
 
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_qi4ed"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_qksev"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="17_gews1"]
 [ext_resource type="PackedScene" uid="uid://c6mr1pakik7qi" path="res://Prefabs/elevator.tscn" id="18_kkol0"]
 [ext_resource type="PackedScene" uid="uid://buu2mv05jqk50" path="res://Assets/Building Objects/Floors/Floor Hallway T.glb" id="20_axuo3"]
+[ext_resource type="PackedScene" uid="uid://bqqut7d5wcejx" path="res://Assets/Building Objects/Decos/Chain.glb" id="20_c0qxu"]
 [ext_resource type="PackedScene" uid="uid://hn2rp2lxo6e0" path="res://Assets/Building Objects/Walls/Wall Corner 1L.glb" id="21_fa4i2"]
 [ext_resource type="PackedScene" uid="uid://c4vii36lgl7fa" path="res://Assets/Building Objects/Floors/Floor Corner 2x2.glb" id="21_rxfv0"]
 [ext_resource type="PackedScene" uid="uid://cn0ijfa8t33m4" path="res://Assets/Building Objects/Floors/Floor Inner Corner 2x2.glb" id="22_fqem3"]
@@ -1109,6 +1110,30 @@ transform = Transform3D(-1, 0, 1.05697e-07, 0, 0.25, 0, -1.50996e-07, 0, -0.7, 4
 
 [node name="Floor" parent="Upper Level/Emelator4" instance=ExtResource("17_gews1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Chain2" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 4, 2)
+
+[node name="Chain3" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 7, 2)
+
+[node name="Chain4" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 10, 2)
+
+[node name="Chain5" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 13, 2)
+
+[node name="Chain6" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 16, 2)
+
+[node name="Chain7" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 19, 2)
+
+[node name="Chain8" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 22, 2)
+
+[node name="Chain9" parent="Upper Level/Emelator4" instance=ExtResource("20_c0qxu")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2, 25, 2)
 
 [node name="Floor 2x127" parent="Upper Level" instance=ExtResource("4_68g5u")]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 11)
