@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj48w6fjxrxwy"]
+
+[ext_resource type="Script" path="res://Prefabs/pillar_group.gd" id="1_cgwsv"]
+
+[node name="PillarGroup" type="Node3D"]
+script = ExtResource("1_cgwsv")
