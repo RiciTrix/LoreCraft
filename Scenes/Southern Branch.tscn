@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dncm5j4f4jk1"]
+[gd_scene load_steps=28 format=3 uid="uid://dncm5j4f4jk1"]
 
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_qi4ed"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_qksev"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://34e5ylcd1736" path="res://Assets/Building Objects/Walls/Wall Straight 2W.glb" id="10_fk4aw"]
 [ext_resource type="PackedScene" uid="uid://bibll4pikqx77" path="res://Assets/Building Objects/Walls/Wall Corner.glb" id="11_b5ghw"]
 [ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="12_sfu0d"]
-[ext_resource type="LightmapGIData" uid="uid://bmvphcsygvmnc" path="res://lightmaps/richard_scene.lmbake" id="15_j2ums"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="16_mmrft"]
 [ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="17_153qx"]
 [ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="17_gews1"]
@@ -3203,7 +3202,6 @@ quality = 2
 bounces = 5
 texel_scale = 5.0
 generate_probes_subdiv = 3
-light_data = ExtResource("15_j2ums")
 
 [node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("16_mmrft")]
 transform = Transform3D(1, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, 1, 0, 0, 0)
