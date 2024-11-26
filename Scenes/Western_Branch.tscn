@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c8a5yu3f4xsry"]
+[gd_scene load_steps=27 format=3 uid="uid://c8a5yu3f4xsry"]
 
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_h417h"]
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="2_ajtqy"]
@@ -25,6 +25,7 @@
 [ext_resource type="LightmapGIData" uid="uid://bmvphcsygvmnc" path="res://lightmaps/richard_scene.lmbake" id="23_r2ko2"]
 [ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="23_u68yb"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="24_62yi2"]
+[ext_resource type="PackedScene" uid="uid://b7so8drnf5wal" path="res://Assets/Traps/Stalactite.glb" id="26_tgcar"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -1079,11 +1080,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 0, -1)
 
 [node name="Pressure Plate" parent="Environment" node_paths=PackedStringArray("whatToActivate") instance=ExtResource("21_bn2rd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.7663, 0, -12.7442)
-whatToActivate = [NodePath("")]
+whatToActivate = [null]
 
 [node name="Pressure Plate2" parent="Environment" node_paths=PackedStringArray("whatToActivate") instance=ExtResource("21_bn2rd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 25.2934, 0, -11.2767)
-whatToActivate = [NodePath("")]
+whatToActivate = [null]
 
 [node name="SpikeTrap" parent="Environment" instance=ExtResource("22_lf0u7")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31, 0, -12)
@@ -1470,6 +1471,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, -1, -2)
 
 [node name="Floor63" parent="Environment" instance=ExtResource("12_4htn4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -1, -2)
+
+[node name="Stalactite2" parent="Environment" instance=ExtResource("26_tgcar")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 5, 17)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4, 0, -2)
