@@ -47,7 +47,7 @@ _subresources={
 "PATH:Door 3": {
 "generate/physics": true,
 "physics/shape_type": 3,
-"primitive/position": Vector3(1, 1.5, 0.25),
+"primitive/position": Vector3(2, 1.5, 0.5),
 "primitive/size": Vector3(2, 3, 0.6)
 }
 }
