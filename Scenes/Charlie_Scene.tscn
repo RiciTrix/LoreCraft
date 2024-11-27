@@ -58,6 +58,15 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0,
 [node name="Floor Hallway Straigt14" parent="Enviroment" instance=ExtResource("1_yusm3")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18, 0, -20)
 
+[node name="Floor Hallway Straigt17" parent="Enviroment" instance=ExtResource("1_yusm3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26, 0, -12)
+
+[node name="Floor Hallway Straigt15" parent="Enviroment" instance=ExtResource("1_yusm3")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -26, 0, -24)
+
+[node name="Floor Hallway Straigt16" parent="Enviroment" instance=ExtResource("1_yusm3")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, -26, 0, -16)
+
 [node name="Floor Hallway T" parent="Enviroment" instance=ExtResource("2_lddxl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
 
@@ -69,6 +78,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0
 
 [node name="Floor Hallway Turn" parent="Enviroment" instance=ExtResource("3_u4bjf")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0, -8)
+
+[node name="Floor Hallway Turn9" parent="Enviroment" instance=ExtResource("3_u4bjf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -22, 0, -12)
 
 [node name="Floor Hallway Turn2" parent="Enviroment" instance=ExtResource("3_u4bjf")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14, 0, -4)
@@ -225,6 +237,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -1, -36)
 
 [node name="Floor7" parent="Enviroment" instance=ExtResource("7_tq73f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -1, -24)
+
+[node name="Wall Doorway With Floor3" parent="Enviroment" instance=ExtResource("4_hv6n7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, -25)
+
+[node name="Wall Doorway With Floor4" parent="Enviroment" instance=ExtResource("4_hv6n7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 0, -12)
 
 [node name="Traps" type="Node3D" parent="."]
 
