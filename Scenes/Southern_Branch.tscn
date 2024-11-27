@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dncm5j4f4jk1"]
+[gd_scene load_steps=30 format=3 uid="uid://dncm5j4f4jk1"]
 
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_qi4ed"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_qksev"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://b3aiyuskwlnhl" path="res://Prefabs/Traps/saw_blade_trap.tscn" id="25_goenp"]
 [ext_resource type="PackedScene" uid="uid://rs2qmui5lb7n" path="res://Prefabs/Traps/flame_thrower.tscn" id="26_aq7h4"]
 [ext_resource type="PackedScene" uid="uid://dt14j6vqhybfd" path="res://Prefabs/Traps/spinningSpike.tscn" id="26_tovks"]
+[ext_resource type="LightmapGIData" uid="uid://b6d6fbtn5v3s7" path="res://Scenes/Southern_Branch.lmbake" id="27_j1prt"]
 [ext_resource type="PackedScene" uid="uid://dyl3weht6gb5p" path="res://Prefabs/Traps/spike_trap.tscn" id="27_nyj0v"]
 [ext_resource type="PackedScene" uid="uid://tyl1xib7y1lm" path="res://Scenes/Southern_Branch_Maze.tscn" id="27_og3mm"]
 
@@ -1749,9 +1750,6 @@ transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 4, -5, 3
 [node name="Floor Hallway Straigt2" parent="Upper Level" instance=ExtResource("1_qi4ed")]
 transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 0, -5, 32)
 
-[node name="Lower Level" parent="." instance=ExtResource("27_og3mm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5, -16, 63.5)
-
 [node name="Shell" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -6, 8)
 
@@ -3227,6 +3225,7 @@ quality = 2
 bounces = 5
 texel_scale = 5.0
 generate_probes_subdiv = 3
+light_data = ExtResource("27_j1prt")
 
 [node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("16_mmrft")]
 transform = Transform3D(1, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, 1, 0, 0, 0)
@@ -3234,3 +3233,6 @@ cam = NodePath("../CameraMain/CameraPivot/Camera3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_qksev")
+
+[node name="Node3D" parent="." instance=ExtResource("27_og3mm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, -14, 68)

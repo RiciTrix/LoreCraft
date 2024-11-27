@@ -47,6 +47,33 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jmtd5")
 
+[sub_resource type="Animation" id="Animation_a4ggg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_u71mo"]
 resource_name = "Spin"
 length = 5.0
@@ -74,33 +101,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0.0210845, 0), Vector3(0, 0.042169, 0), Vector3(0, 0.0632536, 0), Vector3(0, 0.0843381, 0), Vector3(0, 0.105423, 0), Vector3(0, 0.126507, 0), Vector3(0, 0.147592, 0), Vector3(0, 0.168676, 0), Vector3(0, 0.189761, 0), Vector3(0, 0.210845, 0), Vector3(0, 0.23193, 0), Vector3(0, 0.253014, 0), Vector3(0, 0.274099, 0), Vector3(0, 0.295183, 0), Vector3(0, 0.316268, 0), Vector3(0, 0.337352, 0), Vector3(0, 0.358437, 0), Vector3(0, 0.379521, 0), Vector3(0, 0.400606, 0), Vector3(0, 0.42169, 0), Vector3(0, 0.442775, 0), Vector3(0, 0.463859, 0), Vector3(0, 0.484944, 0), Vector3(0, 0.506028, 0), Vector3(0, 0.527113, 0), Vector3(0, 0.548197, 0), Vector3(0, 0.569282, 0), Vector3(0, 0.590366, 0), Vector3(0, 0.611451, 0), Vector3(0, 0.632535, 0), Vector3(0, 0.65362, 0), Vector3(0, 0.674705, 0), Vector3(0, 0.695789, 0), Vector3(0, 0.716874, 0), Vector3(0, 0.737958, 0), Vector3(0, 0.759043, 0), Vector3(0, 0.780127, 0), Vector3(0, 0.801212, 0), Vector3(0, 0.822296, 0), Vector3(0, 0.843381, 0), Vector3(0, 0.864465, 0), Vector3(0, 0.88555, 0), Vector3(0, 0.906634, 0), Vector3(0, 0.927719, 0), Vector3(0, 0.948803, 0), Vector3(0, 0.969888, 0), Vector3(0, 0.990972, 0), Vector3(0, 1.01206, 0), Vector3(0, 1.03314, 0), Vector3(0, 1.05423, 0), Vector3(0, 1.07531, 0), Vector3(0, 1.09639, 0), Vector3(0, 1.11748, 0), Vector3(0, 1.13856, 0), Vector3(0, 1.15965, 0), Vector3(0, 1.18073, 0), Vector3(0, 1.20182, 0), Vector3(0, 1.2229, 0), Vector3(0, 1.24399, 0), Vector3(0, 1.26507, 0), Vector3(0, 1.28616, 0), Vector3(0, 1.30724, 0), Vector3(0, 1.32832, 0), Vector3(0, 1.34941, 0), Vector3(0, 1.37049, 0), Vector3(0, 1.39158, 0), Vector3(0, 1.41266, 0), Vector3(0, 1.43375, 0), Vector3(0, 1.45483, 0), Vector3(0, 1.47592, 0), Vector3(0, 1.497, 0), Vector3(0, 1.51809, 0), Vector3(0, 1.53917, 0), Vector3(0, 1.56025, 0), Vector3(0, 1.58134, 0), Vector3(0, 1.60242, 0), Vector3(0, 1.62351, 0), Vector3(0, 1.64459, 0), Vector3(0, 1.66568, 0), Vector3(0, 1.68676, 0), Vector3(0, 1.70785, 0), Vector3(0, 1.72893, 0), Vector3(0, 1.75001, 0), Vector3(0, 1.7711, 0), Vector3(0, 1.79218, 0), Vector3(0, 1.81327, 0), Vector3(0, 1.83435, 0), Vector3(0, 1.85544, 0), Vector3(0, 1.87652, 0), Vector3(0, 1.89761, 0), Vector3(0, 1.91869, 0), Vector3(0, 1.93978, 0), Vector3(0, 1.96086, 0), Vector3(0, 1.98194, 0), Vector3(0, 2.00303, 0), Vector3(0, 2.02411, 0), Vector3(0, 2.0452, 0), Vector3(0, 2.06628, 0), Vector3(0, 2.08737, 0), Vector3(0, 2.10845, 0), Vector3(0, 2.12954, 0), Vector3(0, 2.15062, 0), Vector3(0, 2.17171, 0), Vector3(0, 2.19279, 0), Vector3(0, 2.21387, 0), Vector3(0, 2.23496, 0), Vector3(0, 2.25604, 0), Vector3(0, 2.27713, 0), Vector3(0, 2.29821, 0), Vector3(0, 2.3193, 0), Vector3(0, 2.34038, 0), Vector3(0, 2.36147, 0), Vector3(0, 2.38255, 0), Vector3(0, 2.40363, 0), Vector3(0, 2.42472, 0), Vector3(0, 2.4458, 0), Vector3(0, 2.46689, 0), Vector3(0, 2.48797, 0), Vector3(0, 2.50906, 0), Vector3(0, 2.53014, 0), Vector3(0, 2.55123, 0), Vector3(0, 2.57231, 0), Vector3(0, 2.5934, 0), Vector3(0, 2.61448, 0), Vector3(0, 2.63556, 0), Vector3(0, 2.65665, 0), Vector3(0, 2.67773, 0), Vector3(0, 2.69882, 0), Vector3(0, 2.7199, 0), Vector3(0, 2.74099, 0), Vector3(0, 2.76207, 0), Vector3(0, 2.78316, 0), Vector3(0, 2.80424, 0), Vector3(0, 2.82533, 0), Vector3(0, 2.84641, 0), Vector3(0, 2.86749, 0), Vector3(0, 2.88858, 0), Vector3(0, 2.90966, 0), Vector3(0, 2.93075, 0), Vector3(0, 2.95183, 0), Vector3(0, 2.97292, 0), Vector3(0, 2.994, 0), Vector3(0, 3.01509, 0), Vector3(0, 3.03617, 0), Vector3(0, 3.05725, 0), Vector3(0, 3.07834, 0), Vector3(0, 3.09942, 0), Vector3(0, 3.12051, 0), Vector3(0, 3.14159, 0), Vector3(0, 3.16268, 0), Vector3(0, 3.18376, 0), Vector3(0, 3.20485, 0), Vector3(0, 3.22593, 0), Vector3(0, 3.24702, 0), Vector3(0, 3.2681, 0), Vector3(0, 3.28918, 0), Vector3(0, 3.31027, 0), Vector3(0, 3.33135, 0), Vector3(0, 3.35244, 0), Vector3(0, 3.37352, 0), Vector3(0, 3.39461, 0), Vector3(0, 3.41569, 0), Vector3(0, 3.43678, 0), Vector3(0, 3.45786, 0), Vector3(0, 3.47895, 0), Vector3(0, 3.50003, 0), Vector3(0, 3.52111, 0), Vector3(0, 3.5422, 0), Vector3(0, 3.56328, 0), Vector3(0, 3.58437, 0), Vector3(0, 3.60545, 0), Vector3(0, 3.62654, 0), Vector3(0, 3.64762, 0), Vector3(0, 3.66871, 0), Vector3(0, 3.68979, 0), Vector3(0, 3.71087, 0), Vector3(0, 3.73196, 0), Vector3(0, 3.75304, 0), Vector3(0, 3.77413, 0), Vector3(0, 3.79521, 0), Vector3(0, 3.8163, 0), Vector3(0, 3.83738, 0), Vector3(0, 3.85847, 0), Vector3(0, 3.87955, 0), Vector3(0, 3.90064, 0), Vector3(0, 3.92172, 0), Vector3(0, 3.9428, 0), Vector3(0, 3.96389, 0), Vector3(0, 3.98497, 0), Vector3(0, 4.00606, 0), Vector3(0, 4.02714, 0), Vector3(0, 4.04823, 0), Vector3(0, 4.06931, 0), Vector3(0, 4.0904, 0), Vector3(0, 4.11148, 0), Vector3(0, 4.13257, 0), Vector3(0, 4.15365, 0), Vector3(0, 4.17473, 0), Vector3(0, 4.19582, 0), Vector3(0, 4.2169, 0), Vector3(0, 4.23799, 0), Vector3(0, 4.25907, 0), Vector3(0, 4.28016, 0), Vector3(0, 4.30124, 0), Vector3(0, 4.32233, 0), Vector3(0, 4.34341, 0), Vector3(0, 4.36449, 0), Vector3(0, 4.38558, 0), Vector3(0, 4.40666, 0), Vector3(0, 4.42775, 0), Vector3(0, 4.44883, 0), Vector3(0, 4.46992, 0), Vector3(0, 4.491, 0), Vector3(0, 4.51209, 0), Vector3(0, 4.53317, 0), Vector3(0, 4.55426, 0), Vector3(0, 4.57534, 0), Vector3(0, 4.59642, 0), Vector3(0, 4.61751, 0), Vector3(0, 4.63859, 0), Vector3(0, 4.65968, 0), Vector3(0, 4.68076, 0), Vector3(0, 4.70185, 0), Vector3(0, 4.72293, 0), Vector3(0, 4.74402, 0), Vector3(0, 4.7651, 0), Vector3(0, 4.78618, 0), Vector3(0, 4.80727, 0), Vector3(0, 4.82835, 0), Vector3(0, 4.84944, 0), Vector3(0, 4.87052, 0), Vector3(0, 4.89161, 0), Vector3(0, 4.91269, 0), Vector3(0, 4.93378, 0), Vector3(0, 4.95486, 0), Vector3(0, 4.97595, 0), Vector3(0, 4.99703, 0), Vector3(0, 5.01811, 0), Vector3(0, 5.0392, 0), Vector3(0, 5.06028, 0), Vector3(0, 5.08137, 0), Vector3(0, 5.10245, 0), Vector3(0, 5.12354, 0), Vector3(0, 5.14462, 0), Vector3(0, 5.16571, 0), Vector3(0, 5.18679, 0), Vector3(0, 5.20788, 0), Vector3(0, 5.22896, 0), Vector3(0, 5.25004, 0), Vector3(0, 5.27113, 0), Vector3(0, 5.29221, 0), Vector3(0, 5.3133, 0), Vector3(0, 5.33438, 0), Vector3(0, 5.35547, 0), Vector3(0, 5.37655, 0), Vector3(0, 5.39764, 0), Vector3(0, 5.41872, 0), Vector3(0, 5.43981, 0), Vector3(0, 5.46089, 0), Vector3(0, 5.48197, 0), Vector3(0, 5.50306, 0), Vector3(0, 5.52414, 0), Vector3(0, 5.54523, 0), Vector3(0, 5.56631, 0), Vector3(0, 5.5874, 0), Vector3(0, 5.60848, 0), Vector3(0, 5.62957, 0), Vector3(0, 5.65065, 0), Vector3(0, 5.67173, 0), Vector3(0, 5.69282, 0), Vector3(0, 5.7139, 0), Vector3(0, 5.73499, 0), Vector3(0, 5.75607, 0), Vector3(0, 5.77716, 0), Vector3(0, 5.79824, 0), Vector3(0, 5.81933, 0), Vector3(0, 5.84041, 0), Vector3(0, 5.8615, 0), Vector3(0, 5.88258, 0), Vector3(0, 5.90366, 0), Vector3(0, 5.92475, 0), Vector3(0, 5.94583, 0), Vector3(0, 5.96692, 0), Vector3(0, 5.988, 0), Vector3(0, 6.00909, 0), Vector3(0, 6.03017, 0), Vector3(0, 6.05126, 0), Vector3(0, 6.07234, 0), Vector3(0, 6.09342, 0), Vector3(0, 6.11451, 0), Vector3(0, 6.13559, 0), Vector3(0, 6.15668, 0), Vector3(0, 6.17776, 0), Vector3(0, 6.19885, 0), Vector3(0, 6.21993, 0), Vector3(0, 6.24102, 0), Vector3(0, 6.2621, 0), Vector3(0, 6.28319, 0), Vector3(0, 6.28319, 0), Vector3(0, 6.28319, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_a4ggg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efxaq"]

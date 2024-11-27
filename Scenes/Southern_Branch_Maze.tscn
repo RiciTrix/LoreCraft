@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://tyl1xib7y1lm"]
+[gd_scene load_steps=15 format=3 uid="uid://tyl1xib7y1lm"]
 
 [ext_resource type="PackedScene" uid="uid://c8v35qgpcbvid" path="res://Assets/Building Objects/Floors/Floor Hallway Turn.glb" id="1_fuffd"]
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="2_7k87c"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bibll4pikqx77" path="res://Assets/Building Objects/Walls/Wall Corner.glb" id="13_5dhxb"]
 [ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="13_ru88s"]
 [ext_resource type="PackedScene" uid="uid://va2u7m5g2hw5" path="res://Assets/Building Objects/Walls/Wall Doorway With Floor.glb" id="13_s3j43"]
+[ext_resource type="LightmapGIData" uid="uid://c46mgjqr2xvap" path="res://Scenes/Southern_Branch_Maze.lmbake" id="14_icov0"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -4779,3 +4780,10 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 55, 2, -
 
 [node name="torch222" parent="." instance=ExtResource("13_ru88s")]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 57, 2, -79)
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 2
+bounces = 5
+texel_scale = 5.0
+generate_probes_subdiv = 3
+light_data = ExtResource("14_icov0")
