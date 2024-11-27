@@ -10,7 +10,7 @@ func activate():
 	super.activate()
 	tween = get_tree().create_tween()
 	tween.tween_property(self, "position", self.position + (distance * direction), duration)
-	tween.connect("finished", deactivate)
+	tween.connect("finised", deactivate)
 	
 	
 func deactivate():

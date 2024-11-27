@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5tm0vk6hca84"]
+[gd_scene load_steps=13 format=3 uid="uid://b5tm0vk6hca84"]
 
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_td7t8"]
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="2_sclew"]
@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://7gtmld14h7yj" path="res://Assets/Building Objects/Floors/Floor Corner.glb" id="6_u8mob"]
 [ext_resource type="PackedScene" uid="uid://bkfg22p0mytef" path="res://Assets/Building Objects/Floors/Floor 2x2.glb" id="7_s30wo"]
 [ext_resource type="PackedScene" uid="uid://dfxbob31kprby" path="res://Prefabs/pillar.tscn" id="9_facwt"]
+[ext_resource type="Script" path="res://Prefabs/pillar_group_sean_scene.gd" id="9_jsevp"]
 [ext_resource type="PackedScene" uid="uid://bj48w6fjxrxwy" path="res://Prefabs/pillar_group.tscn" id="10_m6rgs"]
+[ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="11_fbyfa"]
 
 [node name="SeanScene" type="Node3D"]
 
@@ -112,9 +114,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 5)
 
 [node name="Floor 2x15" parent="Environment" instance=ExtResource("7_s30wo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 5)
-
-[node name="Emelator" parent="Environment" instance=ExtResource("4_3yny8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98766, 0.0504724, 0.945773)
 
 [node name="Floor 2x16" parent="Environment" instance=ExtResource("7_s30wo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
@@ -367,12 +366,28 @@ omni_attenuation = 0.3
 
 [node name="PillarGroup" parent="." instance=ExtResource("10_m6rgs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -6)
+script = ExtResource("9_jsevp")
 
 [node name="Node3D" parent="PillarGroup" instance=ExtResource("9_facwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -5)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, 0, -5)
+passwordFace = 3
 
 [node name="Node3D3" parent="PillarGroup" instance=ExtResource("9_facwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 3)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, 0, 3)
+passwordFace = 3
 
 [node name="Node3D2" parent="PillarGroup" instance=ExtResource("9_facwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -1)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, 0, -1)
+passwordFace = 2
+
+[node name="Emelator" parent="." instance=ExtResource("4_3yny8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.98766, 0.0504724, 0.945773)
+distance = 20.0
+direction = Vector3i(0, 1, 0)
+duration = 5.0
+enableReturn = true
+
+[node name="Pressure Plate" parent="." node_paths=PackedStringArray("whatToActivate") instance=ExtResource("11_fbyfa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
+whatToActivate = [NodePath("../Emelator")]
+canActivate = false

@@ -14,10 +14,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func isPasswordCorrect():
+	var allCorrect = true
+	
+	for pillar in pillars:
+		allCorrect = allCorrect and pillar.isCorrectFace()
+		
+	return allCorrect
 
 func onPillarInteracted(pillar: Pillar):
-	pillar.rotatePillar(2)
-	
-	for otherPillar in pillars:
-		if not otherPillar == pillar:
-			otherPillar.rotatePillar(1)
+	pass
