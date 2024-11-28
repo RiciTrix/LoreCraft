@@ -1,0 +1,316 @@
+[gd_scene load_steps=19 format=4 uid="uid://cdhll8vxx2fk3"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_i805i"]
+[ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_sm4wk"]
+[ext_resource type="LightmapGIData" uid="uid://occc2obtq7l4" path="res://Scenes/main_menu.lmbake" id="2_6jvj7"]
+[ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="2_hrdsm"]
+[ext_resource type="PackedScene" uid="uid://7gtmld14h7yj" path="res://Assets/Building Objects/Floors/Floor Corner.glb" id="3_o7qgo"]
+[ext_resource type="PackedScene" uid="uid://dpha2xl16wy5j" path="res://Assets/Building Objects/Walls/Wall Doorway.glb" id="4_kb0p8"]
+[ext_resource type="PackedScene" uid="uid://bibll4pikqx77" path="res://Assets/Building Objects/Walls/Wall Corner.glb" id="5_lxhrp"]
+[ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="6_vos10"]
+[ext_resource type="PackedScene" uid="uid://b1ccqujav8iy1" path="res://Assets/Building Objects/Walls/Wall Straight.glb" id="8_3tdv0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5l1p8"]
+resource_name = "Stone"
+cull_mode = 2
+albedo_color = Color(0.505672, 0.505672, 0.505672, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c75jw"]
+resource_name = "Stone Bevelled Edges"
+cull_mode = 2
+albedo_color = Color(0.596592, 0.596592, 0.596592, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c2d5l"]
+_surfaces = [{
+"aabb": AABB(0, 0.2, -7.45058e-09, 2, 3.6, 1),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABQAGAAQABQAHAAYAAAAGAAcAAAACAAYA"),
+"name": "Stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAQM3MTD4AAIA/AAAAADMzc0AAAIA/AAAAQDMzc0AAAIA/AAAAAM3MTD4AAIA/AAAAADMzc0AAAMAyAAAAAM3MTD4AAACyAAAAQDMzc0AAAMAyAAAAQM3MTD4AAACy")
+}, {
+"aabb": AABB(0, 0, -0.1, 2, 4, 1.2),
+"format": 34359742465,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAUABAAAAAIABgACAAEABgAFAAIABwAIAAkABwAKAAgACQALAAwACQAIAAsADQAAAAQADQAOAAAADAAPAAkADAAQAA8ACQARAAcACQAPABEACgASAAgACgATABIACAAUAAsACAASABQADgADAAAADgAVAAMAFQAWAAMAFQAXABYAEgAQABQAEgAPABAAEwAPABIAEwARAA8ABAAXAA0ABAAWABcABAAGABYABAAFAAYAEwAHABEAEwAKAAcAAwAGAAEAAwAWAAYA"),
+"name": "Stone Bevelled Edges",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAJqZeUDNzIw/AAAAAAAAgEDNzMy9AAAAAAAAgEDNzIw/AAAAAJqZeUDNzMy9AAAAQJqZeUDNzIw/AAAAQAAAgEDNzIw/AAAAQAAAgEDNzMy9AAAAQAAAAADNzIw/AAAAAMzMzD3NzIw/AAAAQMzMzD3NzIw/AAAAAAAAAADNzIw/AAAAAM3MTD4AAIA/AAAAQM3MTD4AAIA/AAAAQDMzc0AAAIA/AAAAADMzc0AAAIA/AAAAQMzMzD3NzMy9AAAAQM3MTD4AAACyAAAAQAAAAADNzMy9AAAAAMzMzD3NzMy9AAAAAAAAAADNzMy9AAAAAM3MTD4AAACyAAAAADMzc0AAAMAyAAAAQJqZeUDNzMy9AAAAQDMzc0AAAMAy")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pj0ur"]
+resource_name = "Wall Straight 2W_Cube_016"
+lightmap_size_hint = Vector2i(46, 46)
+_surfaces = [{
+"aabb": AABB(0, 0.2, -7.45058e-09, 2, 3.6, 1),
+"attribute_data": PackedByteArray("MzPzPgAAAD5DFjI8hiwkP2ZmBj8AAAAA6k3vPvWmtz5mZgY/AAAAPupN7z6GLCQ/NDPzPgAAAABWFjI89aa3PjQz8z4AAIA/yEI2P3UECj1mZgY/AABAP5GFDD8NnuM+ZmYGPwAAgD/IQjY/DZ7jPjIz8z4AAEA/kYUMP3UECj0yM/M+AABAP+pN7z5DFjI8ZmYGPwAAID9DFjI8x0KWPmZmBj8AAEA/QxYyPEMWMjwyM/M+AAAgP+pN7z7IQpY+MzPzPgAAAD4NnuM+WchiP2ZmBj8AACA/dQQKPSELOT8yM/M+AAAgPw2e4z4hCzk/ZmYGPwAAAD51BAo9WchiPw=="),
+"format": 34359742519,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_5l1p8"),
+"name": "Stone",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAAQM3MTD4AAIA/AAAAADMzc0AAAIA/AAAAQDMzc0AAAIA/AAAAAM3MTD4AAIA/AAAAAM3MTD4AAIA/AAAAADMzc0AAAMAyAAAAADMzc0AAAIA/AAAAAM3MTD4AAACyAAAAAM3MTD4AAACyAAAAQDMzc0AAAMAyAAAAADMzc0AAAMAyAAAAQM3MTD4AAACyAAAAQM3MTD4AAIA/AAAAQDMzc0AAAMAyAAAAQM3MTD4AAACyAAAAQDMzc0AAAIA//3//f/9/////f/9//3////9//3//f////3//f/9///8AAP9//3///wAA/3//f///AAD/f/9///8AAP9//3//////////f/////////9//////////3//////////f///////f/9///////9//3///////3//f///////f/9///8=")
+}, {
+"aabb": AABB(0, 0, -0.1, 2, 4, 1.2),
+"attribute_data": PackedByteArray("MzMTPwAAgD9Obzo//HXpPgAAID8AAEA/C1kIP+pN7z4AACA/AACAP05vOj/qTe8+MzMTPwAAQD8LWQg//HXpPjMzEz8AAAA+FrJQP9/0Zj8AACA/AAAAAAtZCD8tZGE/AAAgPwAAAD4WslA/LWRhPzMzEz8AAAAAC1kIP9/0Zj8AAEA/AAAAP2QhSz9DFjI8AABgPwAAgD6nN30/yEKWPgAAYD8AAAA/ZCFLP8hClj4AAEA/AACAPqc3fT9DFjI8AADAPgAAAD6nN30/hiwkP5qZ2T4AAAAA9aZ3P/Wmtz6amdk+AAAAPvWmdz+GLCQ/AADAPgAAAACnN30/9aa3PpqZ2T4AAAA+yEKWPqc3fT80M/M+AAAAAEMWMjz1pnc/MzPzPgAAAD7IQpY+9aZ3P5qZ2T4AAAAAQxYyPKc3fT9mZgY/AAAAPqc3fT+nN30/MzMTPwAAAAD1pnc/nN40PzMzEz8AAAA+9aZ3P6c3fT9mZgY/AAAAAKc3fT+c3jQ/MzPzPgAAAD4NnuM+WchiP5mZ2T4AACA//XXpPpzeND+amdk+AAAAPv116T7f9GY/MjPzPgAAID8NnuM+IQs5PwAAgD4AAAA/6k3vPpzeND8AAMA+AAAAPupN7z7f9GY/AADAPgAAgD9Obzo/QxYyPJmZ2T4AAEA/C1kIPwaKtjyamdk+AACAP05vOj8GirY8AADAPgAAQD8LWQg/QxYyPDIz8z4AAEA/kYUMP3UECj00M/M+AACAP8hCNj91BAo9ZmYGPwAAgD/IQjY/DZ7jPmZmBj8AAEA/kYUMPw2e4z5mZgY/AABAP4YsJD+nN30/MzMTPwAAID/1prc+9aZ3PzMzEz8AAEA/hiwkP/Wmdz9mZgY/AAAgP/Wmtz6nN30/mZnZPgAAQD8tZGE/pzd9PzIz8z4AACA/3/RmP5zeND8yM/M+AABAP9/0Zj+nN30/mZnZPgAAID8tZGE/nN40PwAAwD4AAEA/3/RmP4YsJD+Zmdk+AAAgPy1kYT/1prc+mZnZPgAAQD8tZGE/hiwkPwAAwD4AACA/3/RmP/Wmtz4zMxM/AAAAPgCKtjzf9GY/ZmYGPwAAID91BAo9IQs5P2ZmBj8AAAA+dQQKPVnIYj8zMxM/AAAgPwCKtjyc3jQ/AABAPwAAAD9DFjI8nN40PwAAID8AAAA+QxYyPN/0Zj8AAAA+AAAAPwtZCD8WslA/AACAPgAAgD5Obzo/C1kIPwAAgD4AAAA/C1kIPwtZCD8AAAA+AACAPk5vOj8WslA/MzMTPwAAQD8WslA/hiwkPwAAID8AACA/ZCFLP/Wmtz4AACA/AABAP2QhSz+GLCQ/MzMTPwAAID8WslA/9aa3Pg=="),
+"format": 34359742519,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAGgAcAB0AGgAZABwAHgAfACAAHgAhAB8AIAAiACMAIAAfACIAJAADAAAAJAAlAAMAJgAnACgAJgApACcAKgArACwAKgAtACsALgAvADAALgAxAC8AMgAzADQAMgA1ADMAMgA2ADUAMgA3ADYAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0A"),
+"material": SubResource("StandardMaterial3D_c75jw"),
+"name": "Stone Bevelled Edges",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("AAAAAJqZeUDNzIw/AAAAAAAAgEDNzMy9AAAAAAAAgEDNzIw/AAAAAJqZeUDNzMy9AAAAQJqZeUDNzIw/AAAAAAAAgEDNzIw/AAAAQAAAgEDNzIw/AAAAAJqZeUDNzIw/AAAAQAAAgEDNzMy9AAAAAAAAgEDNzIw/AAAAAAAAgEDNzMy9AAAAQAAAgEDNzIw/AAAAQAAAAADNzIw/AAAAAMzMzD3NzIw/AAAAQMzMzD3NzIw/AAAAAAAAAADNzIw/AAAAQMzMzD3NzIw/AAAAAM3MTD4AAIA/AAAAQM3MTD4AAIA/AAAAAMzMzD3NzIw/AAAAQDMzc0AAAIA/AAAAAJqZeUDNzIw/AAAAQJqZeUDNzIw/AAAAADMzc0AAAIA/AAAAQM3MTD4AAIA/AAAAQMzMzD3NzMy9AAAAQMzMzD3NzIw/AAAAQM3MTD4AAACyAAAAQAAAAADNzMy9AAAAQAAAAADNzIw/AAAAAAAAAADNzIw/AAAAAMzMzD3NzMy9AAAAAMzMzD3NzIw/AAAAAAAAAADNzMy9AAAAAM3MTD4AAACyAAAAAM3MTD4AAIA/AAAAADMzc0AAAIA/AAAAADMzc0AAAMAyAAAAADMzc0AAAMAyAAAAQJqZeUDNzMy9AAAAAJqZeUDNzMy9AAAAQDMzc0AAAMAyAAAAAMzMzD3NzMy9AAAAQM3MTD4AAACyAAAAAM3MTD4AAACyAAAAQMzMzD3NzMy9AAAAAAAAAADNzMy9AAAAQMzMzD3NzMy9AAAAAMzMzD3NzMy9AAAAQAAAAADNzMy9AAAAQJqZeUDNzIw/AAAAQDMzc0AAAMAyAAAAQDMzc0AAAIA/AAAAQJqZeUDNzMy9AAAAQAAAgEDNzMy9AAAAQAAAgEDNzIw/AAAAAAAAAADNzMy9AAAAQAAAAADNzIw/AAAAQAAAAADNzMy9AAAAAAAAAADNzIw/AAAAAJqZeUDNzMy9AAAAQAAAgEDNzMy9AAAAAAAAgEDNzMy9AAAAQJqZeUDNzMy9AAD/f/9/vfIAAP9//3///wAA/3//f///AAD/f2mV////f/9//3////9//3//f////3//f/9/////f/9//3////9///8AAP+//3///wAA/7//f///AAD/v/9///8AAP+//3//f/9/////f/9//3////9//3//f////3//f/9/////f/+//7////9//7//v////3//v/+/////f/+//7////9//z//f//f/3//P/9//9//f/8//3//3/9//z//f//f////f2+9//////9//3+s1v///3/0l///////f/9//9////9//38H0v///3//f///AAD/f/9///8AAP9//3+98gAA/39plf//AAD/f/9///8AAP9//39G4QAA/3//v///AAD/f/9/RuEAAP9//7////+/AAD/v////78AAP+/////vwAA/7////+/AAD/v////7////9//9//v////3//3/+/////f//f/7////9//9///////3//////////f/////////9//////////3///////3//f8b2////f2+9//////9//3//3////3+F1P//////f+/b//////9//3////9/AAD///+//38AAP///7//fwAA////v/9/AAD///+///////9//////////3//////////f/////////9///8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c2d5l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbly7"]
+vertex_color_use_as_albedo = true
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 3.0
+emission_on_uv2 = true
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_drjwh"]
+data = PackedVector3Array(2, 0.2, 1, 0, 3.8, 1, 2, 3.8, 1, 2, 0.2, 1, 0, 0.2, 1, 0, 3.8, 1, 0, 0.2, 1, 0, 3.8, 2.23517e-08, 0, 3.8, 1, 0, 0.2, 1, 0, 0.2, -7.45058e-09, 0, 3.8, 2.23517e-08, 0, 0.2, -7.45058e-09, 2, 3.8, 2.23517e-08, 0, 3.8, 2.23517e-08, 0, 0.2, -7.45058e-09, 2, 0.2, -7.45058e-09, 2, 3.8, 2.23517e-08, 2, 0.2, 1, 2, 3.8, 2.23517e-08, 2, 0.2, -7.45058e-09, 2, 0.2, 1, 2, 3.8, 1, 2, 3.8, 2.23517e-08, 0, 3.9, 1.1, 0, 4, -0.1, 0, 4, 1.1, 0, 3.9, 1.1, 0, 3.9, -0.1, 0, 4, -0.1, 2, 3.9, 1.1, 0, 4, 1.1, 2, 4, 1.1, 2, 3.9, 1.1, 0, 3.9, 1.1, 0, 4, 1.1, 2, 4, -0.1, 0, 4, 1.1, 0, 4, -0.1, 2, 4, -0.1, 2, 4, 1.1, 0, 4, 1.1, 2, 0, 1.1, 0, 0.1, 1.1, 2, 0.1, 1.1, 2, 0, 1.1, 0, 0, 1.1, 0, 0.1, 1.1, 2, 0.1, 1.1, 0, 0.2, 1, 2, 0.2, 1, 2, 0.1, 1.1, 0, 0.1, 1.1, 0, 0.2, 1, 2, 3.8, 1, 0, 3.9, 1.1, 2, 3.9, 1.1, 2, 3.8, 1, 0, 3.8, 1, 0, 3.9, 1.1, 2, 0.2, 1, 2, 0.1, -0.1, 2, 0.1, 1.1, 2, 0.2, 1, 2, 0.2, -7.45058e-09, 2, 0.1, -0.1, 2, 0.1, 1.1, 2, 0, -0.1, 2, 0, 1.1, 2, 0.1, 1.1, 2, 0.1, -0.1, 2, 0, -0.1, 0, 0, 1.1, 0, 0.1, -0.1, 0, 0.1, 1.1, 0, 0, 1.1, 0, 0, -0.1, 0, 0.1, -0.1, 0, 0.1, 1.1, 0, 0.2, -7.45058e-09, 0, 0.2, 1, 0, 0.1, 1.1, 0, 0.1, -0.1, 0, 0.2, -7.45058e-09, 0, 3.8, 1, 0, 3.9, -0.1, 0, 3.9, 1.1, 0, 3.8, 1, 0, 3.8, 2.23517e-08, 0, 3.9, -0.1, 0, 3.8, 2.23517e-08, 2, 3.9, -0.1, 0, 3.9, -0.1, 0, 3.8, 2.23517e-08, 2, 3.8, 2.23517e-08, 2, 3.9, -0.1, 0, 0.1, -0.1, 2, 0.2, -7.45058e-09, 0, 0.2, -7.45058e-09, 0, 0.1, -0.1, 2, 0.1, -0.1, 2, 0.2, -7.45058e-09, 0, 0, -0.1, 2, 0.1, -0.1, 0, 0.1, -0.1, 0, 0, -0.1, 2, 0, -0.1, 2, 0.1, -0.1, 2, 3.9, 1.1, 2, 3.8, 2.23517e-08, 2, 3.8, 1, 2, 3.9, 1.1, 2, 3.9, -0.1, 2, 3.8, 2.23517e-08, 2, 3.9, 1.1, 2, 4, -0.1, 2, 3.9, -0.1, 2, 3.9, 1.1, 2, 4, 1.1, 2, 4, -0.1, 0, 0, -0.1, 2, 0, 1.1, 2, 0, -0.1, 0, 0, -0.1, 0, 0, 1.1, 2, 0, 1.1, 0, 3.9, -0.1, 2, 4, -0.1, 0, 4, -0.1, 0, 3.9, -0.1, 2, 3.9, -0.1, 2, 4, -0.1)
+
+[sub_resource type="Animation" id="Animation_qwv6c"]
+resource_name = "moveCam"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.7, 0), Vector3(-4, 1.7, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control2/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mdpp4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.7, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control2/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qi5je"]
+_data = {
+"RESET": SubResource("Animation_mdpp4"),
+"moveCam": SubResource("Animation_qwv6c")
+}
+
+[node name="MainMenu" type="Node3D"]
+script = ExtResource("1_i805i")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_sm4wk")
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 2
+bounces = 5
+texel_scale = 5.0
+generate_probes_subdiv = 4
+light_data = ExtResource("2_6jvj7")
+
+[node name="Enviroment" type="Node3D" parent="."]
+
+[node name="Floor" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="Floor3" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Floor4" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="Floor7" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="Floor8" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+
+[node name="Floor9" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 5, -6)
+
+[node name="Floor10" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 5, -2)
+
+[node name="Floor11" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 5, 2)
+
+[node name="Floor12" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 2)
+
+[node name="Floor13" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -2)
+
+[node name="Floor14" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -6)
+
+[node name="Floor15" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 5, -6)
+
+[node name="Floor16" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 5, -2)
+
+[node name="Floor17" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 5, 2)
+
+[node name="Floor5" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Floor6" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Floor2" parent="Enviroment" instance=ExtResource("2_hrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+
+[node name="Floor Corner2" parent="Enviroment" instance=ExtResource("3_o7qgo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 6)
+
+[node name="Floor Corner3" parent="Enviroment" instance=ExtResource("3_o7qgo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -2)
+
+[node name="Wall Doorway2" parent="Enviroment" instance=ExtResource("4_kb0p8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.1, 0, -2)
+
+[node name="Wall Corner2" parent="Enviroment" instance=ExtResource("5_lxhrp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.1, 0, 7)
+
+[node name="Wall Corner3" parent="Enviroment" instance=ExtResource("5_lxhrp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 0, -7)
+
+[node name="Wall Corner4" parent="Enviroment" instance=ExtResource("5_lxhrp")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.9, 0, -7)
+
+[node name="Wall Corner5" parent="Enviroment" instance=ExtResource("5_lxhrp")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.9, 0, 7)
+
+[node name="torch" parent="Enviroment" instance=ExtResource("6_vos10")]
+transform = Transform3D(1.49012e-08, 0, 1, 0, 1, 0, -1, 0, 1.49012e-08, -4.1, 2, 3)
+
+[node name="Wall Straight 2W" type="Node3D" parent="Enviroment"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.1, 0, -1)
+
+[node name="Wall Straight 2x4" type="MeshInstance3D" parent="Enviroment/Wall Straight 2W"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, -0.8, -1)
+mesh = SubResource("ArrayMesh_pj0ur")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_pbly7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enviroment/Wall Straight 2W/Wall Straight 2x4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Wall Straight 2W/Wall Straight 2x4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_drjwh")
+
+[node name="torch2" parent="Enviroment" instance=ExtResource("6_vos10")]
+transform = Transform3D(1.49012e-08, 0, 1, 0, 1, 0, -1, 0, 1.49012e-08, -4.1, 2, -3)
+
+[node name="Wall Straight2" parent="Enviroment" instance=ExtResource("8_3tdv0")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.9, 0, -2)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.7, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Play Game"
+metadata/_edit_use_anchors_ = true
+
+[node name="Control2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qi5je")
+}
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="onPlayGame"]
