@@ -617,6 +617,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -14)
 distance = 4.0
 direction = Vector3i(0, 1, 0)
 duration = 3.0
+enableReturn = true
 
 [node name="Pressure Plate" parent="Enviroment/Emelator" node_paths=PackedStringArray("whatToActivate") instance=ExtResource("20_wui56")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)

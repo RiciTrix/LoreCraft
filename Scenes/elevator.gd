@@ -10,13 +10,14 @@ func activate():
 	super.activate()
 	tween = get_tree().create_tween()
 	tween.tween_property(self, "position", self.position + (distance * direction), duration)
-	tween.connect("finised", deactivate)
+	tween.connect("finished", deactivate)
 	
 	
 func deactivate():
 	super.deactivate()
 	if enableReturn:
 		direction *= -1
+	tween.kill()
 	
 func doTrapThings(delta):
 	pass

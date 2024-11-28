@@ -9,7 +9,7 @@ func activate():
 	
 	if not canActivate:
 		return
-	
+		
 	for trap in whatToActivate:
 		if !trap.is_active():
 			trap.activate()
