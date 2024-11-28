@@ -26,7 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://b3aiyuskwlnhl" path="res://Prefabs/Traps/saw_blade_trap.tscn" id="25_goenp"]
 [ext_resource type="PackedScene" uid="uid://rs2qmui5lb7n" path="res://Prefabs/Traps/flame_thrower.tscn" id="26_aq7h4"]
 [ext_resource type="PackedScene" uid="uid://dt14j6vqhybfd" path="res://Prefabs/Traps/spinningSpike.tscn" id="26_tovks"]
-[ext_resource type="LightmapGIData" uid="uid://b6d6fbtn5v3s7" path="res://Scenes/Southern_Branch.lmbake" id="27_j1prt"]
+[ext_resource type="LightmapGIData" path="res://Scenes/Southern_Branch.lmbake" id="27_j1prt"]
 [ext_resource type="PackedScene" uid="uid://dyl3weht6gb5p" path="res://Prefabs/Traps/spike_trap.tscn" id="27_nyj0v"]
 [ext_resource type="PackedScene" uid="uid://tyl1xib7y1lm" path="res://Scenes/Southern_Branch_Maze.tscn" id="27_og3mm"]
 
