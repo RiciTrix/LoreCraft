@@ -29,9 +29,9 @@ func Update(delta):
 	
 func Physics_Update(delta):
 	
-	if body.get_floor_normal().dot(body.transform.basis.z) < -0.5:
+	if body.get_floor_normal().dot(body.transform.basis.z) < 0:
 		timer.paused = true
-	elif body.get_floor_normal().dot(body.transform.basis.z) > 0.5:
+	elif body.get_floor_normal().dot(body.transform.basis.z) > 0.1:
 		timer.stop()
 	elif body.get_floor_normal().dot(body.transform.basis.z) == 0:
 		timer.paused = false
