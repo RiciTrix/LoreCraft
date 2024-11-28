@@ -23,6 +23,7 @@ import/blender/enabled=false
 
 Player=""
 interactable=""
+checkpoint=""
 
 [input]
 

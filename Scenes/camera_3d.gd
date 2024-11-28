@@ -30,7 +30,16 @@ func _process(delta):
 		if ray.is_colliding() and ray.get_collider().is_in_group('interactable'):
 			
 			if Input.is_action_just_pressed("interact"):
-				ray.get_collider().get_parent().interact()
+				
+				var rayCollider = ray.get_collider()
+				
+				if rayCollider:
+					var parent = rayCollider.get_parent()
+					
+					if parent.is_in_group("checkpoint"):
+						parent.interact(rootNode)
+					else:
+						parent.interact()
 		
 		if _enableLerp:
 			mainNode.position.y = lerp(mainNode.position.y, followPos.global_position.y, 15 * delta)

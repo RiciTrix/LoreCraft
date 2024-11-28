@@ -6,6 +6,7 @@ class_name PlayerController
 @export var mainCollider: CollisionShape3D
 @export var crouchCollider: CollisionShape3D
 @export var cam: PlayerCamera
+@export var activeCheckpoint: Checkpoint
 
 @onready var footsteps = $AudioStreamPlayer3D
 

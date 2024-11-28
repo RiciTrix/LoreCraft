@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b5tm0vk6hca84"]
+[gd_scene load_steps=14 format=3 uid="uid://b5tm0vk6hca84"]
 
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_td7t8"]
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="2_sclew"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Prefabs/pillar_group_sean_scene.gd" id="9_jsevp"]
 [ext_resource type="PackedScene" uid="uid://bj48w6fjxrxwy" path="res://Prefabs/pillar_group.tscn" id="10_m6rgs"]
 [ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="11_fbyfa"]
+[ext_resource type="PackedScene" uid="uid://bbgmmjyckard8" path="res://Prefabs/Checkpoint.tscn" id="13_mvf88"]
 
 [node name="SeanScene" type="Node3D"]
 
@@ -391,3 +392,6 @@ enableReturn = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)
 whatToActivate = [NodePath("../Emelator")]
 canActivate = false
+
+[node name="Checkpoint" parent="." instance=ExtResource("13_mvf88")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -11)
