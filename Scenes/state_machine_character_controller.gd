@@ -7,6 +7,7 @@ class_name PlayerController
 @export var crouchCollider: CollisionShape3D
 @export var cam: PlayerCamera
 @export var activeCheckpoint: Checkpoint
+@export var acquiredKeys: Array
 
 @onready var footsteps = $AudioStreamPlayer3D
 
@@ -35,6 +36,9 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
+func addKey(keyResource: KeyResource):
+	acquiredKeys.append(keyResource)
+
 func swapCamState(rotationLerpAmount, b):
 	c = !c
 	_rotationLerpAmount = rotationLerpAmount

@@ -36,7 +36,7 @@ func _process(delta):
 				if rayCollider:
 					var parent = rayCollider.get_parent()
 					
-					if parent.is_in_group("checkpoint"):
+					if parent.is_in_group("checkpoint") or parent.is_in_group("key"):
 						parent.interact(rootNode)
 					else:
 						parent.interact()

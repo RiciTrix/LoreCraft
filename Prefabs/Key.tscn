@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1e1e0xhe0fmh"]
+
+[ext_resource type="Script" path="res://Prefabs/key.gd" id="1_qjtp3"]
+[ext_resource type="Resource" uid="uid://dgoma413wuktw" path="res://Resources/DefaultKeyResource.tres" id="2_o8ji4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lhmvx"]
+size = Vector3(1.5, 1, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4aqbl"]
+
+[node name="Key" type="Node3D" groups=["interactable", "key"]]
+script = ExtResource("1_qjtp3")
+keyResource = ExtResource("2_o8ji4")
+
+[node name="Area3D" type="Area3D" parent="." groups=["interactable"]]
+collision_layer = 16384
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0324999, 0.5, 0.0125)
+shape = SubResource("BoxShape3D_lhmvx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_4aqbl")

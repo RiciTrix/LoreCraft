@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="KeyResource" load_steps=4 format=3 uid="uid://dtq4bfbpo4vaf"]
+
+[ext_resource type="Script" path="res://Resources/baseKeyResource.gd" id="1_wwd64"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ig2d"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cufut"]
+material = SubResource("StandardMaterial3D_5ig2d")
+
+[resource]
+script = ExtResource("1_wwd64")
+name = "blue-key"
+mesh = SubResource("BoxMesh_cufut")
