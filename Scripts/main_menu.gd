@@ -6,6 +6,7 @@ var anim: AnimationPlayer
 
 func _ready():
 	anim = $AnimationPlayer
+	$CanvasLayer/VBoxContainer/HSlider.value = AudioServer.get_bus_volume_db(0)
 
 
 func onPlayGame():
@@ -20,3 +21,14 @@ func _process(delta):
 			var v = playSpace.instantiate()
 			get_node("..").add_child(v)
 			self.queue_free()		
+
+
+func _on_value_changed(value, index):
+	if value == -6:
+		AudioServer.set_bus_mute(index, true) 
+	else:
+		AudioServer.set_bus_mute(index, false) 
+		
+	print(str(value) + ", " + str(index))
+	
+	AudioServer.set_bus_volume_db(index, value)

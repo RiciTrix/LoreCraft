@@ -46,7 +46,6 @@ func Physics_Update(delta):
 		else:
 			Transitioned.emit(self, "Walking")
 	
-	print(timer.time_left)
 	body.velocity += slideDir * slideSpeed * delta
 	body.velocity.y += body.get_gravity().y * delta
 	if timer.is_stopped():

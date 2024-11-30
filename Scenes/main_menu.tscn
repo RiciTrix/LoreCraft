@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cdhll8vxx2fk3"]
+[gd_scene load_steps=20 format=4 uid="uid://cdhll8vxx2fk3"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_i805i"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_sm4wk"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bibll4pikqx77" path="res://Assets/Building Objects/Walls/Wall Corner.glb" id="5_lxhrp"]
 [ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="6_vos10"]
 [ext_resource type="PackedScene" uid="uid://b1ccqujav8iy1" path="res://Assets/Building Objects/Walls/Wall Straight.glb" id="8_3tdv0"]
+[ext_resource type="AudioStream" uid="uid://cvwcagqlw42l7" path="res://SFX/Music/myst.mp3" id="10_c6n60"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5l1p8"]
 resource_name = "Stone"
@@ -259,6 +260,13 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.9, 0
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.7, 0)
 
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera3D"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camera3D"]
+stream = ExtResource("10_c6n60")
+autoplay = true
+bus = &"Music"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -308,9 +316,56 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 metadata/_edit_use_anchors_ = true
 
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+layout_direction = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -68.0
+offset_right = 141.0
+offset_bottom = 69.0
+grow_vertical = 2
+scale = Vector2(1.35, 1.35)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Master Volume
+"
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+min_value = -6.0
+max_value = 6.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume
+"
+
+[node name="HSlider2" type="HSlider" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+min_value = -6.0
+max_value = 6.0
+
+[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Sound Effects
+"
+
+[node name="HSlider3" type="HSlider" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+min_value = -6.0
+max_value = 6.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qi5je")
 }
 
 [connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="onPlayGame"]
+[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider" to="." method="_on_value_changed" binds= [0]]
+[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider2" to="." method="_on_value_changed" binds= [1]]
+[connection signal="value_changed" from="CanvasLayer/VBoxContainer/HSlider3" to="." method="_on_value_changed" binds= [2]]
