@@ -52,4 +52,7 @@ func swapCamState(rotationLerpAmount, b):
 		mainCollider.disabled = false
 		crouchCollider.disabled = true
 		lerpCam = false
-		
+
+func die():
+	$StateMachine.on_child_transitioned($StateMachine.currentState, "Idle")
+	$StateMachine.enabled = false

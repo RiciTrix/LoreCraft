@@ -3,6 +3,7 @@ extends Node
 var currentState: State
 var states: Dictionary = {}
 
+@onready var enabled: bool = true
 @export var initial_state: State
 
 func _ready():
@@ -26,6 +27,9 @@ func _physics_process(delta):
 func on_child_transitioned(state, new_state_name):
 	if state != currentState:
 		return
+
+	if !enabled:
+		return
 	
 	var new_state: State = states.get(new_state_name.to_lower())
 	
@@ -37,3 +41,4 @@ func on_child_transitioned(state, new_state_name):
 	
 	new_state.enter()
 	currentState = new_state
+	
