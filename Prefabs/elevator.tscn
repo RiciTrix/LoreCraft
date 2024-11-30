@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/elevator.gd" id="1_mnpm3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n0uyj"]
+rough = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_klr3c"]
 size = Vector3(4, 1, 4)

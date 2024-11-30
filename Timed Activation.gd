@@ -4,9 +4,10 @@ extends Timer
 func activate():
 	var parent = get_parent()
 	
-	if parent is Trap: 
-		parent.activate()
-		parent.trapType = Trap.Types.AlwaysOn
+	if parent is Trap:
+		if !parent.is_active(): 
+			parent.activate()
+			parent.trapType = Trap.Types.AlwaysOn
 
 func _ready():
 	self.connect("timeout",activate)

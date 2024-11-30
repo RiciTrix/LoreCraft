@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cpelsfadk6c4u"]
+[gd_scene load_steps=32 format=3 uid="uid://cpelsfadk6c4u"]
 
 [ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="1_bgkpx"]
 [ext_resource type="PackedScene" uid="uid://ba3rheaxmp0up" path="res://Assets/Building Objects/Floors/Floor 1 Side 2x2.glb" id="4_ybf21"]
@@ -16,8 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="15_758y1"]
 [ext_resource type="LightmapGIData" uid="uid://bqompjvr68vb5" path="res://lightmaps/Oblisk Room.lmbake" id="16_43s6r"]
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="16_a43ww"]
+[ext_resource type="AudioStream" uid="uid://dfd5jfn4wj3g3" path="res://SFX/stone-push-37412.mp3" id="17_aavcb"]
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="17_tn015"]
 [ext_resource type="PackedScene" uid="uid://cyh1yjrfb5i43" path="res://Prefabs/Enviroment/oblisk.tscn" id="18_mkvmm"]
+[ext_resource type="Script" path="res://Scenes/trapAudioTrigger.gd" id="18_tcaut"]
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="19_enc7q"]
 [ext_resource type="Resource" path="res://Resources/SquareKeyResource.tres" id="19_frx16"]
 [ext_resource type="Resource" path="res://Resources/CircleKeyResource.tres" id="20_3t7b7"]
@@ -1270,12 +1272,25 @@ distance = 3.0
 direction = Vector3i(0, 1, 0)
 duration = 3.0
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Enviroment/Door 3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 0)
+stream = ExtResource("17_aavcb")
+volume_db = 10.0
+script = ExtResource("18_tcaut")
+
 [node name="Door 1" parent="Enviroment" instance=ExtResource("20_ofxoh")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.3, 0, -2)
 script = ExtResource("21_rpnhg")
 distance = 1.0
 direction = Vector3i(0, 3, 0)
 duration = 3.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Enviroment/Door 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+stream = ExtResource("17_aavcb")
+volume_db = 10.0
+bus = &"SFX"
+script = ExtResource("18_tcaut")
 
 [node name="Key" parent="Enviroment" instance=ExtResource("22_qq44v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 0)
@@ -1292,6 +1307,11 @@ distance = 3.0
 direction = Vector3i(0, 1, 0)
 duration = 3.0
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Enviroment/Door 32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.6, 0)
+stream = ExtResource("17_aavcb")
+script = ExtResource("18_tcaut")
+
 [node name="Key3" parent="Enviroment" instance=ExtResource("22_qq44v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.9, 9.9, 4.8)
 keyResource = ExtResource("22_oj4sd")
@@ -1306,6 +1326,11 @@ script = ExtResource("21_rpnhg")
 distance = 3.0
 direction = Vector3i(0, 1, 0)
 duration = 3.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Enviroment/Door 42"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.4, 0)
+stream = ExtResource("17_aavcb")
+script = ExtResource("18_tcaut")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("14_epfqv")
@@ -1354,10 +1379,10 @@ FirstSlotKey = ExtResource("21_y0r82")
 SecondSlotKey = ExtResource("20_3t7b7")
 ThirdSlotKey = ExtResource("19_frx16")
 FourthSlotKey = ExtResource("22_oj4sd")
-WhatToActivateFirstSlot = [NodePath("../Enviroment/Door 1")]
-WhatToActivateSecondSlot = [NodePath("../Enviroment/Door 42")]
-WhatToActivateThirdSlot = [NodePath("../Enviroment/Door 3")]
-WhatToActivateFourthSlot = [NodePath("../Enviroment/Door 32")]
+WhatToActivateFirstSlot = [NodePath("../Enviroment/Door 1"), NodePath("../Enviroment/Door 1/AudioStreamPlayer3D")]
+WhatToActivateSecondSlot = [NodePath("../Enviroment/Door 42"), NodePath("../Enviroment/Door 42/AudioStreamPlayer3D")]
+WhatToActivateThirdSlot = [NodePath("../Enviroment/Door 3"), NodePath("../Enviroment/Door 3/AudioStreamPlayer3D")]
+WhatToActivateFourthSlot = [NodePath("../Enviroment/Door 32"), NodePath("../Enviroment/Door 32/AudioStreamPlayer3D")]
 
 [node name="Main" parent="." instance=ExtResource("29_uyb3l")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33, 0, 0)

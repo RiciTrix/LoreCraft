@@ -20,4 +20,5 @@ func _on_area_3d_body_entered(body):
 	if isActivated && disableAfterFirstActivation:
 		return
 	else:
-		activate()
+		if body is PlayerController:
+			activate()

@@ -60,6 +60,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("crouchFollowCamPos", "standingFollowCamPos", "mainCollider", "crouchCollider") groups=["Player"]]
+platform_on_leave = 2
 script = ExtResource("1_f0lyk")
 crouchFollowCamPos = NodePath("CameraFollowCrouch")
 standingFollowCamPos = NodePath("CameraFollow")
