@@ -18,5 +18,5 @@ func doTrapThings(delta):
 	blade.position.x = travel
 
 func _on_blade_entered(body):
-	if body.is_in_group("Player"):
-		print("Dead")
+	if	body is PlayerController:
+		body.die()

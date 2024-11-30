@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dyl3weht6gb5p"]
+[gd_scene load_steps=11 format=4 uid="uid://dyl3weht6gb5p"]
 
 [ext_resource type="Script" path="res://Scripts/spike_trap.gd" id="1_ntrpm"]
 
@@ -136,6 +136,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bbs65")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j67t6"]
+size = Vector3(3, 1.7, 2.4)
+
 [node name="SpikeTrap" type="Node3D" node_paths=PackedStringArray("activeTimer")]
 script = ExtResource("1_ntrpm")
 length = 2.0
@@ -160,6 +163,12 @@ gi_mode = 2
 mesh = SubResource("ArrayMesh_tknxb")
 skeleton = NodePath("")
 
+[node name="Area3D" type="Area3D" parent="Spike Trap Base/Spike Trap Spikes2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spike Trap Base/Spike Trap Spikes2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("BoxShape3D_j67t6")
+
 [node name="activeTime" type="Timer" parent="."]
 process_callback = 0
 one_shot = true
@@ -168,3 +177,5 @@ one_shot = true
 process_callback = 0
 wait_time = 3.0
 one_shot = true
+
+[connection signal="body_entered" from="Spike Trap Base/Spike Trap Spikes2/Area3D" to="." method="_on_area_3d_body_entered"]

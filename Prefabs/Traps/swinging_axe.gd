@@ -8,3 +8,8 @@ func doTrapThings(delta):
 	num += delta
 	var travel = distance.x * sin(num * bladeSpeed)
 	blade.rotation.z = travel
+
+
+func _on_area_3d_body_entered(body):
+	if body is PlayerController:
+		body.die()

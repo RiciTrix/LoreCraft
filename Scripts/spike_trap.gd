@@ -39,3 +39,8 @@ func reset():
 
 func doTrapThings(delta):
 	pass
+
+
+func _on_area_3d_body_entered(body):
+	if body is PlayerController:
+		body.die()
