@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cs2f1ul5jrvi0"]
+[gd_scene load_steps=15 format=3 uid="uid://cs2f1ul5jrvi0"]
 
 [ext_resource type="Script" path="res://Scenes/state_machine_character_controller.gd" id="1_f0lyk"]
 [ext_resource type="Script" path="res://Scenes/state_machine.gd" id="2_4sxpg"]
@@ -19,6 +19,43 @@ radius = 0.4
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1c1m2"]
 radius = 0.3
 height = 1.8
+
+[sub_resource type="Animation" id="Animation_73hxn"]
+resource_name = "fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0.712129, 0.712129, 0.712129, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tvkan"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fwgvp"]
+_data = {
+"RESET": SubResource("Animation_tvkan"),
+"fade": SubResource("Animation_73hxn")
+}
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("crouchFollowCamPos", "standingFollowCamPos", "mainCollider", "crouchCollider") groups=["Player"]]
 script = ExtResource("1_f0lyk")
@@ -93,3 +130,28 @@ upwardRay = NodePath("../../RayCast3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01138, 0)
 target_position = Vector3(0, 1, 0)
 hit_from_inside = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_fwgvp")
+}

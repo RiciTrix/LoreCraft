@@ -19,6 +19,9 @@ var direction
 @onready var lerpCam : bool = false
 var _rotationLerpAmount = 0
 
+func _ready():
+	$CanvasLayer/AnimationPlayer.play_backwards("fade")
+
 func _physics_process(delta):
 	
 	if lerpCam:
@@ -56,5 +59,9 @@ func swapCamState(rotationLerpAmount, b):
 func die():
 	$StateMachine.on_child_transitioned($StateMachine.currentState, "Idle")
 	$StateMachine.enabled = false
+	$CanvasLayer/AnimationPlayer.play("fade")
+	await get_tree().create_timer(2).timeout
 	global_position = activeCheckpoint.global_position
+	$CanvasLayer/AnimationPlayer.play_backwards("fade")
+	await get_tree().create_timer(2).timeout
 	$StateMachine.enabled = true
