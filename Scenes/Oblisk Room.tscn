@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cpelsfadk6c4u"]
+[gd_scene load_steps=29 format=3 uid="uid://cpelsfadk6c4u"]
 
 [ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="1_bgkpx"]
 [ext_resource type="PackedScene" uid="uid://ba3rheaxmp0up" path="res://Assets/Building Objects/Floors/Floor 1 Side 2x2.glb" id="4_ybf21"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dcf6vutd6mfyf" path="res://Assets/Building Objects/Walls/Wall Corner BE 2 1L.glb" id="11_6ojrw"]
 [ext_resource type="PackedScene" uid="uid://hn2rp2lxo6e0" path="res://Assets/Building Objects/Walls/Wall Corner 1L.glb" id="12_huxpa"]
 [ext_resource type="PackedScene" uid="uid://b1ccqujav8iy1" path="res://Assets/Building Objects/Walls/Wall Straight.glb" id="13_5st6i"]
+[ext_resource type="PackedScene" uid="uid://l4nrcidmge1l" path="res://Assets/Building Objects/Doors/Door 2.glb" id="14_0x3gj"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="14_epfqv"]
 [ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="15_758y1"]
 [ext_resource type="LightmapGIData" uid="uid://bqompjvr68vb5" path="res://lightmaps/Oblisk Room.lmbake" id="16_43s6r"]
@@ -18,6 +19,15 @@
 [ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="17_tn015"]
 [ext_resource type="PackedScene" uid="uid://cyh1yjrfb5i43" path="res://Prefabs/Enviroment/oblisk.tscn" id="18_mkvmm"]
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="19_enc7q"]
+[ext_resource type="Resource" path="res://Resources/SquareKeyResource.tres" id="19_frx16"]
+[ext_resource type="Resource" path="res://Resources/CircleKeyResource.tres" id="20_3t7b7"]
+[ext_resource type="PackedScene" uid="uid://ysh010a40fks" path="res://Assets/Building Objects/Doors/Door 1.glb" id="20_ofxoh"]
+[ext_resource type="Script" path="res://Scenes/elevator.gd" id="21_rpnhg"]
+[ext_resource type="Resource" path="res://Resources/CrossKeyResource.tres" id="21_y0r82"]
+[ext_resource type="Resource" path="res://Resources/TriangleKeyResource.tres" id="22_oj4sd"]
+[ext_resource type="PackedScene" uid="uid://b1e1e0xhe0fmh" path="res://Prefabs/Key.tscn" id="22_qq44v"]
+[ext_resource type="PackedScene" uid="uid://brjuqchiy1u2b" path="res://Assets/Building Objects/Doors/Door 3.glb" id="26_afia0"]
+[ext_resource type="PackedScene" uid="uid://m1m5au7neyrf" path="res://Assets/Building Objects/Doors/Door 4.glb" id="28_gyww6"]
 
 [node name="Main" type="Node3D"]
 
@@ -1252,6 +1262,50 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -23, 2
 [node name="torch40" parent="Enviroment" instance=ExtResource("15_758y1")]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -23, 2, -2)
 
+[node name="Door 3" parent="Enviroment" instance=ExtResource("14_0x3gj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.3, 0, 2)
+script = ExtResource("21_rpnhg")
+distance = 3.0
+direction = Vector3i(0, 1, 0)
+duration = 3.0
+
+[node name="Door 1" parent="Enviroment" instance=ExtResource("20_ofxoh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.3, 0, -2)
+script = ExtResource("21_rpnhg")
+distance = 1.0
+direction = Vector3i(0, 3, 0)
+duration = 3.0
+
+[node name="Key" parent="Enviroment" instance=ExtResource("22_qq44v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 0)
+keyResource = ExtResource("21_y0r82")
+
+[node name="Key2" parent="Enviroment" instance=ExtResource("22_qq44v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1, 0)
+keyResource = ExtResource("19_frx16")
+
+[node name="Door 32" parent="Enviroment" instance=ExtResource("26_afia0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 19.3)
+script = ExtResource("21_rpnhg")
+distance = 3.0
+direction = Vector3i(0, 1, 0)
+duration = 3.0
+
+[node name="Key3" parent="Enviroment" instance=ExtResource("22_qq44v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, 0)
+keyResource = ExtResource("22_oj4sd")
+
+[node name="Key4" parent="Enviroment" instance=ExtResource("22_qq44v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 24)
+keyResource = ExtResource("20_3t7b7")
+
+[node name="Door 42" parent="Enviroment" instance=ExtResource("28_gyww6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -20.3)
+script = ExtResource("21_rpnhg")
+distance = 3.0
+direction = Vector3i(0, 1, 0)
+duration = 3.0
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("14_epfqv")
 
@@ -1294,4 +1348,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10)
 wall_min_slide_angle = 0.610865
 cam = NodePath("../CameraMain/CameraPivot/Camera3D")
 
-[node name="Oblisk" parent="." instance=ExtResource("18_mkvmm")]
+[node name="Oblisk" parent="." node_paths=PackedStringArray("WhatToActivateFirstSlot", "WhatToActivateSecondSlot", "WhatToActivateThirdSlot", "WhatToActivateFourthSlot") instance=ExtResource("18_mkvmm")]
+FirstSlotKey = ExtResource("21_y0r82")
+SecondSlotKey = ExtResource("20_3t7b7")
+ThirdSlotKey = ExtResource("19_frx16")
+FourthSlotKey = ExtResource("22_oj4sd")
+WhatToActivateFirstSlot = [NodePath("../Enviroment/Door 1")]
+WhatToActivateSecondSlot = [NodePath("../Enviroment/Door 42")]
+WhatToActivateThirdSlot = [NodePath("../Enviroment/Door 3")]
+WhatToActivateFourthSlot = [NodePath("../Enviroment/Door 32")]
