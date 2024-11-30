@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://df2301r7i0m8x"]
+[gd_scene load_steps=42 format=3 uid="uid://df2301r7i0m8x"]
 
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_yusm3"]
 [ext_resource type="PackedScene" uid="uid://buu2mv05jqk50" path="res://Assets/Building Objects/Floors/Floor Hallway T.glb" id="2_lddxl"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://dpha2xl16wy5j" path="res://Assets/Building Objects/Walls/Wall Doorway.glb" id="38_gajax"]
 [ext_resource type="PackedScene" uid="uid://cmd6pa1hquy36" path="res://Assets/Building Objects/Walls/Wall 1W.glb" id="39_1gvlo"]
 [ext_resource type="PackedScene" uid="uid://dibkr6auetkcs" path="res://Assets/Building Objects/Slopes/Slope 1H.glb" id="40_887g2"]
+[ext_resource type="PackedScene" uid="uid://bbgmmjyckard8" path="res://Prefabs/Checkpoint.tscn" id="41_puv8y"]
 
 [node name="Main" type="Node3D"]
 
@@ -3226,3 +3227,21 @@ bounces = 5
 texel_scale = 5.0
 generate_probes_subdiv = 3
 light_data = ExtResource("32_n3bgo")
+
+[node name="Checkpoint" parent="." instance=ExtResource("41_puv8y")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28, 0, -31.5)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("41_puv8y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -12)
+
+[node name="Checkpoint3" parent="." instance=ExtResource("41_puv8y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -18)
+
+[node name="Checkpoint4" parent="." instance=ExtResource("41_puv8y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 8, -31)
+
+[node name="Checkpoint5" parent="." instance=ExtResource("41_puv8y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 8, -40)
+
+[node name="Checkpoint6" parent="." instance=ExtResource("41_puv8y")]
+transform = Transform3D(0.839032, 0, 0.544083, 0, 1, 0, -0.544083, 0, 0.839032, -56.2193, 8, -59.7984)
