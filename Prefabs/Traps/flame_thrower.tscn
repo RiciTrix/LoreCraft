@@ -301,4 +301,4 @@ one_shot = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_tk48a")
-volume_db = -10.0
+volume_db = -30.0

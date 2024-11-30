@@ -607,6 +607,7 @@ swapPolarity = 0
 positiveX = true
 negativeX = true
 positiveZ = false
+trapType = 0
 
 [node name="flame_thrower2" parent="Enviroment" instance=ExtResource("21_6b4i6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -6)

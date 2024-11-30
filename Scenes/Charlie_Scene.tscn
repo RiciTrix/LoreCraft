@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://df2301r7i0m8x"]
+[gd_scene load_steps=40 format=3 uid="uid://df2301r7i0m8x"]
 
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_yusm3"]
 [ext_resource type="PackedScene" uid="uid://buu2mv05jqk50" path="res://Assets/Building Objects/Floors/Floor Hallway T.glb" id="2_lddxl"]
@@ -13,8 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://rs2qmui5lb7n" path="res://Prefabs/Traps/flame_thrower.tscn" id="11_w6dyl"]
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="12_sutti"]
 [ext_resource type="PackedScene" uid="uid://5362euukhprb" path="res://Prefabs/Traps/Timed Activator.tscn" id="13_dk7ct"]
-[ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="13_w8qub"]
-[ext_resource type="PackedScene" uid="uid://cs2f1ul5jrvi0" path="res://Scenes/Character.tscn" id="14_h0bya"]
 [ext_resource type="PackedScene" uid="uid://dctgbb2rhh0sv" path="res://Assets/Building Objects/Floors/Floor No Exits.glb" id="15_k8l7h"]
 [ext_resource type="PackedScene" uid="uid://c6mr1pakik7qi" path="res://Prefabs/elevator.tscn" id="16_545xl"]
 [ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="17_jhy2i"]
@@ -3185,38 +3183,6 @@ trapType = 0
 
 [node name="Node3D" parent="Traps/SpikeTrap7" instance=ExtResource("13_dk7ct")]
 wait_time = 5.0
-
-[node name="CameraMain" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29142, 7)
-
-[node name="CameraPivot" type="Node3D" parent="CameraMain"]
-
-[node name="Camera3D" type="Camera3D" parent="CameraMain/CameraPivot" node_paths=PackedStringArray("rootNode", "mainNode", "pivotPoint")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.185575)
-environment = ExtResource("12_sutti")
-current = true
-fov = 90.0
-script = ExtResource("13_w8qub")
-rootNode = NodePath("../../../Player")
-mainNode = NodePath("../..")
-pivotPoint = NodePath("..")
-sensitivity = 0.1
-
-[node name="AudioListener3D" type="AudioListener3D" parent="CameraMain/CameraPivot/Camera3D"]
-current = true
-
-[node name="RayCast3D" type="RayCast3D" parent="CameraMain/CameraPivot/Camera3D"]
-exclude_parent = false
-target_position = Vector3(0, 0, -1)
-collision_mask = 16384
-hit_from_inside = true
-collide_with_areas = true
-collide_with_bodies = false
-
-[node name="Player" parent="." node_paths=PackedStringArray("cam") instance=ExtResource("14_h0bya")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -3)
-wall_min_slide_angle = 0.610865
-cam = NodePath("../CameraMain/CameraPivot/Camera3D")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("12_sutti")
