@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=4 uid="uid://bbgmmjyckard8"]
+[gd_scene load_steps=13 format=4 uid="uid://bbgmmjyckard8"]
 
 [ext_resource type="Script" path="res://Prefabs/checkpoint.gd" id="1_1xm2u"]
+[ext_resource type="AudioStream" uid="uid://cc76umxyvfdjc" path="res://SFX/fire-sound-effects-224089.mp3" id="2_jtdqq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bbkqw"]
 resource_local_to_scene = true
@@ -229,6 +230,10 @@ _data = {
 
 [node name="Checkpoint" type="Node3D" groups=["checkpoint", "interactable"]]
 script = ExtResource("1_1xm2u")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_jtdqq")
+bus = &"SFX"
 
 [node name="Checkpoint" type="Node3D" parent="."]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0, -1.49012e-08)

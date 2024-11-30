@@ -24,11 +24,9 @@ func _process(delta):
 
 
 func _on_value_changed(value, index):
-	if value == -6:
+	if value == -10:
 		AudioServer.set_bus_mute(index, true) 
 	else:
 		AudioServer.set_bus_mute(index, false) 
-		
-	print(str(value) + ", " + str(index))
 	
 	AudioServer.set_bus_volume_db(index, value)

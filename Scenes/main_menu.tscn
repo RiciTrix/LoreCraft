@@ -337,7 +337,7 @@ text = "Master Volume
 
 [node name="HSlider" type="HSlider" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-min_value = -6.0
+min_value = -10.0
 max_value = 6.0
 
 [node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
@@ -347,7 +347,7 @@ text = "Music Volume
 
 [node name="HSlider2" type="HSlider" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-min_value = -6.0
+min_value = -10.0
 max_value = 6.0
 
 [node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer"]
@@ -357,7 +357,7 @@ text = "Sound Effects
 
 [node name="HSlider3" type="HSlider" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-min_value = -6.0
+min_value = -10.0
 max_value = 6.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

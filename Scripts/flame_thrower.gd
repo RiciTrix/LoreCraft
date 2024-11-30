@@ -51,6 +51,7 @@ func activate():
 		$Timer.connect("timeout", rotateInterval)
 		resetTimer()
 
+	$AudioStreamPlayer3D.play()
 	posXT.emitting = positiveX
 	negXT.emitting = negativeX
 	posZT.emitting = positiveZ

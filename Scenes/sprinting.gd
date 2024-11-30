@@ -7,7 +7,7 @@ extends State
 func enter():
 	$"../../AudioStreamPlayer3D".stream = load("res://SFX/concrete-footsteps-6752.mp3")
 	$"../../AudioStreamPlayer3D".playing = true
-	$"../../AudioStreamPlayer3D".pitch_scale = 2
+	$"../../AudioStreamPlayer3D".pitch_scale = 1.8
 	pass
 	
 func exit():

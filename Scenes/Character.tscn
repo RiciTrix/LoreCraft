@@ -1,13 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://cs2f1ul5jrvi0"]
+[gd_scene load_steps=17 format=3 uid="uid://cs2f1ul5jrvi0"]
 
 [ext_resource type="Script" path="res://Scenes/state_machine_character_controller.gd" id="1_f0lyk"]
 [ext_resource type="Script" path="res://Scenes/state_machine.gd" id="2_4sxpg"]
+[ext_resource type="AudioStream" uid="uid://1vimmda0k8md" path="res://SFX/concrete-footsteps-6752.mp3" id="2_vvjp4"]
 [ext_resource type="Script" path="res://Scenes/player_idle.gd" id="3_37y13"]
 [ext_resource type="Script" path="res://Scenes/player_walking.gd" id="3_67bb3"]
 [ext_resource type="Script" path="res://Scenes/player_jumping.gd" id="4_pbxs3"]
 [ext_resource type="Script" path="res://Scenes/sprinting.gd" id="6_83voy"]
 [ext_resource type="Script" path="res://Scenes/sliding.gd" id="7_dvfj7"]
 [ext_resource type="Script" path="res://Scenes/player_crouching.gd" id="8_00jb8"]
+[ext_resource type="AudioStream" uid="uid://dlqhgwljgkv11" path="res://SFX/Music/myst_gameplay_edit.mp3" id="10_bq3ic"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vjeup"]
 radius = 0.3
@@ -84,6 +86,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_1c1m2")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_vvjp4")
 volume_db = -30.0
 pitch_scale = 0.5
 bus = &"SFX"
@@ -156,3 +159,9 @@ mouse_filter = 2
 libraries = {
 "": SubResource("AnimationLibrary_fwgvp")
 }
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4741, 0)
+stream = ExtResource("10_bq3ic")
+autoplay = true
+bus = &"Music"

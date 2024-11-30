@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/myst_gameplay_edit.mp3-dc06fef9271831e1bba018
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.5
+bpm=0.0
 beat_count=0
 bar_beats=4

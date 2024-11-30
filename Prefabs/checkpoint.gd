@@ -22,6 +22,7 @@ func interact(player: PlayerController):
 	
 	player.activeCheckpoint = self
 	self.anim.play("activate")
+	$AudioStreamPlayer3D.play(4.53)
 
 func deactivate(node):
 	node.activeCheckpoint.anim.play_backwards("activate")
