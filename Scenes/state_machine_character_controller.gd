@@ -56,3 +56,5 @@ func swapCamState(rotationLerpAmount, b):
 func die():
 	$StateMachine.on_child_transitioned($StateMachine.currentState, "Idle")
 	$StateMachine.enabled = false
+	global_position = activeCheckpoint.global_position
+	$StateMachine.enabled = true

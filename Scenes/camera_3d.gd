@@ -23,23 +23,27 @@ func updateFollowPos(node : Node3D, enableLerp: bool):
 	_enableLerp = enableLerp
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+var lastCollidingParent
 func _process(delta):
 		mainNode.position.x = followPos.global_position.x
 		mainNode.position.z = followPos.global_position.z
 		
 		if ray.is_colliding() and ray.get_collider().is_in_group('interactable'):
+			var rayCollider = ray.get_collider()
+			var parent
+			if rayCollider:
+				parent = rayCollider.get_parent()
+				lastCollidingParent = parent
+				parent.toggleUI(true)
 			
-			if Input.is_action_just_pressed("interact"):
-				
-				var rayCollider = ray.get_collider()
-				
-				if rayCollider:
-					var parent = rayCollider.get_parent()
-					
-					if parent.is_in_group("checkpoint") or parent.is_in_group("key"):
-						parent.interact(rootNode)
-					else:
-						parent.interact()
+			if Input.is_action_just_pressed("interact") && parent:
+				if parent.is_in_group("checkpoint") or parent.is_in_group("key"):
+					parent.interact(rootNode)
+				else:
+					parent.interact()
+		else:
+			if lastCollidingParent:
+				lastCollidingParent.toggleUI(false)
 		
 		if _enableLerp:
 			mainNode.position.y = lerp(mainNode.position.y, followPos.global_position.y, 15 * delta)
