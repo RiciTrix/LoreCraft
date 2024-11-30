@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="KeyResource" load_steps=3 format=3 uid="uid://dv76fw5as7726"]
+
+[ext_resource type="Script" path="res://Resources/baseKeyResource.gd" id="1_bhqqb"]
+[ext_resource type="ArrayMesh" uid="uid://cdwlejl1lbblk" path="res://Assets/Keys/Cross Key_Cube_006.res" id="1_ud66l"]
+
+[resource]
+script = ExtResource("1_bhqqb")
+name = "cross-key"
+mesh = ExtResource("1_ud66l")

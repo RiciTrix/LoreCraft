@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="KeyResource" load_steps=3 format=3 uid="uid://bb1ilydr688po"]
+
+[ext_resource type="ArrayMesh" uid="uid://bjld5ppm81ve8" path="res://Assets/Keys/Square Key_Cube_003.res" id="1_5feil"]
+[ext_resource type="Script" path="res://Resources/baseKeyResource.gd" id="2_gtxdv"]
+
+[resource]
+script = ExtResource("2_gtxdv")
+name = "square-key"
+mesh = ExtResource("1_5feil")

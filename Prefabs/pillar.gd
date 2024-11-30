@@ -38,6 +38,9 @@ func _process(delta: float) -> void:
 func onRotationEnd():
 	tween.kill()
 	isAnimating = false
+	
+func toggleUI(visible: bool):
+	$CanvasLayer.visible = visible
 
 func rotatePillar(numberOfRotations):
 	isAnimating = true

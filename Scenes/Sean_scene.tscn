@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b5tm0vk6hca84"]
+[gd_scene load_steps=20 format=3 uid="uid://b5tm0vk6hca84"]
 
 [ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="1_td7t8"]
 [ext_resource type="Script" path="res://Scenes/camera_3d.gd" id="2_sclew"]
@@ -14,8 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://xu5rp8pa0hox" path="res://Prefabs/pressurePlate.tscn" id="11_fbyfa"]
 [ext_resource type="PackedScene" uid="uid://bbgmmjyckard8" path="res://Prefabs/Checkpoint.tscn" id="13_mvf88"]
 [ext_resource type="PackedScene" uid="uid://b1e1e0xhe0fmh" path="res://Prefabs/Key.tscn" id="14_5fex1"]
-[ext_resource type="Resource" uid="uid://d2cnmi7ay86kn" path="res://Resources/RedKeyResource.tres" id="15_4meef"]
-[ext_resource type="Resource" uid="uid://dtq4bfbpo4vaf" path="res://Resources/BlueKeyResource.tres" id="16_cw6pn"]
+[ext_resource type="Resource" uid="uid://bpjahotb1upkn" path="res://Resources/CircleKeyResource.tres" id="16_pwavb"]
+[ext_resource type="Resource" uid="uid://dv76fw5as7726" path="res://Resources/CrossKeyResource.tres" id="17_x8afs"]
+[ext_resource type="PackedScene" uid="uid://cyh1yjrfb5i43" path="res://Prefabs/Enviroment/oblisk.tscn" id="17_yhipm"]
+[ext_resource type="Resource" uid="uid://bb1ilydr688po" path="res://Resources/SquareKeyResource.tres" id="18_n2hlt"]
+[ext_resource type="Resource" uid="uid://cf8vimsex7g5q" path="res://Resources/TriangleKeyResource.tres" id="19_ghgli"]
 
 [node name="SeanScene" type="Node3D"]
 
@@ -399,15 +402,41 @@ canActivate = false
 [node name="Checkpoint" parent="." instance=ExtResource("13_mvf88")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -11)
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Oblisk" parent="." node_paths=PackedStringArray("WhatToActivateSecondSlot", "WhatToActivateThirdSlot") instance=ExtResource("17_yhipm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, 3)
+FirstSlotKey = ExtResource("16_pwavb")
+SecondSlotKey = ExtResource("17_x8afs")
+ThirdSlotKey = ExtResource("18_n2hlt")
+FourthSlotKey = ExtResource("19_ghgli")
+WhatToActivateSecondSlot = [NodePath("../EmelatorCross")]
+WhatToActivateThirdSlot = [NodePath("../EmelatorSquare")]
 
-[node name="Key" parent="Node3D" instance=ExtResource("14_5fex1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -7)
+[node name="Keys" type="Node3D" parent="."]
 
-[node name="Key2" parent="Node3D" instance=ExtResource("14_5fex1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -1)
-keyResource = ExtResource("15_4meef")
+[node name="Key" parent="Keys" instance=ExtResource("14_5fex1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -7)
+keyResource = ExtResource("16_pwavb")
 
-[node name="Key3" parent="Node3D" instance=ExtResource("14_5fex1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -4)
-keyResource = ExtResource("16_cw6pn")
+[node name="Key2" parent="Keys" instance=ExtResource("14_5fex1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, -7)
+keyResource = ExtResource("17_x8afs")
+
+[node name="Key3" parent="Keys" instance=ExtResource("14_5fex1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -4)
+keyResource = ExtResource("18_n2hlt")
+
+[node name="Key4" parent="Keys" instance=ExtResource("14_5fex1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -4)
+keyResource = ExtResource("19_ghgli")
+
+[node name="EmelatorSquare" parent="." instance=ExtResource("4_3yny8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.3046, 0.85494, 9.68568)
+distance = 10.0
+direction = Vector3i(0, 1, 0)
+duration = 5.0
+
+[node name="EmelatorCross" parent="." instance=ExtResource("4_3yny8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0442, 0, 4.15053)
+distance = 10.0
+direction = Vector3i(0, 1, 0)
+duration = 5.0

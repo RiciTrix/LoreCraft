@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="KeyResource" load_steps=3 format=3 uid="uid://cf8vimsex7g5q"]
+
+[ext_resource type="ArrayMesh" uid="uid://cx6ucjb22jlvm" path="res://Assets/Keys/Triangle Key_Cube_004.res" id="1_cw4ra"]
+[ext_resource type="Script" path="res://Resources/baseKeyResource.gd" id="2_aqeog"]
+
+[resource]
+script = ExtResource("2_aqeog")
+name = "triangle-key"
+mesh = ExtResource("1_cw4ra")

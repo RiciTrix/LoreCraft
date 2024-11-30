@@ -5,6 +5,7 @@ class_name Key
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AnimationPlayer.play("Spin")
 	$MeshInstance3D.mesh = keyResource.mesh
 	pass # Replace with function body.
 
@@ -16,3 +17,6 @@ func interact(player):
 	player.addKey(self.keyResource)
 	print(keyResource.name + ' key acquired!')
 	queue_free()
+
+func toggleUI(isVisible: bool):
+	$CanvasLayer.visible = isVisible

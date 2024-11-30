@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="KeyResource" load_steps=3 format=3 uid="uid://bpjahotb1upkn"]
+
+[ext_resource type="ArrayMesh" uid="uid://c67p5rx4pc0oq" path="res://Assets/Keys/Circle Key_Cube_005.res" id="1_6s2iy"]
+[ext_resource type="Script" path="res://Resources/baseKeyResource.gd" id="1_rchcm"]
+
+[resource]
+script = ExtResource("1_rchcm")
+name = "circle-key"
+mesh = ExtResource("1_6s2iy")

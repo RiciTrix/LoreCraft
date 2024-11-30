@@ -42,7 +42,7 @@ func _process(delta):
 				else:
 					parent.interact()
 		else:
-			if lastCollidingParent:
+			if lastCollidingParent && is_instance_valid(lastCollidingParent):
 				lastCollidingParent.toggleUI(false)
 		
 		if _enableLerp:
