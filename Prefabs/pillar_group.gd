@@ -23,5 +23,5 @@ func isPasswordCorrect():
 		
 	return allCorrect
 
-func onPillarInteracted(pillar: Pillar):
+func onPillarInteracted(pillar: Pillar, player):
 	pass

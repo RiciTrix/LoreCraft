@@ -40,7 +40,7 @@ func _process(delta):
 				if parent.is_in_group("checkpoint") or parent.is_in_group("key"):
 					parent.interact(rootNode)
 				else:
-					parent.interact()
+					parent.interact(rootNode)
 		else:
 			if lastCollidingParent && is_instance_valid(lastCollidingParent):
 				lastCollidingParent.toggleUI(false)

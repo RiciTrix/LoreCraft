@@ -49,7 +49,7 @@ func rotatePillar(numberOfRotations):
 	tween.tween_property($"Pillar Puzzle Block", "rotation", $"Pillar Puzzle Block".rotation + Vector3(0, numberOfRotations * PI/2, 0), 1)
 	currentFace = (currentFace + numberOfRotations) % len(facesOrder)
 
-func interact():
+func interact(player: PlayerController):
 	
 	if isAnimating:
 		return
@@ -57,6 +57,6 @@ func interact():
 	var parent = get_parent()
 	
 	if parent is PillarGroup: 
-		parent.onPillarInteracted(self)
+		parent.onPillarInteracted(self, player)
 	else:
 		rotatePillar(1)

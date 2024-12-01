@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b12baanvcwks7"]
+[gd_scene load_steps=36 format=3 uid="uid://b12baanvcwks7"]
 
 [ext_resource type="PackedScene" uid="uid://b1ccqujav8iy1" path="res://Assets/Building Objects/Walls/Wall Straight.glb" id="3_33vjn"]
 [ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="4_fr3np"]
@@ -36,6 +36,9 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_acbqj"]
 size = Vector3(29, 1, 31)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wavfd"]
+size = Vector3(7.5, 1, 19.5)
 
 [node name="final_stage" type="Node3D"]
 
@@ -1979,6 +1982,15 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18, 4
 [node name="Wall 1W18" parent="Enviroment" instance=ExtResource("8_1pob1")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18, 0, -43.9)
 
+[node name="torch12" parent="Enviroment" instance=ExtResource("19_424mj")]
+transform = Transform3D(-2.08616e-07, 0, -1, 0, 1, 0, 1, 0, -2.08616e-07, 14.9551, 2.7, -14.028)
+
+[node name="torch13" parent="Enviroment" instance=ExtResource("19_424mj")]
+transform = Transform3D(-2.08616e-07, 0, -1, 0, 1, 0, 1, 0, -2.08616e-07, 14.9551, 2.7, -21.928)
+
+[node name="torch14" parent="Enviroment" instance=ExtResource("19_424mj")]
+transform = Transform3D(-2.08616e-07, 0, -1, 0, 1, 0, 1, 0, -2.08616e-07, 14.9551, 2.7, -37.728)
+
 [node name="torch" parent="Enviroment" instance=ExtResource("19_424mj")]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 3, 2, -6)
 
@@ -2705,16 +2717,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 11, -27)
 script = ExtResource("14_jxdb0")
 
 [node name="Node3D" parent="PillarGroup" instance=ExtResource("15_hl1gt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 4, -45)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13, 4, -45)
+passwordFace = 3
 
 [node name="Node3D2" parent="PillarGroup" instance=ExtResource("15_hl1gt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 4, -45)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.9, 4, -45)
+passwordFace = 1
 
 [node name="Node3D3" parent="PillarGroup" instance=ExtResource("15_hl1gt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 4, -45)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.1, 4, -45)
 
 [node name="Node3D4" parent="PillarGroup" instance=ExtResource("15_hl1gt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 4, -45)
+transform = Transform3D(-5.21541e-08, 0, -1, 0, 1, 0, 1, 0, -5.21541e-08, 13, 4, -45)
+passwordFace = 2
 
 [node name="Checkpoint" parent="." instance=ExtResource("18_i0rrg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -7.5)
@@ -2900,3 +2915,11 @@ trapType = 0
 
 [node name="Node3D" parent="Checkerboard2/SpikeTrap20" instance=ExtResource("21_0jmj4")]
 wait_time = 11.0
+
+[node name="Deathbox" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, -4, -40)
+script = ExtResource("34_124sy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Deathbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25, 0, 2.35)
+shape = SubResource("BoxShape3D_wavfd")
