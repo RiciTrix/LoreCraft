@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://df2301r7i0m8x"]
+[gd_scene load_steps=38 format=3 uid="uid://df2301r7i0m8x"]
 
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_yusm3"]
 [ext_resource type="PackedScene" uid="uid://buu2mv05jqk50" path="res://Assets/Building Objects/Floors/Floor Hallway T.glb" id="2_lddxl"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://7gtmld14h7yj" path="res://Assets/Building Objects/Floors/Floor Corner.glb" id="9_r1qlx"]
 [ext_resource type="PackedScene" uid="uid://c4vii36lgl7fa" path="res://Assets/Building Objects/Floors/Floor Corner 2x2.glb" id="10_x7i0c"]
 [ext_resource type="PackedScene" uid="uid://rs2qmui5lb7n" path="res://Prefabs/Traps/flame_thrower.tscn" id="11_w6dyl"]
-[ext_resource type="Environment" uid="uid://ci2b8yt60idce" path="res://Enviroments/3D_Playspace.tres" id="12_sutti"]
 [ext_resource type="PackedScene" uid="uid://5362euukhprb" path="res://Prefabs/Traps/Timed Activator.tscn" id="13_dk7ct"]
 [ext_resource type="PackedScene" uid="uid://dctgbb2rhh0sv" path="res://Assets/Building Objects/Floors/Floor No Exits.glb" id="15_k8l7h"]
 [ext_resource type="PackedScene" uid="uid://c6mr1pakik7qi" path="res://Prefabs/elevator.tscn" id="16_545xl"]
@@ -29,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://c3ef2n2sj7rke" path="res://Prefabs/torch.tscn" id="28_ae852"]
 [ext_resource type="PackedScene" uid="uid://dyl3weht6gb5p" path="res://Prefabs/Traps/spike_trap.tscn" id="29_1kpy4"]
 [ext_resource type="PackedScene" uid="uid://d0jjxvipbu1o4" path="res://Assets/Building Objects/Pillars/Pillar.glb" id="30_mrea1"]
-[ext_resource type="LightmapGIData" uid="uid://bgnw0m5vw4ab" path="res://Scenes/Charlie_Scene.lmbake" id="32_n3bgo"]
 [ext_resource type="PackedScene" uid="uid://ff36vc8unudg" path="res://Assets/Building Objects/Slopes/Slope 2H.glb" id="33_ojf6n"]
 [ext_resource type="PackedScene" uid="uid://cjnrdwrslyfsi" path="res://Assets/Building Objects/Roofs/Sloped Roof 2H.glb" id="34_g7vxj"]
 [ext_resource type="PackedScene" uid="uid://0p714448l6l1" path="res://Assets/Building Objects/Walls/Wall Sloped 2H.glb" id="35_7u873"]
@@ -3183,16 +3181,6 @@ trapType = 0
 
 [node name="Node3D" parent="Traps/SpikeTrap7" instance=ExtResource("13_dk7ct")]
 wait_time = 5.0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("12_sutti")
-
-[node name="LightmapGI" type="LightmapGI" parent="."]
-quality = 2
-bounces = 5
-texel_scale = 5.0
-generate_probes_subdiv = 3
-light_data = ExtResource("32_n3bgo")
 
 [node name="Checkpoint" parent="." instance=ExtResource("41_puv8y")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28, 0, -31.5)

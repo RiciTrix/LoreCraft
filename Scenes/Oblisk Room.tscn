@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cpelsfadk6c4u"]
+[gd_scene load_steps=37 format=3 uid="uid://cpelsfadk6c4u"]
 
 [ext_resource type="PackedScene" uid="uid://c11kafuqu6vvo" path="res://Assets/Building Objects/Floors/Floor.glb" id="1_bgkpx"]
 [ext_resource type="PackedScene" uid="uid://ba3rheaxmp0up" path="res://Assets/Building Objects/Floors/Floor 1 Side 2x2.glb" id="4_ybf21"]
@@ -29,10 +29,20 @@
 [ext_resource type="Resource" path="res://Resources/TriangleKeyResource.tres" id="22_oj4sd"]
 [ext_resource type="PackedScene" uid="uid://b1e1e0xhe0fmh" path="res://Prefabs/Key.tscn" id="22_qq44v"]
 [ext_resource type="PackedScene" uid="uid://brjuqchiy1u2b" path="res://Assets/Building Objects/Doors/Door 3.glb" id="26_afia0"]
+[ext_resource type="PackedScene" uid="uid://b12baanvcwks7" path="res://Scenes/final_stage.tscn" id="26_xa4ab"]
 [ext_resource type="PackedScene" uid="uid://m1m5au7neyrf" path="res://Assets/Building Objects/Doors/Door 4.glb" id="28_gyww6"]
 [ext_resource type="PackedScene" uid="uid://df2301r7i0m8x" path="res://Scenes/Charlie_Scene.tscn" id="29_uyb3l"]
+[ext_resource type="Script" path="res://Scripts/deathBox.gd" id="33_j8enu"]
+[ext_resource type="PackedScene" uid="uid://c8a5yu3f4xsry" path="res://Scenes/Western_Branch.tscn" id="34_vg73f"]
+[ext_resource type="PackedScene" uid="uid://dncm5j4f4jk1" path="res://Scenes/Southern_Branch.tscn" id="35_jadcj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_acbqj"]
+size = Vector3(14, 1, 21)
 
 [node name="Main" type="Node3D"]
+
+[node name="final_stage" parent="." instance=ExtResource("26_xa4ab")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -34)
 
 [node name="Enviroment" type="Node3D" parent="."]
 
@@ -1296,10 +1306,6 @@ script = ExtResource("18_tcaut")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 0)
 keyResource = ExtResource("21_y0r82")
 
-[node name="Key2" parent="Enviroment" instance=ExtResource("22_qq44v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1, 0)
-keyResource = ExtResource("19_frx16")
-
 [node name="Door 32" parent="Enviroment" instance=ExtResource("26_afia0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 19.3)
 script = ExtResource("21_rpnhg")
@@ -1386,3 +1392,17 @@ WhatToActivateFourthSlot = [NodePath("../Enviroment/Door 32"), NodePath("../Envi
 
 [node name="Main" parent="." instance=ExtResource("29_uyb3l")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33, 0, 0)
+
+[node name="Deathbox" type="Area3D" parent="Main"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7, 2, -35)
+script = ExtResource("33_j8enu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Main/Deathbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -2)
+shape = SubResource("BoxShape3D_acbqj")
+
+[node name="Node3D" parent="." instance=ExtResource("34_vg73f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, 0)
+
+[node name="Node3D2" parent="." instance=ExtResource("35_jadcj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37)

@@ -3,6 +3,7 @@ extends Trap
 @export var activeTime: float
 @export var activeTimer: Timer
 @export var speed: float
+@export var downOffset: float = 0
 
 @onready var spikes = $"Spike Trap Base/Spike Trap Spikes2"
 
@@ -33,7 +34,9 @@ func disable():
 
 func reset():
 	tween.kill()
+	activeTimer.wait_time = activeTimer.wait_time + downOffset
 	activeTimer.start()
+	
 	await activeTimer.timeout
 	activate()
 
