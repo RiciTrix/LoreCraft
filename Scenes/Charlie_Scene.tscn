@@ -42,7 +42,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_acbqj"]
 size = Vector3(29, 5, 32)
 
-[node name="Main" type="Node3D"]
+[node name="Main2" type="Node3D"]
 
 [node name="Enviroment" type="Node3D" parent="."]
 
@@ -2818,11 +2818,13 @@ transform = Transform3D(1.19209e-07, 0, 1, 0, 1, 0, -1, 0, 1.19209e-07, -28, 8, 
 [node name="Node3D" parent="Enviroment" instance=ExtResource("37_77j6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, -59)
 spin_speed = 2.0
-spin_direction = Vector3i(1, 0, 0)
+spin_direction = Vector3i(0, 1, 0)
+trapType = 1
 
 [node name="flame_thrower9" parent="Enviroment" instance=ExtResource("11_w6dyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 8, -59)
-spinMode = 0
+spinSpeed = 0.0
+timeBetweenIntervals = 5.0
 swapPolarity = 3
 positiveX = true
 negativeX = true
