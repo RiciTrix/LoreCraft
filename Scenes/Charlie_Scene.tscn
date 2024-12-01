@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://df2301r7i0m8x"]
+[gd_scene load_steps=40 format=3 uid="uid://df2301r7i0m8x"]
 
 [ext_resource type="PackedScene" uid="uid://da02ao4j1c5ar" path="res://Assets/Building Objects/Floors/Floor Hallway Straigt.glb" id="1_yusm3"]
 [ext_resource type="PackedScene" uid="uid://buu2mv05jqk50" path="res://Assets/Building Objects/Floors/Floor Hallway T.glb" id="2_lddxl"]
@@ -32,11 +32,15 @@
 [ext_resource type="PackedScene" uid="uid://cjnrdwrslyfsi" path="res://Assets/Building Objects/Roofs/Sloped Roof 2H.glb" id="34_g7vxj"]
 [ext_resource type="PackedScene" uid="uid://0p714448l6l1" path="res://Assets/Building Objects/Walls/Wall Sloped 2H.glb" id="35_7u873"]
 [ext_resource type="PackedScene" uid="uid://c4nstewaxojr3" path="res://Prefabs/Traps/swingingAxe.tscn" id="36_bojn4"]
+[ext_resource type="Script" path="res://Scripts/deathBox.gd" id="36_woh4f"]
 [ext_resource type="PackedScene" uid="uid://dt14j6vqhybfd" path="res://Prefabs/Traps/spinningSpike.tscn" id="37_77j6h"]
 [ext_resource type="PackedScene" uid="uid://dpha2xl16wy5j" path="res://Assets/Building Objects/Walls/Wall Doorway.glb" id="38_gajax"]
 [ext_resource type="PackedScene" uid="uid://cmd6pa1hquy36" path="res://Assets/Building Objects/Walls/Wall 1W.glb" id="39_1gvlo"]
 [ext_resource type="PackedScene" uid="uid://dibkr6auetkcs" path="res://Assets/Building Objects/Slopes/Slope 1H.glb" id="40_887g2"]
 [ext_resource type="PackedScene" uid="uid://bbgmmjyckard8" path="res://Prefabs/Checkpoint.tscn" id="41_puv8y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_acbqj"]
+size = Vector3(29, 5, 32)
 
 [node name="Main" type="Node3D"]
 
@@ -2813,10 +2817,16 @@ transform = Transform3D(1.19209e-07, 0, 1, 0, 1, 0, -1, 0, 1.19209e-07, -28, 8, 
 
 [node name="Node3D" parent="Enviroment" instance=ExtResource("37_77j6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 8, -59)
+spin_speed = 2.0
+spin_direction = Vector3i(1, 0, 0)
 
 [node name="flame_thrower9" parent="Enviroment" instance=ExtResource("11_w6dyl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 8, -59)
-negativeZ = true
+spinMode = 0
+swapPolarity = 3
+positiveX = true
+negativeX = true
+positiveZ = false
 
 [node name="Axe6" parent="Enviroment" instance=ExtResource("36_bojn4")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 13, -59)
@@ -2826,21 +2836,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 8, -59)
 
 [node name="SawBladeTrap4" parent="Enviroment" instance=ExtResource("27_8ephs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 8, -61)
+bladeSpeed = 3
+distance = Vector2(2.5, 0)
 
 [node name="SawBladeTrap5" parent="Enviroment" instance=ExtResource("27_8ephs")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -36, 8, -57)
+bladeSpeed = 1
+distance = Vector2(2.5, 0)
 
 [node name="SawBladeTrap6" parent="Enviroment" instance=ExtResource("27_8ephs")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -36, 9, -55)
+bladeSpeed = 2
+distance = Vector2(2.5, 0)
 
 [node name="SawBladeTrap7" parent="Enviroment" instance=ExtResource("27_8ephs")]
 transform = Transform3D(-1, 3.82137e-15, -8.74228e-08, 8.74228e-08, 4.37114e-08, -1, 0, -1, -4.37114e-08, -36, 10, -55)
+bladeSpeed = 3
+distance = Vector2(2.5, 0)
 
 [node name="SawBladeTrap8" parent="Enviroment" instance=ExtResource("27_8ephs")]
 transform = Transform3D(1, 0, 0, 0, 1.31134e-07, -1, 0, 1, 1.31134e-07, -36, 9, -63)
+bladeSpeed = 1
+distance = Vector2(2.5, 0)
 
 [node name="SawBladeTrap9" parent="Enviroment" instance=ExtResource("27_8ephs")]
 transform = Transform3D(-1, 1.14641e-14, -8.74228e-08, -8.74228e-08, -1.31134e-07, 1, 0, 1, 1.31134e-07, -36, 10, -63)
+bladeSpeed = 2
+distance = Vector2(2.5, 0)
 
 [node name="Wall Doorway With Floor10" parent="Enviroment" instance=ExtResource("4_hv6n7")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -48, 0, -53)
@@ -3103,6 +3125,18 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35, 1
 
 [node name="Sloped Roof 2H7" parent="Enviroment" instance=ExtResource("34_g7vxj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -35, 12, -24)
+
+[node name="Deathbox2" type="Area3D" parent="Enviroment"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33, -8, -44)
+script = ExtResource("36_woh4f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enviroment/Deathbox2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -2, -1.52588e-05)
+shape = SubResource("BoxShape3D_acbqj")
+
+[node name="Axe7" parent="Enviroment" instance=ExtResource("36_bojn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 5, -31)
+bladeSpeed = 2
 
 [node name="Traps" type="Node3D" parent="."]
 
